@@ -1,0 +1,74 @@
+    <!-- MAIN CONTENT - FAQ & LOGISTICS -->
+    <main class="flex-grow pt-32 pb-20 max-w-5xl mx-auto px-6 md:px-10 w-full reveal">
+        
+        <!-- HEADER -->
+        <header class="mb-16 border-b specimen-border pb-10">
+            <p class="text-[10px] font-bold uppercase opacity-40 mb-4">Customer Support</p>
+            <h1 class="font-display font-black text-5xl md:text-7xl uppercase leading-none tracking-tighter">
+                FAQ Page
+            </h1>
+            <p class="mt-6 text-xs leading-loose opacity-70 max-w-md">
+                Frequently referenced inquiries regarding transmission schedules, artifact handling, and terminal operations.
+            </p>
+        </header>
+
+        <!-- FAQ ACCORDION LIST -->
+        <div class="space-y-4" id="faq-container">
+            
+            <!-- FAQ Item 1 -->
+            <div class="faq-item border specimen-border p-6 md:p-8 cursor-pointer bg-white/40 hover:bg-white transition-colors">
+                <div class="faq-question flex justify-between items-center">
+                    <h2 class="font-display font-black text-lg md:text-xl uppercase">How are artifacts dispatched and routed?</h2>
+                    <span class="faq-icon font-bold text-xl">+</span>
+                </div>
+                <div class="faq-answer text-xs leading-relaxed opacity-80 pt-4">
+                    All objects are packaged within custom archival containers to protect against environmental degradation during transit. Dispatches occur within 48 hours of transaction clearance. Tracking vectors are transmitted directly to your registered email matrix once the courier logs the package.
+                </div>
+            </div>
+
+            <!-- FAQ Item 2 -->
+            <div class="faq-item border specimen-border p-6 md:p-8 cursor-pointer bg-white/40 hover:bg-white transition-colors">
+                <div class="faq-question flex justify-between items-center">
+                    <h2 class="font-display font-black text-lg md:text-xl uppercase">What is the return or exchange protocol?</h2>
+                    <span class="faq-icon font-bold text-xl">+</span>
+                </div>
+                <div class="faq-answer text-xs leading-relaxed opacity-80 pt-4">
+                    Due to the limited, numbered nature of our permanent collections, final sales are enforced. Exchanges are exclusively permitted if an artifact arrives structurally compromised or structurally incorrect relative to your original index specifications. Notify the terminal within 7 days of delivery.
+                </div>
+            </div>
+
+            <!-- FAQ Item 3 -->
+            <div class="faq-item border specimen-border p-6 md:p-8 cursor-pointer bg-white/40 hover:bg-white transition-colors">
+                <div class="faq-question flex justify-between items-center">
+                    <h2 class="font-display font-black text-lg md:text-xl uppercase">Are sequential drops restocked?</h2>
+                    <span class="faq-icon font-bold text-xl">+</span>
+                </div>
+                <div class="faq-answer text-xs leading-relaxed opacity-80 pt-4">
+                    Negative. Artifacts are produced in isolated batch sequences and are intentionally retired once inventory hits zero. Subscribing to our broadcast channel provides early coordinate alerts for upcoming collections prior to public exposure.
+                </div>
+            </div>
+
+            <!-- FAQ Item 4 -->
+            <div class="faq-item border specimen-border p-6 md:p-8 cursor-pointer bg-white/40 hover:bg-white transition-colors">
+                <div class="faq-question flex justify-between items-center">
+                    <h2 class="font-display font-black text-lg md:text-xl uppercase">How do I update my account identity matrix?</h2>
+                    <span class="faq-icon font-bold text-xl">+</span>
+                </div>
+                <div class="faq-answer text-xs leading-relaxed opacity-80 pt-4">
+                    Access the <a href="<!-- #!/engine/node/ page('login') -->" class="underline font-bold">Identity Portal</a> and authenticate using your designated credentials. From your dashboard terminal, you can modify shipping drop coordinates, access history, and transmission preferences.
+                </div>
+            </div>
+
+            <!-- FAQ Item 5 -->
+            <div class="faq-item border specimen-border p-6 md:p-8 cursor-pointer bg-white/40 hover:bg-white transition-colors">
+                <div class="faq-question flex justify-between items-center">
+                    <h2 class="font-display font-black text-lg md:text-xl uppercase">How can I initiate direct communication?</h2>
+                    <span class="faq-icon font-bold text-xl">+</span>
+                </div>
+                <div class="faq-answer text-xs leading-relaxed opacity-80 pt-4">
+                    For direct operator assistance, submit your inquiry through the <a href="<!-- #!/engine/node/ page('contact') -->" class="underline font-bold">Comms Protocol</a> terminal page. Expect a response window between 24 to 48 standard hours.
+                </div>
+            </div>
+
+        </div>
+    </main>

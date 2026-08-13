@@ -1,0 +1,237 @@
+<!-- #/engine/head/encode/:BEGIN -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Thoughtfully curated essentials. Minimal design, maximum impact.">
+    <title>ESSENCE — Minimalist Store</title>
+
+    <!-- Tailwind CSS CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        black:   '#000000',
+                        white:   '#FFFFFF',
+                        gray: {
+                            50:  '#FAFAFA',
+                            100: '#F5F5F5',
+                            200: '#EEEEEE',
+                            300: '#E0E0E0',
+                            400: '#BDBDBD',
+                            500: '#9E9E9E',
+                            600: '#757575',
+                            700: '#616161',
+                            800: '#424242',
+                            900: '#212121',
+                        }
+                    },
+                    fontFamily: {
+                        display: ['"Playfair Display"', 'serif'],
+                        body:    ['"Outfit"', 'sans-serif'],
+                    },
+                    spacing: {
+                        '128': '32rem',
+                    }
+                }
+            }
+        }
+    </script>
+
+    <!-- Google Fonts: Playfair Display + Outfit -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700&family=Playfair+Display:wght@400;700&display=swap" rel="stylesheet">
+
+    <!-- Lucide Icons -->
+    <script src="https://unpkg.com/lucide@latest/dist/umd/lucide.js"></script>
+
+    <!-- Theme stylesheet -->
+    <link rel="stylesheet" href="/assets/css/main.css">
+</head>
+<!-- #/engine/head/encode/:END; --><body class="bg-white text-gray-900 font-body">
+
+    <!-- Navbar -->
+    # $app()->card(navbar);
+
+
+    <!-- Page content -->
+    <main id="main-content" class="pt-16 min-h-screen">
+        # $app()->page(e); 
+
+    </main>
+
+    <!-- Cart Drawer -->
+    <div id="cart-drawer" class="fixed inset-y-0 right-0 z-50 w-full sm:w-96 bg-white shadow-2xl transform translate-x-full transition-transform duration-300 flex flex-col">
+
+        <!-- Header -->
+        <div class="flex items-center justify-between p-6 border-b border-gray-100">
+            <h2 class="font-display text-lg font-bold">Your Cart</h2>
+            <button id="cart-close" class="text-gray-700 hover:text-black transition-colors" aria-label="Close cart">
+                <i data-lucide="x" class="w-5 h-5"></i>
+            </button>
+        </div>
+
+        <!-- Items container -->
+        <div id="cart-items" class="flex-1 overflow-y-auto p-6 space-y-4">
+            <!-- #!/engine/node/ $cart = $_SESSION['cart'] ?? []; if (empty($cart)): -->
+                <div class="flex flex-col items-center justify-center h-full text-center py-12">
+                    <i data-lucide="shopping-bag" class="w-12 h-12 text-gray-300 mb-4"></i>
+                    <p class="text-sm text-gray-600">Your cart is empty</p>
+                </div>
+            <!-- #!/engine/node/ else: -->
+                <!-- #!/engine/node/ foreach ($cart as $item): -->
+                <div class="flex gap-4 pb-4 border-b border-gray-100">
+                    <img src="<!-- #!/engine/node/ echo htmlspecialchars($item['image'] ?? '') -->" alt="<!-- #!/engine/node/ echo htmlspecialchars($item['name'] ?? '') -->"
+                         class="w-16 h-16 object-cover bg-gray-100">
+                    <div class="flex-1 min-w-0">
+                        <p class="text-sm font-medium text-black truncate"><!-- #!/engine/node/ echo htmlspecialchars($item['name'] ?? '') --></p>
+                        <p class="text-xs text-gray-600 mt-1"><!-- #!/engine/node/ echo htmlspecialchars($item['price'] ?? '') --> × <!-- #!/engine/node/ echo $item['qty'] --></p>
+                        <form method="POST" action="/cart" class="mt-2">
+                            <input type="hidden" name="action"     value="remove">
+                            <input type="hidden" name="product_id" value="<!-- #!/engine/node/ echo (int)($item['id'] ?? 0) -->">
+                            <button type="submit" class="text-xs text-gray-600 hover:text-red-600 transition-colors underline">
+                                Remove
+                            </button>
+                        </form>
+                    </div>
+                </div>
+                <!-- #!/engine/node/ endforeach; -->
+            <!-- #!/engine/node/ endif; -->
+        </div>
+
+        <!-- Footer -->
+        <div class="border-t border-gray-100 p-6 space-y-4">
+            <!-- #!/engine/node/ $total = 0.0; foreach ($cart as $item) { $raw = preg_replace('/[^0-9.]/', '', $item['price']); $total += (float)$raw * (int)$item['qty']; } -->
+            <div class="flex justify-between text-sm font-medium">
+                <span>Subtotal</span>
+                <span>R<!-- #!/engine/node/ echo number_format($total, 2) --></span>
+            </div>
+            <p class="text-xs text-gray-600 text-center">Shipping calculated at checkout</p>
+            <a href="/checkout"
+                class="block w-full bg-black text-white py-3 text-sm font-medium hover:bg-gray-800 transition-colors text-center">
+                Checkout
+            </a>
+            <button id="drawer-continue" type="button"
+                class="w-full border border-gray-300 text-black py-3 text-sm font-medium hover:border-black transition-colors">
+                Continue Shopping
+            </button>
+        </div>
+    </div>
+
+    <!-- Drawer backdrop -->
+    <div id="cart-backdrop" class="fixed inset-0 z-40 bg-black opacity-0 invisible transition-all duration-300 pointer-events-none"></div>
+
+    <!-- Footer -->
+    <footer class="border-t border-gray-100 bg-gray-50">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16">
+            <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-12 mb-12">
+
+                <!-- Brand -->
+                <div>
+                    <p class="font-display text-lg font-bold mb-3">ESSENCE</p>
+                    <p class="text-sm text-gray-600 leading-relaxed">
+                        Thoughtfully curated essentials. Designed for simplicity, built for purpose.
+                    </p>
+                </div>
+
+                <!-- Shop -->
+                <div>
+                    <p class="text-xs font-semibold uppercase tracking-wider text-gray-900 mb-4">Shop</p>
+                    <ul class="space-y-2 text-sm text-gray-600">
+                        <li><a href="/shop"       class="hover:text-black transition-colors">All Products</a></li>
+                        <li><a href="/collection" class="hover:text-black transition-colors">Collection</a></li>
+                        <li><a href="/search"     class="hover:text-black transition-colors">Search</a></li>
+                    </ul>
+                </div>
+
+                <!-- Customer Care -->
+                <div>
+                    <p class="text-xs font-semibold uppercase tracking-wider text-gray-900 mb-4">Care</p>
+                    <ul class="space-y-2 text-sm text-gray-600">
+                        <li><a href="/contact" class="hover:text-black transition-colors">Contact</a></li>
+                        <li><a href="/policy"  class="hover:text-black transition-colors">Returns</a></li>
+                        <li><a href="/about"   class="hover:text-black transition-colors">About</a></li>
+                    </ul>
+                </div>
+
+                <!-- Connect -->
+                <div>
+                    <p class="text-xs font-semibold uppercase tracking-wider text-gray-900 mb-4">Connect</p>
+                    <ul class="space-y-2 text-sm text-gray-600">
+                        <li><a href="#" class="hover:text-black transition-colors">Instagram</a></li>
+                        <li><a href="#" class="hover:text-black transition-colors">Twitter</a></li>
+                        <li><a href="#" class="hover:text-black transition-colors">Email</a></li>
+                    </ul>
+                </div>
+
+            </div>
+
+            <div class="border-t border-gray-200 pt-8 flex flex-col sm:flex-row justify-between items-center gap-4 text-xs text-gray-600">
+                <p>&copy; <!-- #!/engine/node/ echo date('Y') --> ESSENCE. All rights reserved.</p>
+                <div class="flex gap-6">
+                    <a href="/policy" class="hover:text-black transition-colors">Privacy</a>
+                    <a href="/policy" class="hover:text-black transition-colors">Terms</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Lucide icons init -->
+    <script>lucide.createIcons();</script>
+
+    <!-- Cart drawer logic -->
+    <script>
+        const cartTrigger = document.getElementById('cart-trigger');
+        const cartDrawer = document.getElementById('cart-drawer');
+        const cartClose = document.getElementById('cart-close');
+        const cartBackdrop = document.getElementById('cart-backdrop');
+        const drawerContinue = document.getElementById('drawer-continue');
+        const mobileMenuBtn = document.getElementById('mobile-menu-btn');
+        const mobileMenu = document.getElementById('mobile-menu');
+
+        // Open drawer
+        cartTrigger?.addEventListener('click', () => {
+            cartDrawer.classList.remove('translate-x-full');
+            cartBackdrop.classList.add('opacity-50', 'pointer-events-auto');
+            cartTrigger.setAttribute('aria-expanded', 'true');
+        });
+
+        // Close drawer
+        function closeCart() {
+            cartDrawer.classList.add('translate-x-full');
+            cartBackdrop.classList.remove('opacity-50', 'pointer-events-auto');
+            cartTrigger.setAttribute('aria-expanded', 'false');
+        }
+
+        cartClose?.addEventListener('click', closeCart);
+        cartBackdrop?.addEventListener('click', closeCart);
+        drawerContinue?.addEventListener('click', closeCart);
+
+        // Mobile menu toggle
+        mobileMenuBtn?.addEventListener('click', () => {
+            mobileMenu.classList.toggle('hidden');
+        });
+
+        // Close drawer on checkout link click
+        document.querySelectorAll('#cart-drawer a[href="/checkout"]').forEach(link => {
+            link.addEventListener('click', closeCart);
+        });
+    </script>
+
+    <!-- Highlight active nav link -->
+    <script>
+        const path = window.location.pathname.replace(/\/$/, '') || '/home';
+        document.querySelectorAll('.nav-link').forEach(a => {
+            if (a.getAttribute('href') === path) {
+                a.classList.add('text-black', 'font-bold');
+                a.classList.remove('text-gray-700');
+            }
+        });
+    </script>
+
+</body>
+</html>

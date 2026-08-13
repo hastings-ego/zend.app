@@ -1,0 +1,378 @@
+<style>
+    /* Architecture lines */
+    .specimen-border {
+        border: 0.5px solid #E0E0E0;
+    }
+
+    .dark-border {
+        border: 0.5px solid rgba(245, 245, 245, 0.2);
+    }
+
+    /* Subtle reveal animations */
+    .reveal {
+        animation: specReveal 1.2s cubic-bezier(0.16, 1, 0.3, 1) forwards;
+    }
+
+    @keyframes specReveal {
+        from {
+            opacity: 0;
+            transform: translateY(20px);
+            filter: blur(5px);
+        }
+
+        to {
+            opacity: 1;
+            transform: translateY(0);
+            filter: blur(0);
+        }
+    }
+
+    /* Selection Button Active State */
+    .size-active {
+        background-color: #1A1A1A !important;
+        color: #F5F5F5 !important;
+    }
+
+    /* Hover Logic for Related Cards */
+    .specimen-card .info {
+        opacity: 0;
+        transition: opacity 0.4s ease;
+    }
+
+    .specimen-card:hover .info {
+        opacity: 1;
+    }
+
+    .specimen-card img {
+        transition: transform 0.8s cubic-bezier(0.16, 1, 0.3, 1);
+    }
+
+    .specimen-card:hover img {
+        transform: scale(1.03);
+    }
+
+    /* Mobile Menu Transitions */
+    #mobile-menu {
+        transition: transform 0.5s cubic-bezier(0.16, 1, 0.3, 1);
+    }
+
+    .menu-open {
+        transform: translateY(0%);
+    }
+
+    .menu-closed {
+        transform: translateY(-100%);
+    }
+
+    ::-webkit-scrollbar {
+        width: 4px;
+    }
+
+    ::-webkit-scrollbar-thumb {
+        background: #1A1A1A;
+    }
+</style>
+
+<!-- MAIN CONTENT - PRODUCT SPECIFICATION -->
+<main class="flex-grow pt-32 pb-20 max-w-7xl mx-auto px-6 md:px-10 w-full reveal">
+
+    <!-- TOP BREADCRUMB / ARTIFACT ID -->
+    <div style="display:none;"
+        class="flex justify-between items-center mb-10 pb-4 border-b specimen-border text-[10px] uppercase tracking-[0.4em] opacity-50">
+        <div>
+            <a href="" class="hover:underline">
+                <span id="prod-breadcrumb-category">
+
+                </span> / <span id="prod-breadcrumb-id">REF_01</span>
+            </a>
+        </div>
+        <div id="prod-stock-status">Status: Verified Available</div>
+    </div>
+
+    <!-- PRODUCT SECTION -->
+    <div class="grid grid-cols-1 lg:grid-cols-12 gap-12 lg:gap-16 items-start">
+
+        <!-- PRODUCT GALLERY (Left 7 Columns) -->
+        <div class="lg:col-span-7 space-y-6" id="product-gallery">
+            <div class="aspect-[4/5] bg-archive-line overflow-hidden specimen-border relative">
+                <img id="main-gallery-img" src="" alt="Artifact Main View" class="w-full h-full object-cover grayscale">
+            </div>
+            <!-- Thumbnail Grid -->
+            <div class="grid grid-cols-3 gap-6" id="thumbnail-grid">
+                <!-- Populated via JS -->
+            </div>
+        </div>
+
+        <!-- PRODUCT SELECTION & CONTROLS (Right 5 Columns) -->
+        <div class="lg:col-span-5 lg:sticky lg:top-32 space-y-10">
+            <div>
+                <p id="prod-category" class="text-[10px] font-bold uppercase tracking-[0.4em] opacity-40 mb-2">Apparel
+                </p>
+                <h1 id="prod-title"
+                    class="font-display font-black text-4xl md:text-5xl uppercase  tracking-tighter mb-4">Void Tee
+                </h1>
+                <p id="prod-price" class="font-bold text-xl tracking-wider">85.00 ZAR</p>
+            </div>
+
+            <div class="text-xs leading-relaxed opacity-70 space-y-4 border-t border-b specimen-border py-6">
+                <p id="prod-description">Heavyweight custom-milled cotton artifact engineered with a relaxed structural
+                    drop. Treated with an artisanal wash designed to simulate natural structural decay over time.</p>
+            </div>
+
+            <!-- SIZE SELECTION MATRIX -->
+            <div class="space-y-4">
+                <div class="flex justify-between text-[10px] font-bold uppercase tracking-[0.3em]">
+                    <span>Select Specification Size</span>
+                    <span class="opacity-40">Standard Matrix</span>
+                </div>
+                <div class="grid grid-cols-4 gap-3" id="size-selector">
+                    <button
+                        class="size-btn border specimen-border py-3 text-xs font-bold uppercase tracking-widest hover:border-archive-ink transition-colors"
+                        data-size="S">S</button>
+                    <button
+                        class="size-btn border specimen-border py-3 text-xs font-bold uppercase tracking-widest size-active"
+                        data-size="M">M</button>
+                    <button
+                        class="size-btn border specimen-border py-3 text-xs font-bold uppercase tracking-widest hover:border-archive-ink transition-colors"
+                        data-size="L">L</button>
+                    <button
+                        class="size-btn border specimen-border py-3 text-xs font-bold uppercase tracking-widest hover:border-archive-ink transition-colors"
+                        data-size="XL">XL</button>
+                </div>
+            </div>
+
+            <!-- ACTIONS -->
+            <div class="space-y-4 pt-4">
+                <button id="add-to-cart-btn"
+                    class="w-full bg-archive-ink text-archive-paper py-5 text-xs font-bold uppercase tracking-[0.4em] hover:opacity-90 transition-opacity">
+                    Add To Cart
+                </button>
+                <p class="text-[9px] uppercase tracking-widest text-center opacity-40">Ships within 48 hours of
+                    transmission clearance.</p>
+            </div>
+        </div>
+
+    </div>
+
+    <!-- RELATED PRODUCTS SECTION -->
+    <section class="mt-32 pt-20 border-t specimen-border">
+        <div class="flex justify-between items-end mb-16">
+            <div>
+                <p class="text-[10px] font-bold uppercase  opacity-40 mb-4"></p>
+                <h2 class="font-display font-black text-3xl md:text-5xl uppercase  tracking-tighter">
+                    Related Products
+                </h2>
+            </div>
+        </div>
+
+        <!-- RELATED GRID -->
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-12" id="related-products-grid">
+            <!-- Populated via JS -->
+        </div>
+    </section>
+
+</main>
+
+<!-- PRODUCT TEMPLATE FOR RELATED ITEMS -->
+<template id="tpl-related-card">
+    <a href="" class="specimen-card flex flex-col group cursor-pointer js-rel-link block">
+        <div class="aspect-[4/5] bg-archive-line mb-6 overflow-hidden relative specimen-border">
+            <img src="" alt="" class="w-full h-full object-cover grayscale js-rel-img">
+            <div
+                class="absolute inset-0 bg-archive-paper/80 opacity-0 group-hover:opacity-100 transition-opacity flex items-center justify-center">
+                <span class="text-[10px] font-bold tracking-[0.4em]">VIEW_ARTIFACT</span>
+            </div>
+        </div>
+        <div class="info flex justify-between items-start">
+            <div>
+                <h3 class="font-display font-black text-xl uppercase js-rel-title"></h3>
+                <p class="text-[9px] opacity-40 uppercase js-rel-category mt-1"></p>
+            </div>
+            <span class="font-bold text-sm js-rel-price"></span>
+        </div>
+    </a>
+</template>
+
+
+<!-- PRODUCT & GALLERY DYNAMIC LOGIC -->
+<script>
+    <!-- #!/engine/node/
+        app()->create_shop_ui(api()->async_products());
+    -->
+
+        class ProductController {
+            constructor() {
+                this.selectedSize = 'M';
+                this.currentProduct = this.resolveProduct();
+
+                this.initProductDetails();
+                this.initRelatedProducts();
+                this.initSizeSelector();
+                this.initAddToCart();
+                this.initMobileMenu();
+                this.updateCartCount();
+                this.initReviewForm();
+            }
+
+            resolveProduct() {
+                const hash = window.location.hash.replace('#', '');
+                const prodId = parseInt(hash) || <!-- #!/engine/node/ echo $_GET['data']; -->;
+                return DB_PRODUCTS.find(p => p.id === prodId) || DB_PRODUCTS[0];
+            }
+
+            initProductDetails() {
+                const p = this.currentProduct;
+                document.getElementById('prod-title').textContent = p.title;
+                document.getElementById('prod-price').textContent = `${p.price.toFixed(2)} ZAR`;
+                document.getElementById('prod-category').textContent = p.category;
+                document.getElementById('prod-breadcrumb-category').textContent = p.category;
+                document.getElementById('prod-breadcrumb-id').textContent = `REF_0${p.id}`;
+                document.getElementById('prod-description').textContent = p.desc;
+                document.title = `${p.title}`;
+
+                // Setup Gallery
+                const mainImg = document.getElementById('main-gallery-img');
+                const thumbGrid = document.getElementById('thumbnail-grid');
+
+                mainImg.src = p.gallery[0];
+                thumbGrid.innerHTML = '';
+
+                p.gallery.forEach((imgUrl, index) => {
+                    const thumb = document.createElement('div');
+                    thumb.className = `aspect-square bg-archive-line overflow-hidden specimen-border cursor-pointer opacity-70
+hover:opacity-100 transition-opacity ${index === 0 ? 'ring-1 ring-archive-ink opacity-100' : ''}`;
+                    thumb.innerHTML = `<img src="${imgUrl}" alt="Thumbnail ${index + 1}" class="w-full h-full object-cover grayscale">`;
+
+                    thumb.addEventListener('click', () => {
+                        mainImg.src = imgUrl;
+                        document.querySelectorAll('#thumbnail-grid > div').forEach(el => {
+                            el.classList.remove('ring-1', 'ring-archive-ink', 'opacity-100');
+                            el.classList.add('opacity-70');
+                        });
+                        thumb.classList.add('ring-1', 'ring-archive-ink', 'opacity-100');
+                        thumb.classList.remove('opacity-70');
+                    });
+
+                    thumbGrid.appendChild(thumb);
+                });
+            }
+
+            initRelatedProducts() {
+                const grid = document.getElementById('related-products-grid');
+                const template = document.getElementById('tpl-related-card');
+                grid.innerHTML = '';
+
+                // Filter products matching the same category, excluding current item, limit to 3
+                let related = DB_PRODUCTS.filter(p => p.category === this.currentProduct.category && p.id !== this.currentProduct.id);
+
+                // If not enough in the same category, grab any other items to fill up to 3 slots
+                if (related.length < 3) {
+                    const others = DB_PRODUCTS.filter(p => p.id !== this.currentProduct.id && !related.includes(p));
+                    related = [...related, ...others];
+                }
+
+                related.slice(0, 3).forEach(p => {
+                    const clone = template.content.cloneNode(true);
+
+                    const link = clone.querySelector('.js-rel-link');
+                    link.href = `/product/${p.id}/`;
+                    link.addEventListener('click', () => {
+                        window.location.hash = `#${p.id}`;
+                        window.location.reload();
+                    });
+
+                    clone.querySelector('.js-rel-title').textContent = p.title;
+                    clone.querySelector('.js-rel-category').textContent = p.category;
+                    clone.querySelector('.js-rel-price').textContent = `${p.price.toFixed(2)} ZAR`;
+                    clone.querySelector('.js-rel-img').src = p.gallery[0];
+                    clone.querySelector('.js-rel-img').alt = p.title;
+
+                    grid.appendChild(clone);
+                });
+            }
+
+            initSizeSelector() {
+                const buttons = document.querySelectorAll('.size-btn');
+                buttons.forEach(btn => {
+                    btn.addEventListener('click', (e) => {
+                        buttons.forEach(b => b.classList.remove('size-active', 'bg-archive-ink', 'text-archive-paper'));
+                        buttons.forEach(b => b.classList.add('border', 'specimen-border'));
+                        e.target.classList.add('size-active');
+                        this.selectedSize = e.target.getAttribute('data-size');
+                    });
+                });
+            }
+
+            initAddToCart() {
+                const btn = document.getElementById('add-to-cart-btn');
+                btn.addEventListener('click', () => {
+                    const cart = JSON.parse(localStorage.getItem('specimen_cart')) || [];
+                    const p = this.currentProduct;
+
+                    const existingIndex = cart.findIndex(item => item.id === p.id && item.size === this.selectedSize);
+                    if (existingIndex > -1) {
+                        cart[existingIndex].qty += 1;
+                    } else {
+                        cart.push({
+                            id: p.id,
+                            title: p.title,
+                            price: p.price,
+                            size: this.selectedSize,
+                            img: p.gallery[0],
+                            qty: 1
+                        });
+                    }
+
+                    localStorage.setItem('specimen_cart', JSON.stringify(cart));
+                    this.updateCartCount();
+
+                    // Visual feedback
+                    const originalText = btn.textContent;
+                    btn.textContent = 'Added To Cart';
+                    btn.classList.add('bg-emerald-900');
+                    setTimeout(() => {
+                        btn.textContent = originalText;
+                        btn.classList.remove('bg-emerald-900');
+                    }, 1500);
+                });
+            }
+
+            initMobileMenu() {
+                const btn = document.getElementById('menu-toggle');
+                const menu = document.getElementById('mobile-menu');
+                let isOpen = false;
+
+                btn.addEventListener('click', () => {
+                    isOpen = !isOpen;
+                    if (isOpen) {
+                        menu.classList.remove('menu-closed');
+                        menu.classList.add('menu-open');
+                        btn.textContent = '[ CLOSE ]';
+                    } else {
+                        menu.classList.remove('menu-open');
+                        menu.classList.add('menu-closed');
+                        btn.textContent = '[ MENU ]';
+                    }
+                });
+            }
+
+            updateCartCount() {
+                const cart = JSON.parse(localStorage.getItem('specimen_cart')) || [];
+                const count = cart.reduce((acc, item) => acc + item.qty, 0);
+                document.querySelectorAll('.js-cart-count').forEach(el => el.textContent = count);
+            }
+
+            initReviewForm() {
+                const form = document.getElementById('review-form');
+                form.addEventListener('submit', (e) => {
+                    e.preventDefault();
+                    alert('Review transmission received and logged into the archive queue.');
+                    form.reset();
+                });
+            }
+        }
+
+    document.addEventListener('DOMContentLoaded', () => {
+        window.ProductApp = new ProductController();
+    });
+</script>

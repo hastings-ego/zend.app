@@ -1,0 +1,125 @@
+
+        
+        <!-- 1. HERO SECTION -->
+        <section class="max-w-7xl mx-auto px-6 md:px-10 py-10 md:py-20 reveal">
+            <div class="flex flex-col md:flex-row justify-between items-start md:items-end mb-16 gap-10">
+                <h1 style="text-align:center; margin:auto;" class="font-display font-black text-6xl md:text-8xl lg:text-[10vw] leading-none uppercase tracking-tighter">
+                    About Us
+                </h1>
+            </div>
+            <div class="w-full aspect-[21/9] bg-archive-line specimen-border overflow-hidden">
+                <img src="https://voide.online/cdn/shop/files/f8504b70-4027-11f1-b002-c581252a7275.png?height=1408&v=1783674106" alt="Factory Archive" class="w-full h-full object-cover grayscale opacity-90">
+            </div>
+        </section>
+
+        <!-- 2. MANIFESTO TEXT -->
+        <section class="max-w-4xl mx-auto px-6 md:px-10 py-20 reveal">
+            <div class="grid grid-cols-1 md:grid-cols-12 gap-10">
+                <div class="md:col-span-8 space-y-12 text-sm leading-loose">
+                    <p class="font-display font-black text-3xl md:text-4xl leading-tight">The new Standard of silent identity</p>
+                    <p class="opacity-70">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum a elit gravida, consequat magna commodo, dapibus urna. Cras leo dui, dictum vitae sem in, lobortis pulvinar nunc. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Integer nec lectus nisl. Vestibulum rhoncus nulla non neque varius sollicitudin. Aliquam tempus odio lacus, nec bibendum mi iaculis ut. Proin odio sem, commodo et ultrices ut, tincidunt ac arcu. Vestibulum tincidunt leo imperdiet volutpat varius. Pellentesque tristique ex vel ante ornare scelerisque. Quisque pharetra lorem eu venenatis convallis.</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- 3. SAMPLE CATEGORIES -->
+        <section class="max-w-7xl mx-auto px-6 md:px-10 py-20 reveal">
+            
+            <!-- Brutalist Grid Layout for Categories -->
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-px bg-archive-line specimen-border">
+                <a href="<!-- #!/engine/node/ page('shop') -->" class="bg-archive-paper p-10 md:p-16 hover:bg-archive-ink hover:text-archive-paper transition-colors group flex flex-col justify-between aspect-square md:aspect-auto">
+                    <span class="text-[10px] font-bold tracking-[0.3em] opacity-40 group-hover:opacity-60 mb-10">01</span>
+                    <div>
+                        <h3 class="font-display font-black text-3xl md:text-4xl uppercase mb-2">Apparel</h3>
+                        <p class="text-xs opacity-60">Structural base layers & anatomy.</p>
+                    </div>
+                </a>
+                <a href="<!-- #!/engine/node/ page('shop') -->" class="bg-archive-paper p-10 md:p-16 hover:bg-archive-ink hover:text-archive-paper transition-colors group flex flex-col justify-between aspect-square md:aspect-auto">
+                    <span class="text-[10px] font-bold tracking-[0.3em] opacity-40 group-hover:opacity-60 mb-10">02</span>
+                    <div>
+                        <h3 class="font-display font-black text-3xl md:text-4xl uppercase mb-2">Outerwear</h3>
+                        <p class="text-xs opacity-60">Technical membranes & shells.</p>
+                    </div>
+                </a>
+                <a href="<!-- #!/engine/node/ page('shop') -->" class="bg-archive-paper p-10 md:p-16 hover:bg-archive-ink hover:text-archive-paper transition-colors group flex flex-col justify-between aspect-square md:aspect-auto">
+                    <span class="text-[10px] font-bold tracking-[0.3em] opacity-40 group-hover:opacity-60 mb-10">03</span>
+                    <div>
+                        <h3 class="font-display font-black text-3xl md:text-4xl uppercase mb-2">Clothing</h3>
+                        <p class="text-xs opacity-60">Utility caps & structural add-ons.</p>
+                    </div>
+                </a>
+            </div>
+        </section>
+
+        <!-- 4. SAMPLE PRODUCTS -->
+        <section class="max-w-7xl mx-auto px-6 md:px-10 py-20 reveal">
+            <div class="flex justify-between items-end mb-10 border-b specimen-border pb-6">
+                <h2 class="font-display font-black text-4xl uppercase">Sample Products</h2>
+                <a href="<!-- #!/engine/node/ page('home') -->" class="text-[10px] font-bold uppercase tracking-[0.3em] hover:line-through">View All -></a>
+            </div>
+            
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
+                <!-- Product 1 -->
+                <a href="<!-- #!/engine/node/ page('shop') -->" class="product-card flex flex-col group cursor-pointer">
+                    <div class="aspect-[4/5] bg-archive-line mb-4 overflow-hidden relative specimen-border">
+                        <img src="https://voide.online/cdn/shop/files/rn-image_picker_lib_temp_5add5d57-49be-4c5b-89f7-b31a47aff9e6.png?v=1783664415&width=832" class="w-full h-full object-cover grayscale">
+                        <div class="absolute inset-0 bg-archive-paper/80 opacity-0 group-hover:opacity-100 transition-opacity flex items-center justify-center">
+                            <span class="text-[10px] font-bold tracking-[0.4em]">VOIDE CLOTHING</span>
+                        </div>
+                    </div>
+                    <div class="info flex justify-between items-start">
+                        
+                    </div>
+                </a>
+
+                <a href="<!-- #!/engine/node/ page('shop') -->" class="product-card flex flex-col group cursor-pointer">
+                    <div class="aspect-[4/5] bg-archive-line mb-4 overflow-hidden relative specimen-border">
+                        <img src="https://voide.online/cdn/shop/files/rn-image_picker_lib_temp_872d65db-cf21-4b57-8a41-6202e4c92f4b.png?v=1783664415&width=3840" class="w-full h-full object-cover grayscale">
+                        <div class="absolute inset-0 bg-archive-paper/80 opacity-0 group-hover:opacity-100 transition-opacity flex items-center justify-center">
+                            <span class="text-[10px] font-bold tracking-[0.4em]">VOIDE CLOTHING</span>
+                        </div>
+                    </div>
+                    <div class="info flex justify-between items-start">
+                        
+                    </div>
+                </a>
+
+                <a href="<!-- #!/engine/node/ page('shop') -->" class="product-card flex flex-col group cursor-pointer">
+                    <div class="aspect-[4/5] bg-archive-line mb-4 overflow-hidden relative specimen-border">
+                        <img src="https://voide.online/cdn/shop/files/rn-image_picker_lib_temp_67b6bf3d-616a-4d4d-a031-26cd6a9c4611.png?v=1783675645&width=832" class="w-full h-full object-cover grayscale">
+                        <div class="absolute inset-0 bg-archive-paper/80 opacity-0 group-hover:opacity-100 transition-opacity flex items-center justify-center">
+                            <span class="text-[10px] font-bold tracking-[0.4em]">VOIDE CLOTHING</span>
+                        </div>
+                    </div>
+                    <div class="info flex justify-between items-start">
+                        
+                    </div>
+                </a>
+
+                <a href="<!-- #!/engine/node/ page('shop') -->" class="product-card flex flex-col group cursor-pointer">
+                    <div class="aspect-[4/5] bg-archive-line mb-4 overflow-hidden relative specimen-border">
+                        <img src="https://voide.online/cdn/shop/files/rn-image_picker_lib_temp_9d3c137c-3f27-4538-a8dc-1edeb335d876.png?v=1783675646&width=832" class="w-full h-full object-cover grayscale">
+                        <div class="absolute inset-0 bg-archive-paper/80 opacity-0 group-hover:opacity-100 transition-opacity flex items-center justify-center">
+                            <span class="text-[10px] font-bold tracking-[0.4em]">VOIDE CLOTHING</span>
+                        </div>
+                    </div>
+                    <div class="info flex justify-between items-start">
+                        
+                    </div>
+                </a>
+                
+            </div>
+        </section>
+
+        <!-- 5. CALL TO ACTION -->
+        <section class="bg-archive-ink text-archive-paper py-32 px-6 md:px-10 mt-20">
+            <div class="max-w-4xl mx-auto text-center reveal">
+                <p class="text-[10px] font-bold uppercase tracking-[0.5em] opacity-50 mb-8">Contact Us</p>
+                <h2 class="font-display font-black text-5xl md:text-7xl uppercase mb-12 italic">Reach Out TO uS</h2>
+                <p class="text-sm opacity-70 mb-12 max-w-lg mx-auto leading-loose">
+Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum a elit gravida, consequat magna commodo, dapibus urna. Cras leo dui, dictum vitae sem in, lobortis pulvinar nunc. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Integer nec lectus nisl. Vestibulum rhoncus nulla non neque varius sollicitudin. Aliquam tempus odio lacus, nec bibendum mi iaculis ut. Proin odio sem, commodo et ultrices ut, tincidunt ac arcu. Vestibulum tincidunt leo imperdiet volutpat varius. Pellentesque tristique ex vel ante ornare scelerisque. Quisque pharetra lorem eu venenatis convallis.</p>
+                <a href="<!-- #!/engine/node/ page('contact') -->" class="inline-block bg-archive-paper text-archive-ink px-12 py-5 font-display font-black uppercase text-sm hover:scale-105 transition-transform">
+                    Contact Store
+                </a>
+            </div>
+        </section>

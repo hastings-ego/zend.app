@@ -1,0 +1,82 @@
+
+
+    <!-- MAIN CONTENT - TERMS OF USE / VOID -->
+    <main class="flex-grow pt-32 pb-20 max-w-4xl mx-auto px-6 md:px-10 w-full reveal">
+        
+        <!-- HEADER -->
+        <div class="mb-16 pb-8 border-b specimen-border flex flex-col md:flex-row justify-between items-start md:items-end gap-6">
+            <div>
+                <p class="text-[10px] font-bold uppercase opacity-40 mb-4">Legal Policies</p>
+                <h1 class="font-display font-black text-4xl md:text-6xl uppercase tracking-tighter">
+                    Terms of Use
+                </h1>
+            </div>
+        </div>
+
+        <!-- TERMS CONTENT SECTIONS -->
+        <div class="space-y-16 text-xs uppercase tracking-widest leading-relaxed">
+            
+            <!-- SECTION 01 -->
+            <div class="border specimen-border p-8 md:p-12 bg-white/40 space-y-4">
+                <h3 class="font-display font-black text-xl uppercase text-archive-ink">Acceptance of Protocol</h3>
+                <p class="text-archive-ink/80 leading-loose">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum a elit gravida, consequat magna commodo, dapibus urna. Cras leo dui, dictum vitae sem in, lobortis pulvinar nunc. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Integer nec lectus nisl. Vestibulum rhoncus nulla non neque varius sollicitudin. Aliquam tempus odio lacus, nec bibendum mi iaculis ut. Proin odio sem, commodo et ultrices ut, tincidunt ac arcu. Vestibulum tincidunt leo imperdiet volutpat varius. Pellentesque tristique ex vel ante ornare scelerisque. Quisque pharetra lorem eu venenatis convallis.</p>
+            </div>
+
+            <div class="border specimen-border p-8 md:p-12 bg-white/40 space-y-4">
+                <h3 class="font-display font-black text-xl uppercase text-archive-ink">Artifact Decay & Material Variance</h3>
+                <p class="text-archive-ink/80 leading-loose">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum a elit gravida, consequat magna commodo, dapibus urna. Cras leo dui, dictum vitae sem in, lobortis pulvinar nunc. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Integer nec lectus nisl. Vestibulum rhoncus nulla non neque varius sollicitudin. Aliquam tempus odio lacus, nec bibendum mi iaculis ut. Proin odio sem, commodo et ultrices ut, tincidunt ac arcu. Vestibulum tincidunt leo imperdiet volutpat varius. Pellentesque tristique ex vel ante ornare scelerisque. Quisque pharetra lorem eu venenatis convallis.</p>
+            </div>
+
+            <div class="border specimen-border p-8 md:p-12 bg-white/40 space-y-4">
+                <h3 class="font-display font-black text-xl uppercase text-archive-ink">Intellectual Property & Data Rights</h3>
+                <p class="text-archive-ink/80 leading-loose">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum a elit gravida, consequat magna commodo, dapibus urna. Cras leo dui, dictum vitae sem in, lobortis pulvinar nunc. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Integer nec lectus nisl. Vestibulum rhoncus nulla non neque varius sollicitudin. Aliquam tempus odio lacus, nec bibendum mi iaculis ut. Proin odio sem, commodo et ultrices ut, tincidunt ac arcu. Vestibulum tincidunt leo imperdiet volutpat varius. Pellentesque tristique ex vel ante ornare scelerisque. Quisque pharetra lorem eu venenatis convallis.</p>
+            </div>
+
+            <!-- SECTION 05 -->
+            <div class="border specimen-border p-8 md:p-12 bg-archive-ink text-archive-paper space-y-4">
+                <h3 class="font-display font-black text-xl uppercase text-white">Limitation of Liability</h3>
+                <p class="text-archive-paper/80 leading-loose">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum a elit gravida, consequat magna commodo, dapibus urna. Cras leo dui, dictum vitae sem in, lobortis pulvinar nunc. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Integer nec lectus nisl. Vestibulum rhoncus nulla non neque varius sollicitudin. Aliquam tempus odio lacus, nec bibendum mi iaculis ut. Proin odio sem, commodo et ultrices ut, tincidunt ac arcu. Vestibulum tincidunt leo imperdiet volutpat varius. Pellentesque tristique ex vel ante ornare scelerisque. Quisque pharetra lorem eu venenatis convallis.</p>
+            </div>
+
+        </div>
+    </main>
+
+
+    <!-- LOGIC -->
+    <script>
+        class TermsController {
+            constructor() {
+                this.initMobileMenu();
+                this.updateCartCount();
+            }
+
+            initMobileMenu() {
+                const btn = document.getElementById('menu-toggle');
+                const menu = document.getElementById('mobile-menu');
+                let isOpen = false;
+
+                btn.addEventListener('click', () => {
+                    isOpen = !isOpen;
+                    if (isOpen) {
+                        menu.classList.remove('menu-closed');
+                        menu.classList.add('menu-open');
+                        btn.textContent = '[ CLOSE ]';
+                    } else {
+                        menu.classList.remove('menu-open');
+                        menu.classList.add('menu-closed');
+                        btn.textContent = '[ MENU ]';
+                    }
+                });
+            }
+
+            updateCartCount() {
+                const cart = JSON.parse(localStorage.getItem('specimen_cart')) || [];
+                const count = cart.reduce((acc, item) => acc + item.qty, 0);
+                document.querySelectorAll('.js-cart-count').forEach(el => el.textContent = count);
+            }
+        }
+
+        document.addEventListener('DOMContentLoaded', () => {
+            window.TermsApp = new TermsController();
+        });
+    </script>

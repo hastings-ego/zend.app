@@ -1,0 +1,177 @@
+
+    <style>
+        
+        /* Architecture lines */
+        .specimen-border { border: 0.5px solid #E0E0E0; }
+        .dark-border { border: 0.5px solid rgba(245, 245, 245, 0.2); }
+        
+        /* Subtle reveal animations */
+        .reveal { animation: specReveal 1.2s cubic-bezier(0.16, 1, 0.3, 1) forwards; }
+        @keyframes specReveal { 
+            from { opacity: 0; transform: translateY(20px); filter: blur(5px); } 
+            to { opacity: 1; transform: translateY(0); filter: blur(0); } 
+        }
+
+        /* Mobile Menu Transitions */
+        #mobile-menu { transition: transform 0.5s cubic-bezier(0.16, 1, 0.3, 1); }
+        .menu-open { transform: translateY(0%); }
+        .menu-closed { transform: translateY(-100%); }
+
+        ::-webkit-scrollbar { width: 4px; }
+        ::-webkit-scrollbar-thumb { background: #1A1A1A; }
+    </style>
+
+    <!-- MAIN CONTENT - IDENTITY / LOGIN PORTAL -->
+    <main class="flex-grow pt-32 pb-20 max-w-xl mx-auto px-6 w-full reveal flex flex-col justify-center">
+        
+        <!-- HEADER -->
+        <div class="mb-12 text-center">
+            <p class="text-[10px] font-bold uppercase opacity-40 mb-4">Login Page</p>
+            <h1 class="font-display font-black text-4xl md:text-5xl uppercase">
+                Welcome Back
+            </h1>
+            <p class="text-xs uppercase tracking-widest opacity-60 mt-3">Access Your Account, and manage your profile.</p>
+        </div>
+
+        <!-- AUTH BOX -->
+        <div class="border specimen-border p-8 md:p-12 bg-white/40 shadow-sm relative">
+
+            <!-- LOGIN FORM -->
+            <form id="auth-form" class="space-y-8">
+                
+                <!-- Register Only Field (Hidden by default) -->
+                <div id="field-name-container" class="space-y-3 hidden">
+                    <label class="block text-[10px] font-bold uppercase opacity-60">Username</label>
+                    <input type="text" id="auth-name" placeholder="FULL NAME" class="w-full bg-transparent border specimen-border p-4 text-xs font-mono uppercase focus:border-archive-ink outline-none placeholder:opacity-30">
+                </div>
+
+                <div class="space-y-3">
+                    <label class="block text-[10px] font-bold uppercase opacity-60">Email</label>
+                    <input type="email" id="auth-email" placeholder="" required class="w-full bg-transparent border specimen-border p-4 text-xs font-mono uppercase focus:border-archive-ink outline-none placeholder:opacity-30">
+                </div>
+
+                <div class="space-y-3">
+                    <div class="flex justify-between items-center">
+                        <label class="block text-[10px] font-bold uppercase opacity-60">Password</label>
+                        <a href="<!-- #!/engine/node/ page('reset-password') -->"  id="forgot-link" class="text-[9px] uppercase opacity-40 hover:opacity-100 transition-opacity">Recover?</a>
+                    </div>
+                    <input type="password" id="auth-password" placeholder="••••••••••••" required class="w-full bg-transparent border specimen-border p-4 text-xs font-mono uppercase focus:border-archive-ink outline-none placeholder:opacity-30">
+                </div>
+
+                <button type="submit" id="auth-submit-btn" class="w-full bg-archive-ink text-archive-paper py-5 text-xs font-bold uppercase  hover:opacity-90 transition-opacity">
+                    Access Account
+                </button>
+            </form>
+
+            <!-- SUCCESS STATE DISPLAY (Hidden by default) -->
+            <div id="auth-success-state" class="hidden text-center py-10 space-y-6">
+                <p class="text-[10px] font-bold uppercase tracking-[0.4em] text-emerald-700">Access Granted [+]</p>
+                <h3 class="font-display font-black text-2xl uppercase italic">Session Initialized</h3>
+                <p class="text-xs uppercase tracking-widest opacity-60">Welcome back, operative. Redirecting you to command catalog...</p>
+            </div>
+
+        </div>
+
+    </main>
+
+    <!-- AUTHENTICATION LOGIC -->
+    <script>
+        class AuthController {
+            constructor() {
+                this.isRegisterMode = false;
+                this.initTabs();
+                this.initFormSubmit();
+                this.initMobileMenu();
+                this.updateCartCount();
+            }
+
+            initTabs() {
+                const tabLogin = document.getElementById('tab-login');
+                const tabRegister = document.getElementById('tab-register');
+                const nameContainer = document.getElementById('field-name-container');
+                const submitBtn = document.getElementById('auth-submit-btn');
+
+                tabLogin.addEventListener('click', () => {
+                    this.isRegisterMode = false;
+                    tabLogin.classList.remove('opacity-40');
+                    tabLogin.classList.add('border-b-2', 'border-archive-ink');
+                    tabRegister.classList.add('opacity-40');
+                    tabRegister.classList.remove('border-b-2', 'border-archive-ink');
+                    
+                    nameContainer.classList.add('hidden');
+                    document.getElementById('auth-name').removeAttribute('required');
+                    submitBtn.textContent = 'AUTHENTICATE_SESSION';
+                });
+
+                tabRegister.addEventListener('click', () => {
+                    this.isRegisterMode = true;
+                    tabRegister.classList.remove('opacity-40');
+                    tabRegister.classList.add('border-b-2', 'border-archive-ink');
+                    tabLogin.classList.add('opacity-40');
+                    tabLogin.classList.remove('border-b-2', 'border-archive-ink');
+                    
+                    nameContainer.classList.remove('hidden');
+                    document.getElementById('auth-name').setAttribute('required', 'true');
+                    submitBtn.textContent = 'REGISTER_NODE';
+                });
+            }
+
+            initFormSubmit() {
+                const form = document.getElementById('auth-form');
+                const btn = document.getElementById('auth-submit-btn');
+                const successState = document.getElementById('auth-success-state');
+
+                form.addEventListener('submit', (e) => {
+                    e.preventDefault();
+
+                    btn.textContent = this.isRegisterMode ? 'INITIALIZING NEW NODE...' : 'VERIFYING CREDENTIALS...';
+                    btn.classList.add('bg-emerald-900');
+
+                    setTimeout(() => {
+                        form.classList.add('hidden');
+                        successState.classList.remove('hidden');
+
+                        // Save mock session state
+                        localStorage.setItem('specimen_session', JSON.stringify({
+                            active: true,
+                            email: document.getElementById('auth-email').value,
+                            timestamp: new Date().toISOString()
+                        }));
+
+                        setTimeout(() => {
+                            window.location.href = '<!-- #!/engine/node/ page('shop'); -->';
+                        }, 1500);
+                    }, 1200);
+                });
+            }
+
+            initMobileMenu() {
+                const btn = document.getElementById('menu-toggle');
+                const menu = document.getElementById('mobile-menu');
+                let isOpen = false;
+
+                btn.addEventListener('click', () => {
+                    isOpen = !isOpen;
+                    if (isOpen) {
+                        menu.classList.remove('menu-closed');
+                        menu.classList.add('menu-open');
+                        btn.textContent = '[ CLOSE ]';
+                    } else {
+                        menu.classList.remove('menu-open');
+                        menu.classList.add('menu-closed');
+                        btn.textContent = '[ MENU ]';
+                    }
+                });
+            }
+
+            updateCartCount() {
+                const cart = JSON.parse(localStorage.getItem('specimen_cart')) || [];
+                const count = cart.reduce((acc, item) => acc + item.qty, 0);
+                document.querySelectorAll('.js-cart-count').forEach(el => el.textContent = count);
+            }
+        }
+
+        document.addEventListener('DOMContentLoaded', () => {
+            window.AuthApp = new AuthController();
+        });
+    </script>

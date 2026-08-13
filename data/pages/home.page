@@ -1,0 +1,205 @@
+<div class="bg-white pb-6 sm:pb-8 lg:pb-12">
+    <div class="mx-auto max-w-screen-2xl px-4 md:px-8">
+        <section
+            class="relative flex min-h-96 flex-1 shrink-0 items-center justify-center overflow-hidden rounded-lg bg-gray-100 py-16 shadow-lg md:py-20 xl:py-48">
+            <!-- image - start -->
+            <img src="https://themes.varsitymarket.co.za/collection/voide/assets/cover.webp" loading="lazy" alt=""
+                class="absolute inset-0 h-full w-full object-cover object-center" />
+            <!-- image - end -->
+
+            <!-- overlay - start -->
+            <div class="absolute inset-0 mix-blend-multiply"></div>
+            <!-- overlay - end -->
+
+            <!-- text start -->
+            <div class="relative flex flex-col items-center p-4 sm:max-w-xl">
+                <p class="mb-4 text-center text-lg text-indigo-200 sm:text-xl md:mb-8">Very proud to introduce</p>
+
+                <h1 style="text-align:center; margin:auto;"
+                    class="font-display font-black text-white text-6xl md:text-8xl lg:text-[10vw] leading-none uppercase tracking-tighter">
+                    VOIDE
+                </h1>
+
+                <h1 class="mb-8 text-center text-4xl font-bold text-white sm:text-5xl md:mb-12 md:text-6xl">
+                    CLOTHING</h1>
+
+
+                <div class="flex w-full flex-col gap-2.5 sm:flex-row sm:justify-center">
+                </div>
+            </div>
+            <!-- text end -->
+        </section>
+    </div>
+</div>
+
+
+<!-- 3. SAMPLE CATEGORIES -->
+<section class="max-w-7xl mx-auto px-6 md:px-10 py-20 reveal">
+
+    <!-- Brutalist Grid Layout for Categories -->
+    <div class="grid grid-cols-1 md:grid-cols-3 gap-px bg-archive-line specimen-border">
+        <a href="<!-- #!/engine/node/ page('shop') -->"
+            class="bg-archive-paper p-10 md:p-16 hover:bg-archive-ink hover:text-archive-paper transition-colors group flex flex-col justify-between aspect-square md:aspect-auto">
+            <span class="text-[10px] font-bold tracking-[0.3em] opacity-40 group-hover:opacity-60 mb-10">01</span>
+            <div>
+                <h3 class="font-display font-black text-3xl md:text-4xl uppercase mb-2">Apparel</h3>
+                <p class="text-xs opacity-60">Structural base layers & anatomy.</p>
+            </div>
+        </a>
+        <a href="<!-- #!/engine/node/ page('shop') -->"
+            class="bg-archive-paper p-10 md:p-16 hover:bg-archive-ink hover:text-archive-paper transition-colors group flex flex-col justify-between aspect-square md:aspect-auto">
+            <span class="text-[10px] font-bold tracking-[0.3em] opacity-40 group-hover:opacity-60 mb-10">02</span>
+            <div>
+                <h3 class="font-display font-black text-3xl md:text-4xl uppercase mb-2">Outerwear</h3>
+                <p class="text-xs opacity-60">Technical membranes & shells.</p>
+            </div>
+        </a>
+        <a href="<!-- #!/engine/node/ page('shop') -->"
+            class="bg-archive-paper p-10 md:p-16 hover:bg-archive-ink hover:text-archive-paper transition-colors group flex flex-col justify-between aspect-square md:aspect-auto">
+            <span class="text-[10px] font-bold tracking-[0.3em] opacity-40 group-hover:opacity-60 mb-10">03</span>
+            <div>
+                <h3 class="font-display font-black text-3xl md:text-4xl uppercase mb-2">Clothing</h3>
+                <p class="text-xs opacity-60">Utility caps & structural add-ons.</p>
+            </div>
+        </a>
+    </div>
+</section>
+
+<div class="bg-white py-6 sm:py-8 lg:py-12">
+    <div class="mx-auto max-w-screen-2xl px-4 md:px-8">
+        <!-- text - start -->
+        <div class="mb-10 md:mb-16">
+        </div>
+        <!-- text - end -->
+
+        <div class="grid gap-6 sm:grid-cols-2">
+            <!-- product - start -->
+            <a href="<!-- #!/engine/node/ page('shop') -->" style="height:75vh" class="group relative flex items-end overflow-hidden rounded-lg bg-gray-100 p-4 shadow-lg">
+                <img src="https://voide.online/cdn/shop/files/f8504b70-4027-11f1-b002-c581252a7275.png?height=1408&v=1783674106"
+                    loading="lazy" alt="Photo by Fakurian Design"
+                    class="absolute inset-0 h-full w-full object-cover object-center transition duration-200 group-hover:scale-110" />
+
+                <div
+                    class="pointer-events-none absolute inset-0 bg-gradient-to-t from-gray-800 via-transparent to-transparent opacity-50">
+                </div>
+
+                <div class="relative flex flex-col">
+                    <span class="text-gray-300">ART</span>
+                    <span class="text-lg font-semibold text-white lg:text-xl">WE CRAFT IT</span>
+                </div>
+            </a>
+            <!-- product - end -->
+
+            <!-- product - start -->
+            <a href="<!-- #!/engine/node/ page('shop') -->" style="height:75vh" class="group relative flex h-100 items-end overflow-hidden rounded-lg bg-gray-100 p-4 shadow-lg">
+                <img src="https://voide.online/cdn/shop/files/e60b53c1-401c-11f1-9555-b9180039253c.png?height=1536&v=1783674161"
+                    loading="lazy" alt=""
+                    class="absolute inset-0 h-full w-full object-cover object-center transition duration-200 group-hover:scale-110" />
+
+                <div
+                    class="pointer-events-none absolute inset-0 bg-gradient-to-t from-gray-800 via-transparent to-transparent opacity-50">
+                </div>
+
+                <div class="relative flex flex-col">
+                    <span class="text-gray-300">DESIGNS</span>
+                    <span class="text-lg font-semibold text-white lg:text-xl">WE MAKE IT</span>
+                </div>
+            </a>
+            <!-- product - end -->
+        </div>
+    </div>
+</div>
+
+<main class="flex-grow pt-32">
+    <!-- MAIN CONTENT - CATALOG MATRIX -->
+    <div class="flex-grow pt-32 pb-20 max-w-7xl mx-auto px-6 md:px-10 w-full reveal">
+
+        <!-- HEADER & CATALOG TELEMETRY -->
+        <div
+            class="flex flex-col md:flex-row justify-between items-start md:items-end mb-16 pb-8 border-b specimen-border gap-6">
+            <div>
+                <p class="text-[10px] font-bold uppercase opacity-40 mb-4">View Whats In Store</p>
+                <h1 class="font-display font-black text-4xl md:text-6xl uppercase tracking-tighter">
+                    Latest Arrivals
+                </h1>
+            </div>
+        </div>
+
+        <!-- PRODUCT GRID -->
+        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-12" id="catalog-grid">
+
+            <a href="<!-- #!/engine/node/ page('product/3') -->" class="specimen-card flex flex-col group cursor-pointer block">
+                <div class="aspect-[4/5] bg-archive-line mb-6 overflow-hidden relative specimen-border">
+                    <img src="https://mercha.co.za/wp-content/uploads/2025/09/Mocks-_Hoodie-Back-1000x1259.png"
+                        alt="HEATSKRS HOODIE" class="w-full h-full object-cover grayscale js-card-img">
+                    <div
+                        class="absolute inset-0 bg-archive-paper/80 opacity-0 group-hover:opacity-100 transition-opacity flex items-center justify-center">
+                        <span class="text-[15px] font-bold">VIEW PRODUCT</span>
+                    </div>
+                </div>
+                <div class="flex justify-between items-start">
+                    <div>
+                        <h3 class="font-display font-black text-xl uppercase js-card-title">HEATSKRS HOODIE</h3>
+                        <p class="text-[9px] opacity-40 uppercase js-card-category mt-1"></p>
+                    </div>
+                    <span class="font-bold text-sm js-card-price">R 799.00</span>
+                </div>
+            </a>
+
+            <a href="<!-- #!/engine/node/ page('product/2') -->" class="specimen-card flex flex-col group cursor-pointer block">
+                <div class="aspect-[4/5] bg-archive-line mb-6 overflow-hidden relative specimen-border">
+                    <img src="https://mercha.co.za/wp-content/uploads/2025/07/Mocks-94-1000x1259.webp"
+                        alt="Deadlines SLVLSS Tee" class="w-full h-full object-cover grayscale js-card-img">
+                    <div
+                        class="absolute inset-0 bg-archive-paper/80 opacity-0 group-hover:opacity-100 transition-opacity flex items-center justify-center">
+                        <span class="text-[15px] font-bold">VIEW PRODUCT</span>
+                    </div>
+                </div>
+                <div class="flex justify-between items-start">
+                    <div>
+                        <h3 class="font-display font-black text-xl uppercase js-card-title">Deadlines SLVLSS Tee</h3>
+                        <p class="text-[9px] opacity-40 uppercase js-card-category mt-1"></p>
+                    </div>
+                    <span class="font-bold text-sm js-card-price">R 399.99</span>
+                </div>
+            </a>
+
+            <a href="<!-- #!/engine/node/ page('product/1') -->" class="specimen-card flex flex-col group cursor-pointer block">
+                <div class="aspect-[4/5] bg-archive-line mb-6 overflow-hidden relative specimen-border">
+                    <img src="https://mercha.co.za/wp-content/uploads/2025/08/Mocks-134-1000x1259.png"
+                        alt="TBHBG 220GSM OVRSZD TEE" class="w-full h-full object-cover grayscale js-card-img">
+                    <div
+                        class="absolute inset-0 bg-archive-paper/80 opacity-0 group-hover:opacity-100 transition-opacity flex items-center justify-center">
+                        <span class="text-[15px] font-bold">VIEW PRODUCT</span>
+                    </div>
+                </div>
+                <div class="flex justify-between items-start">
+                    <div>
+                        <h3 class="font-display font-black text-xl uppercase js-card-title">TBHBG 220GSM OVRSZD TEE</h3>
+                        <p class="text-[9px] opacity-40 uppercase js-card-category mt-1"></p>
+                    </div>
+                    <span class="font-bold text-sm js-card-price">R 499.99</span>
+                </div>
+            </a>
+        </div>
+
+    </div>
+</main>
+
+<section class="bg-archive-ink text-archive-paper py-32 px-6 md:px-10 mt-20">
+    <div class="max-w-4xl mx-auto text-center reveal">
+        <p class="text-[10px] font-bold uppercase tracking-[0.5em] opacity-50 mb-8">Contact Us</p>
+        <h2 class="font-display font-black text-5xl md:text-7xl uppercase mb-12">Reach Out TO uS</h2>
+        <p class="text-sm opacity-70 mb-12 max-w-lg mx-auto leading-loose">
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum a elit gravida, consequat magna commodo,
+            dapibus urna. Cras leo dui, dictum vitae sem in, lobortis pulvinar nunc. Pellentesque habitant morbi
+            tristique senectus et netus et malesuada fames ac turpis egestas. Integer nec lectus nisl. Vestibulum
+            rhoncus nulla non neque varius sollicitudin. Aliquam tempus odio lacus, nec bibendum mi iaculis ut. Proin
+            odio sem, commodo et ultrices ut, tincidunt ac arcu. Vestibulum tincidunt leo imperdiet volutpat varius.
+            Pellentesque tristique ex vel ante ornare scelerisque. Quisque pharetra lorem eu venenatis convallis.</p>
+        <a href="<!-- #!/engine/node/ page('contact') -->"
+            class="inline-block bg-archive-paper text-archive-ink px-12 py-5 font-display font-black uppercase text-sm hover:scale-105 transition-transform">
+            Contact Store
+        </a>
+    </div>
+</section>

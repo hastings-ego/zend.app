@@ -1,0 +1,232 @@
+
+
+    <!-- MAIN CONTENT - CHECKOUT / TRANSMISSION TERMINAL -->
+    <main class="flex-grow pt-32 pb-20 max-w-7xl mx-auto px-6 md:px-10 w-full reveal">
+        
+        <!-- HEADER -->
+        <div class="flex flex-col md:flex-row justify-between items-start md:items-end mb-16 pb-8 border-b specimen-border gap-6">
+            <div>
+                <p class="text-[10px] font-bold uppercase tracking-[0.5em] opacity-40 mb-4"></p>
+                <h1 class="font-display font-black text-4xl md:text-6xl uppercase">
+                    Checkout 
+                </h1>
+            </div>
+        </div>
+
+        <!-- CHECKOUT GRID -->
+        <div class="grid grid-cols-1 lg:grid-cols-12 gap-12 lg:gap-16 items-start">
+            
+            <!-- CHECKOUT FORM (Left 7 Columns) -->
+            <div class="lg:col-span-7 space-y-12">
+                
+                <form id="checkout-form" class="space-y-12">
+                    
+                    <!-- SECTION 1: DESTINATION COORDINATES -->
+                    <div class="border specimen-border p-8 md:p-10 bg-white/40 space-y-6">
+                        <div class="border-b specimen-border pb-4">
+                            <p class="text-[14px] font-bold opacity-40 tracking-[0.4em]"></p>
+                            <h2 class="font-display font-black text-2xl uppercase tracking-tight">Shipping Address</h2>
+                        </div>
+
+                        <div class="grid grid-cols-1 md:grid-cols-2 gap-6 text-xs uppercase ">
+                            <div class="space-y-2">
+                                <label class="block text-[14px] opacity-60  font-bold">First Name</label>
+                                <input type="text" id="ship-firstname" placeholder="FIRST NAME" required class="w-full bg-transparent border specimen-border p-4 font-mono focus:border-archive-ink outline-none placeholder:opacity-30">
+                            </div>
+                            <div class="space-y-2">
+                                <label class="block text-[14px] opacity-60  font-bold">Last Name</label>
+                                <input type="text" id="ship-lastname" placeholder="LAST NAME" required class="w-full bg-transparent border specimen-border p-4 font-mono focus:border-archive-ink outline-none placeholder:opacity-30">
+                            </div>
+                        </div>
+
+                        <div class="space-y-2 text-xs uppercase ">
+                            <label class="block text-[14px] opacity-60  font-bold">Email</label>
+                            <input type="email" id="ship-email" placeholder="" required class="w-full bg-transparent border specimen-border p-4 font-mono focus:border-archive-ink outline-none placeholder:opacity-30">
+                        </div>
+
+                        <div class="space-y-2 text-xs uppercase ">
+                            <label class="block text-[14px] opacity-60  font-bold">Street Address</label>
+                            <input type="text" id="ship-address" placeholder="STREET ADDRESS" required class="w-full bg-transparent border specimen-border p-4 font-mono focus:border-archive-ink outline-none placeholder:opacity-30">
+                        </div>
+
+                        <div class="grid grid-cols-1 md:grid-cols-3 gap-6 text-xs uppercase ">
+                            <div class="space-y-2">
+                                <label class="block text-[14px] opacity-60  font-bold">City</label>
+                                <input type="text" id="ship-city" placeholder="CITY" required class="w-full bg-transparent border specimen-border p-4 font-mono focus:border-archive-ink outline-none placeholder:opacity-30">
+                            </div>
+                            <div class="space-y-2">
+                                <label class="block text-[14px] opacity-60  font-bold">State / Province</label>
+                                <input type="text" id="ship-state" placeholder="STATE/PROVINCE" required class="w-full bg-transparent border specimen-border p-4 font-mono focus:border-archive-ink outline-none placeholder:opacity-30">
+                            </div>
+                            <div class="space-y-2">
+                                <label class="block text-[14px] opacity-60  font-bold">Postal Code</label>
+                                <input type="text" id="ship-zip" placeholder="POSTAL CODE" required class="w-full bg-transparent border specimen-border p-4 font-mono focus:border-archive-ink outline-none placeholder:opacity-30">
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- SECTION 2: PAYMENT PROTOCOL -->
+                    <div class="border specimen-border p-8 md:p-10 bg-white/40 space-y-6">
+                        <div class="border-b specimen-border pb-4">
+                            <p class="text-[14px] font-bold opacity-40 tracking-[0.4em]"></p>
+                            <h2 class="font-display font-black text-2xl uppercase tracking-tight">Payment Method</h2>
+                        </div>
+
+                        <div class="space-y-4 text-xs uppercase ">
+                            <label class="block text-[14px] opacity-60  font-bold">Select Settlement Method</label>
+                            <div class="grid grid-cols-1 md:grid-cols-3 gap-4">
+                                <label class="border specimen-border p-4 flex items-center space-x-3 cursor-pointer bg-white font-bold hover:border-archive-ink">
+                                    <input type="radio" name="payment-method" value="card" checked class="accent-archive-ink">
+                                    <span>Credit / Yoco Payment Gateway</span>
+                                </label>
+                                
+                            </div>
+                        </div>
+
+                    </div>
+
+                    <button type="submit" id="complete-order-btn" class="w-full bg-archive-ink text-archive-paper py-5 text-xs font-bold uppercase tracking-[0.4em] hover:opacity-90 transition-opacity">
+                    Pay Now
+                    </button>
+                </form>
+
+            </div>
+
+            <!-- ORDER SUMMARY & QUEUED ARTIFACTS (Right 5 Columns) -->
+            <div class="lg:col-span-5 lg:sticky lg:top-32 space-y-8">
+                
+                <div class="border specimen-border p-8 bg-white/40 space-y-6">
+                    <h3 class="font-display font-black text-xl uppercase tracking-tight pb-4">Cart Summary</h3>
+                    
+                    <!-- CART ITEMS PREVIEW LIST -->
+                    <div id="checkout-items-list" class="space-y-4 max-h-80 overflow-y-auto pr-2">
+                        <!-- Populated via JS -->
+                    </div>
+
+                    <!-- FINANCIAL TELEMETRY -->
+                    <div class="space-y-3 text-xs uppercase  border-t border-b specimen-border py-6">
+                        <div class="flex justify-between">
+                            <span class="opacity-50">Subtotal</span>
+                            <span id="checkout-subtotal" class="font-bold">0.00 ZAR</span>
+                        </div>
+                        <div class="flex justify-between">
+                            <span class="opacity-50">Delivery</span>
+                            <span class="font-bold">150.00 ZAR</span>
+                        </div>
+                        <div class="flex justify-between pt-2">
+                            <span class="opacity-50">Taxes </span>
+                            <span class="font-bold">-</span>
+                        </div>
+                    </div>
+
+                    <div class="flex justify-between items-center text-sm font-bold uppercase  pt-2">
+                        <span>Total</span>
+                        <span id="checkout-total" class="text-xl">15.00 ZAR</span>
+                    </div>
+                </div>
+
+            </div>
+
+        </div>
+
+    </main>
+
+    <!-- CHECKOUT LOGIC -->
+    <script>
+        class CheckoutController {
+            constructor() {
+                this.renderOrderSummary();
+                this.initFormSubmit();
+                this.initMobileMenu();
+            }
+
+            getCart() {
+                return JSON.parse(localStorage.getItem('specimen_cart')) || [];
+            }
+
+            renderOrderSummary() {
+                const cart = this.getCart();
+                const listEl = document.getElementById('checkout-items-list');
+                listEl.innerHTML = '';
+
+                // Update nav/header counts
+                const totalCount = cart.reduce((acc, item) => acc + item.qty, 0);
+                document.querySelectorAll('.js-cart-count').forEach(el => el.textContent = totalCount);
+
+                if (cart.length === 0) {
+                    listEl.innerHTML = '<p class="text-[10px] uppercase  opacity-50 py-4">Cart is empty. <a href="<!-- #!/engine/node/ page('shop') -->" class="underline">Add artifacts</a> first.</p>';
+                    document.getElementById('checkout-subtotal').textContent = '0.00 ZAR';
+                    document.getElementById('checkout-total',).textContent = '15.00 ZAR';
+                    return;
+                }
+
+                let subtotal = 0;
+
+                cart.forEach(item => {
+                    const itemEl = document.createElement('div');
+                    itemEl.className = 'flex justify-between items-center text-xs uppercase  border-b specimen-border pb-3';
+                    itemEl.innerHTML = `
+                        <div>
+                            <p class="font-bold">${item.title}</p>
+                            <p class="text-[14px] opacity-50">Size: ${item.size} // Qty: ${item.qty}</p>
+                        </div>
+                        <span class="font-bold">${(item.price * item.qty).toFixed(2)} ZAR</span>
+                    `;
+                    listEl.appendChild(itemEl);
+                    subtotal += item.price * item.qty;
+                });
+
+                document.getElementById('checkout-subtotal').textContent = `${subtotal.toFixed(2)} ZAR`;
+                const freight = 15.00;
+                document.getElementById('checkout-total').textContent = `${(subtotal + freight).toFixed(2)} ZAR`;
+            }
+
+            initFormSubmit() {
+                const form = document.getElementById('checkout-form');
+                const btn = document.getElementById('complete-order-btn');
+
+                form.addEventListener('submit', (e) => {
+                    e.preventDefault();
+                    const cart = this.getCart();
+
+                    if (cart.length === 0) {
+                        alert('Your index queue is empty. Cannot transmit order.');
+                        window.location.href = 'shop.html';
+                        return;
+                    }
+
+                    btn.textContent = 'TRANSMITTING ORDER TO FULFILLMENT...';
+                    btn.classList.add('bg-emerald-950');
+
+                    setTimeout(() => {
+                        alert('Order transmission successful! Specimen archive command has logged your transaction. Return coordinates dispatched.');
+                        localStorage.removeItem('specimen_cart');
+                        window.location.href = 'index.html';
+                    }, 1800);
+                });
+            }
+
+            initMobileMenu() {
+                const btn = document.getElementById('menu-toggle');
+                const menu = document.getElementById('mobile-menu');
+                let isOpen = false;
+
+                btn.addEventListener('click', () => {
+                    isOpen = !isOpen;
+                    if (isOpen) {
+                        menu.classList.remove('menu-closed');
+                        menu.classList.add('menu-open');
+                        btn.textContent = '[ CLOSE ]';
+                    } else {
+                        menu.classList.remove('menu-open');
+                        menu.classList.add('menu-closed');
+                        btn.textContent = '[ MENU ]';
+                    }
+                });
+            }
+        }
+
+        document.addEventListener('DOMContentLoaded', () => {
+            window.CheckoutApp = new CheckoutController();
+        });
+    </script>

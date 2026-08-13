@@ -1,0 +1,39 @@
+<!-- #/engine/navbar/encode/:BEGIN -->
+
+<!-- MOBILE RESPONSIVE NAV -->
+<nav class="fixed top-0 left-0 w-full z-50 mix-blend-difference px-6 md:px-10 py-6 flex justify-between items-center text-archive-paper">
+  <a href="/" class="font-display font-black text-2xl tracking-tighter z-50 relative">
+    <img src="https://themes.varsitymarket.co.za/collection/voide/assets/logo.png" style="width:100%; max-width: 6rem; filter: invert(1);">
+    <h2 class="font-display font-black text-3xl leading-none" style="text-align:center;">VOIDE</h2>
+
+  </a>
+
+  <!-- Desktop Menu -->
+  <div class="hidden md:flex space-x-12 text-[18px] uppercase tracking-[0.6em] font-bold">
+    <a href="/" class="hover:line-through">Home</a>
+    <a href="/shop/" class="hover:line-through">Shop</a>
+    <a href="/contact/" class="hover:line-through">Contact</a>
+    <a href="/login/" class="hover:line-through">Account</a>
+  </div>
+
+
+  <div style="display:flex; ">
+    <img onclick="window.location.href=`/cart/`" style="width: 2.5rem; display: block; opacity: 1; filter: invert(1);" src="https://themes.varsitymarket.co.za/collection/voide/assets/cart.png">
+
+    <!-- Mobile Toggle Button -->
+    <button id="menu-toggle" class="md:hidden z-50 relative text-[10px] uppercase tracking-[0.4em] font-bold focus:outline-none">
+      <img style="padding-left:1rem; width: 3rem; display: block; opacity: 1; filter: invert(1);" src="https://themes.varsitymarket.co.za/collection/voide/assets/menu.png">
+    </button>
+  </div>
+</nav>
+
+<!-- FULLSCREEN MOBILE MENU -->
+<div id="mobile-menu" class="fixed inset-0 bg-archive-ink text-archive-paper z-40 menu-closed flex flex-col justify-center items-center space-y-10">
+  <a href="/home/" class="font-display font-black text-4xl uppercase hover:italic transition-all">Home</a>
+  <a href="/shop/" class="font-display font-black text-4xl uppercase hover:italic transition-all">Shop</a>
+  <a href="/contact/" class="font-display font-black text-4xl uppercase hover:italic transition-all">Contact</a>
+  <a href="/login/" class="font-display font-black text-4xl uppercase hover:italic transition-all">Account</a>
+  <div class="absolute bottom-10 text-[9px] uppercase">Powered By VarsityMarket Technologies</div>
+</div>
+
+<!-- #/engine/navbar/encode/:END; -->

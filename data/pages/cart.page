@@ -1,0 +1,293 @@
+
+    <!-- MAIN CONTENT - INDEX / CART MATRIX WITH SAMPLES -->
+    <main class="flex-grow pt-32 pb-20 max-w-7xl mx-auto px-6 md:px-10 w-full reveal">
+        
+        <!-- HEADER & CART TELEMETRY -->
+        <div class="flex flex-col md:flex-row justify-between items-start md:items-end mb-16 pb-8 border-b specimen-border gap-6">
+            <div>
+                <p class="text-[10px] font-bold uppercase tracking-[0.5em] opacity-40 mb-4"></p>
+                <h1 class="font-display font-black text-4xl md:text-6xl uppercase">
+                    Your Cart
+                </h1>
+            </div>
+            <div class="flex items-center space-x-4">
+                <div class="text-right">
+                    <p id="cart-item-count" class="text-xs uppercase   font-bold"> [ 0 ]</p>
+                </div>
+            </div>
+        </div>
+
+        <!-- CART CONTAINER -->
+        <div id="cart-container" class="grid grid-cols-1 lg:grid-cols-12 gap-12 lg:gap-16 items-start">
+            
+            <!-- CART ITEMS LIST (Left 8 Columns) -->
+            <div class="lg:col-span-8 space-y-6" id="cart-items-list">
+                <!-- Populated via JS -->
+            </div>
+
+            <!-- CART SUMMARY & CHECKOUT (Right 4 Columns) -->
+            <div class="lg:col-span-4 lg:sticky lg:top-32 border specimen-border p-8 bg-white/40 space-y-8" id="cart-summary-box">
+                <div>
+                    <h3 class="font-display font-black text-2xl uppercase mb-6">Checkout Summary</h3>
+                    <div class="space-y-4 text-xs uppercase  py-6">
+                        <div class="flex justify-between">
+                            <span class="opacity-50">Subtotal</span>
+                            <span id="summary-subtotal" class="font-bold">150.00 ZAR</span>
+                        </div>
+                        <div class="flex justify-between">
+                            <span class="opacity-50">Delivery Fee</span>
+                            <span class="font-bold">80.00 ZAR</span>
+                        </div>
+                        <div class="flex justify-between pt-2">
+                            <span class="opacity-50">Taxes</span>
+                            <span class="font-bold">-</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="flex justify-between items-center text-sm font-bold uppercase   pt-2">
+                    <span>Total</span>
+                    <span id="summary-total" class="text-xl">150.00 ZAR</span>
+                </div>
+
+                <!-- CHECKOUT ACTIONS -->
+                <div class="space-y-4 pt-4">
+                    <button id="checkout-btn" class="w-full bg-archive-ink text-archive-paper py-5 text-xs font-bold uppercase tracking-[0.4em] hover:opacity-90 transition-opacity">
+                        Checkout 
+                    </button>
+                    <a href="<!-- #!/engine/node/ page('shop') -->" class="block text-center text-[10px] uppercase   opacity-50 hover:opacity-100 transition-opacity pt-2">
+                        ← Continue Shopping
+                    </a>
+                </div>
+            </div>
+
+        </div>
+
+        <!-- EMPTY CART STATE (Hidden by default via JS) -->
+        <div id="empty-cart-state" class="hidden py-24 text-center space-y-8 border specimen-border bg-white/30">
+            <p class="text-[10px] uppercase opacity-40"></p>
+            <h2 class="font-display font-black text-3xl md:text-4xl uppercase ">
+                Cart is Currently Empty
+            </h2>
+            <p class="text-xs uppercase   opacity-60 max-w-md mx-auto">No products have been assigned to your index. Inject sample specimens below or select items from the catalog.</p>
+            <div class="flex flex-wrap justify-center gap-4">
+                <button onclick="window.CartSampleApp.injectSamples()" class="bg-archive-ink text-archive-paper px-8 py-4 text-[10px] font-bold uppercase tracking-[0.4em] hover:opacity-90 transition-opacity">
+                   
+                </button>
+                <a href="<!-- #!/engine/node/ page('shop') -->" class="border specimen-border px-8 py-4 text-[10px] font-bold uppercase tracking-[0.4em] hover:border-archive-ink transition-opacity">
+                    Continue Shop
+                </a>
+            </div>
+        </div>
+
+    </main>
+
+    <!-- CART ITEM TEMPLATE -->
+    <template id="tpl-cart-item">
+        <div class="border specimen-border p-6 bg-white/40 flex flex-col md:flex-row items-center justify-between gap-6 js-cart-item" data-id="" data-size="">
+            <div class="flex items-center space-x-6 w-full md:w-auto">
+                <div class="w-20 h-24 bg-archive-line overflow-hidden specimen-border flex-shrink-0">
+                    <img src="" alt="" class="w-full h-full object-cover grayscale js-item-img">
+                </div>
+                <div class="space-y-2">
+                    <p class="text-[9px] uppercase   opacity-40">Specification Size: <span class="js-item-size font-bold"></span></p>
+                    <h3 class="font-display font-black text-xl uppercase js-item-title"></h3>
+                    <p class="text-xs font-bold js-item-price"></p>
+                </div>
+            </div>
+
+            <div class="flex items-center justify-between md:justify-end w-full md:w-auto space-x-8">
+                <!-- Quantity Controls -->
+                <div class="flex items-center border specimen-border bg-white">
+                    <button class="px-3 py-2 text-xs font-bold hover:bg-archive-line transition-colors js-qty-decrease">-</button>
+                    <span class="px-4 text-xs font-bold js-item-qty">1</span>
+                    <button class="px-3 py-2 text-xs font-bold hover:bg-archive-line transition-colors js-qty-increase">+</button>
+                </div>
+
+                <!-- Remove Button -->
+                <button class="text-[10px] uppercase   text-red-600 hover:underline js-item-remove">
+                    [ REMOVE ]
+                </button>
+            </div>
+        </div>
+    </template>
+
+
+    <!-- CART WITH SAMPLES LOGIC -->
+    <script>
+        const SAMPLE_PRODUCTS = [
+            {
+                id: 1,
+                title: 'Void Tee',
+                price: 85.00,
+                size: 'M',
+                qty: 1,
+                img: 'https://images.unsplash.com/photo-1521572267360-ee0c2909d518?q=80&w=800'
+            },
+            {
+                id: 3,
+                title: 'Archive Shell',
+                price: 410.00,
+                size: 'L',
+                qty: 1,
+                img: 'https://images.unsplash.com/photo-1551488831-00ddcb6c6bd3?q=80&w=800'
+            },
+            {
+                id: 4,
+                title: 'Specimen Cap',
+                price: 60.00,
+                size: 'OS',
+                qty: 2,
+                img: 'https://images.unsplash.com/photo-1588850561407-ed78c282e89b?q=80&w=800'
+            }
+        ];
+
+        class CartSampleController {
+            constructor() {
+                // Pre-seed sample items into storage if cart is empty on first load
+                if (!localStorage.getItem('specimen_cart')) {
+                    localStorage.setItem('specimen_cart', JSON.stringify(SAMPLE_PRODUCTS));
+                }
+
+                this.renderCart();
+                this.initCheckout();
+                this.initMobileMenu();
+                this.initSampleInjector();
+            }
+
+            getCart() {
+                return JSON.parse(localStorage.getItem('specimen_cart')) || [];
+            }
+
+            saveCart(cart) {
+                localStorage.setItem('specimen_cart', JSON.stringify(cart));
+                this.renderCart();
+            }
+
+            injectSamples() {
+                localStorage.setItem('specimen_cart', JSON.stringify(SAMPLE_PRODUCTS));
+                this.renderCart();
+            }
+
+            initSampleInjector() {
+                const btn = document.getElementById('load-samples-btn');
+                if (btn) {
+                    btn.addEventListener('click', () => {
+                        this.injectSamples();
+                    });
+                }
+            }
+
+            renderCart() {
+                const cart = this.getCart();
+                const listEl = document.getElementById('cart-items-list');
+                const containerEl = document.getElementById('cart-container');
+                const emptyEl = document.getElementById('empty-cart-state');
+                const template = document.getElementById('tpl-cart-item');
+                
+                listEl.innerHTML = '';
+
+                // Update counts across UI
+                const totalCount = cart.reduce((acc, item) => acc + item.qty, 0);
+                document.querySelectorAll('.js-cart-count').forEach(el => el.textContent = totalCount);
+                document.getElementById('cart-item-count').textContent = `Available Products: [ ${totalCount} ]`;
+
+                if (cart.length === 0) {
+                    containerEl.classList.add('hidden');
+                    emptyEl.classList.remove('hidden');
+                    return;
+                }
+
+                containerEl.classList.remove('hidden');
+                emptyEl.classList.add('hidden');
+
+                let subtotal = 0;
+
+                cart.forEach((item, index) => {
+                    const clone = template.content.cloneNode(true);
+                    
+                    const itemBox = clone.querySelector('.js-cart-item');
+                    itemBox.setAttribute('data-index', index);
+
+                    clone.querySelector('.js-item-title').textContent = item.title;
+                    clone.querySelector('.js-item-price').textContent = `${(item.price * item.qty).toFixed(2)}  ZAR`;
+                    clone.querySelector('.js-item-size').textContent = item.size;
+                    clone.querySelector('.js-item-qty').textContent = item.qty;
+                    
+                    const img = clone.querySelector('.js-item-img');
+                    img.src = item.img;
+                    img.alt = item.title;
+
+                    // Quantity Decrement
+                    clone.querySelector('.js-qty-decrease').addEventListener('click', () => {
+                        if (item.qty > 1) {
+                            item.qty -= 1;
+                        } else {
+                            cart.splice(index, 1);
+                        }
+                        this.saveCart(cart);
+                    });
+
+                    // Quantity Increment
+                    clone.querySelector('.js-qty-increase').addEventListener('click', () => {
+                        item.qty += 1;
+                        this.saveCart(cart);
+                    });
+
+                    // Remove item
+                    clone.querySelector('.js-item-remove').addEventListener('click', () => {
+                        cart.splice(index, 1);
+                        this.saveCart(cart);
+                    });
+
+                    subtotal += item.price * item.qty;
+                    listEl.appendChild(clone);
+                });
+
+                // Update summary totals
+                document.getElementById('summary-subtotal').textContent = `${subtotal.toFixed(2)}  ZAR`;
+                const freight = 15.00;
+                document.getElementById('summary-total').textContent = `${(subtotal + freight).toFixed(2)}  ZAR`;
+            }
+
+            initCheckout() {
+                const btn = document.getElementById('checkout-btn');
+                btn.addEventListener('click', () => {
+                    const cart = this.getCart();
+                    if (cart.length === 0) return;
+
+                    btn.textContent = 'TRANSMITTING ORDER...';
+                    btn.classList.add('bg-emerald-900');
+
+                    setTimeout(() => {
+                        alert('Transmission successful! Sample order logged and forwarded to fulfillment terminal.');
+                        localStorage.removeItem('specimen_cart');
+                        window.location.reload();
+                    }, 1500);
+                });
+            }
+
+            initMobileMenu() {
+                const btn = document.getElementById('menu-toggle');
+                const menu = document.getElementById('mobile-menu');
+                let isOpen = false;
+
+                btn.addEventListener('click', () => {
+                    isOpen = !isOpen;
+                    if (isOpen) {
+                        menu.classList.remove('menu-closed');
+                        menu.classList.add('menu-open');
+                        btn.textContent = '[ CLOSE ]';
+                    } else {
+                        menu.classList.remove('menu-open');
+                        menu.classList.add('menu-closed');
+                        btn.textContent = '[ MENU ]';
+                    }
+                });
+            }
+        }
+
+        document.addEventListener('DOMContentLoaded', () => {
+            window.CartSampleApp = new CartSampleController();
+        });
+    </script>
