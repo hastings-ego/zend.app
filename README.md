@@ -1,62 +1,72 @@
-# ZEND.APK 
+# ZEND.APK - Web Hosting & Management System
 
-A minimalist, high-performance e-commerce web application built with PHP and Tailwind CSS. ZEND.APK is a webserver with a clean, modular architecture designed for simplicity and extensibility.
+A powerful, minimalist web hosting control panel and management system built with PHP and Tailwind CSS. ZEND.APK provides an intuitive GUI for managing HTML code, templates, themes, and enables seamless deployment of web projects.
 
-**Version:** 2.1.1.1 | **Author:** HASTINGS-EGO | **Release:** 2026/07/18
+**Version:** 2.1.1.1 | **Author:** HASTINGS-EGO | **Release:** 2026/07/18 | **Owner:** Hastings-Ego
 
 ---
 
 ## 🌟 Features
 
-### Core Features
-- **Product Catalog** - Browse and view clothing products with images, descriptions, and pricing
-- **Shopping Cart** - Add products to cart and manage items
-- **Checkout System** - Complete purchase flow with form validation
-- **User Accounts** - User authentication and account management
-- **Product Search** - Search and filter products by category and name
-- **Responsive Design** - Mobile-first design using Tailwind CSS
+### Core Management Features
+- **HTML Code Editor** - Visual and raw code editing interface for managing website content
+- **Template Management** - Create, edit, and organize reusable templates (`.kit` format)
+- **Theme System** - Browse, preview, apply, and customize multiple themes
+- **File Browser** - Intuitive file management for assets, data, and configurations
+- **Live Preview** - Real-time preview of changes before deployment
+- **Responsive Design** - Mobile-first admin interface using Tailwind CSS
 
-### Pages & Routes
-- **Home** (`/`) - Landing page with featured products
-- **Shop** (`/shop/`) - Browse all products
-- **Product Details** (`/product/{id}/`) - Individual product page with full description
-- **Cart** (`/cart/`) - Shopping cart management
-- **Checkout** (`/checkout/`) - Payment and shipping information
-- **User Accounts**
+### Deployment & Hosting Features
+- **One-Click Deployment** - Deploy websites with a single command
+- **Server Management** - Control PHP development server lifecycle
+- **Domain & URL Routing** - Segment-based routing system for flexible URL handling
+- **Multi-Site Support** - Host multiple websites from single installation
+- **Auto-Fallback System** - Graceful degradation with fallback templates and content
+- **Error Logging** - Comprehensive error tracking and debugging tools
+
+### Administration Pages
+- **Dashboard** (`/`) - Home/landing page with hosting overview
+- **Projects/Sites** (`/shop/`) - Browse and manage hosted websites
+- **Project Settings** (`/product/`) - Configure individual project settings
+- **Template Editor** (`/cart/`) - Create and manage templates
+- **Theme Manager** (`/checkout/`) - Browse and apply themes
+- **User Management**
   - Login (`/login/`)
-  - Signup (`/signup/`)
+  - Registration (`/signup/`)
   - Account Dashboard (`/account/`)
-  - Order History (`/account/orders/`)
+  - Project History (`/account/orders/`)
   - Settings (`/account/settings/`)
-- **Collections** (`/collection/`) - Product categories and collections
-- **Informational Pages**
-  - About (`/about/`)
-  - FAQ (`/faq/`)
-  - Contact (`/contact/`)
-  - Privacy Policy (`/privacy-policy/`)
-  - Terms of Use (`/terms-of-use/`)
-  - Search Results (`/search/`)
+- **File Explorer** (`/collection/`) - Browse project files and assets
+- **Documentation & Support**
+  - Getting Started (`/about/`)
+  - Help Center (`/faq/`)
+  - Contact Support (`/contact/`)
+  - API Reference (`/privacy-policy/`)
+  - Terms of Service (`/terms-of-use/`)
+  - Search Docs (`/search/`)
 
 ---
 
 ## 🛠️ Technology Stack
 
 ### Backend
-- **PHP 8.1.2** - Server-side logic and routing
-- **cURL** - HTTP requests for external APIs
-- **Sessions** - User session management
+- **PHP 8.1.2** - Server-side hosting control logic and routing
+- **cURL** - HTTP requests for inter-server communication
+- **Sessions** - Secure user authentication and account management
+- **File System I/O** - Direct access to hosting files and configurations
 
 ### Frontend
-- **HTML5** - Semantic markup
-- **Tailwind CSS** - Utility-first CSS framework
-- **JavaScript (Vanilla)** - Interactive features
-- **Google Fonts** - Typography (Inter, JetBrains Mono)
+- **HTML5** - Semantic markup for admin interfaces
+- **Tailwind CSS** - Utility-first CSS framework for responsive design
+- **JavaScript (Vanilla)** - Interactive admin controls and live previews
+- **Google Fonts** - Professional typography (Inter, JetBrains Mono)
 
-### Architecture
-- **Custom Router** - URL-based routing system
-- **Template Engine** - `.kit` file format for templating
-- **Compiler System** - HTML compilation with dynamic content
-- **API Integration** - External API connectivity via cURL
+### Hosting & Architecture
+- **PHP Development Server** - Lightweight hosting environment
+- **Custom Router** - Flexible URL-based routing for multi-site hosting
+- **Template Engine** - `.kit` file format for reusable templates
+- **Compiler System** - Dynamic HTML compilation and asset processing
+- **Theme System** - Modular theme architecture with fallback support
 
 ---
 
@@ -64,50 +74,50 @@ A minimalist, high-performance e-commerce web application built with PHP and Tai
 
 ```
 /home/hastings/zend.app/
-├── index.php                 # Application entry point
-├── routes.php               # Main routing logic and page dispatcher
-├── config.php               # Configuration (API keys, site settings)
-├── scripts.php              # Utility functions (routing, page navigation)
-├── compiler.php             # HTML compilation and template processing
-├── forms.php                # Form handling and submission
-├── api.kit                  # API integration layer
-├── engine.kit               # Application engine and HTML parsing
-├── template.kit             # Template system
-├── structure.kit            # Application structure framework
-├── server.sh                # PHP development server launch script
-├── publish.sh               # Deployment/publishing script
+├── index.php                 # Hosting control panel entry point
+├── routes.php               # Main routing engine for multi-site hosting
+├── config.php               # Hosting configuration (API keys, settings)
+├── scripts.php              # Utility functions (routing, navigation, helpers)
+├── compiler.php             # Template compiler and HTML processor
+├── forms.php                # Form handling for deployment and configuration
+├── api.kit                  # Server-to-server API integration
+├── engine.kit               # Core hosting engine
+├── template.kit             # Template management system
+├── structure.kit            # Hosting structure framework
+├── server.sh                # PHP development server launcher
+├── publish.sh               # One-click deployment script
 │
-├── assets/                  # Static assets
-│   ├── script.js           # Frontend JavaScript
-│   └── styles.css          # Additional CSS styles
+├── assets/                  # Admin panel assets
+│   ├── script.js           # Admin interface JavaScript
+│   └── styles.css          # Additional styling
 │
-├── data/                    # Application data
+├── data/                    # Hosting data & configurations
 │   ├── head.php            # HTML head template
 │   ├── body.php            # HTML body wrapper
-│   ├── navbar.card         # Navigation component
-│   ├── theme.structure.kit # Theme structure
-│   ├── theme.template.kit  # Theme templates
-│   ├── log/                # Application logs
-│   │   └── error-file.log  # Error logs
-│   └── pages/              # Page components
-│       ├── home.page       # Home page
-│       ├── shop.page       # Shop/catalog page
-│       ├── product.page    # Product detail page
-│       ├── cart.page       # Shopping cart
-│       ├── checkout.page   # Checkout process
-│       ├── login.page      # Login page
-│       ├── signup.page     # Registration page
-│       ├── account.page    # User dashboard
-│       ├── about.page      # About page
-│       ├── contact.page    # Contact page
-│       ├── faq.page        # FAQ page
-│       ├── 404.page        # 404 error page
+│   ├── navbar.card         # Admin navigation
+│   ├── theme.structure.kit # Theme structure definitions
+│   ├── theme.template.kit  # Theme template system
+│   ├── log/                # Hosting logs
+│   │   └── error-file.log  # System error logs
+│   └── pages/              # Admin interface pages
+│       ├── home.page       # Hosting dashboard
+│       ├── shop.page       # Projects/sites manager
+│       ├── product.page    # Project configuration
+│       ├── cart.page       # Template editor
+│       ├── checkout.page   # Deployment interface
+│       ├── login.page      # Authentication
+│       ├── signup.page     # Account registration
+│       ├── account.page    # User account panel
+│       ├── about.page      # Documentation
+│       ├── contact.page    # Support contact
+│       ├── faq.page        # Help center
+│       ├── 404.page        # Error page
 │       ├── privacy-policy.page
 │       ├── terms-of-use.page
-│       └── ...             # Additional pages
+│       └── ...             # Additional admin pages
 │
-├── autofill.json           # Autofill configuration
-├── sample.txt              # Sample data
+├── autofill.json           # Auto-configuration data
+├── sample.txt              # Sample templates
 └── .git/                   # Version control
 
 ```
@@ -119,11 +129,11 @@ A minimalist, high-performance e-commerce web application built with PHP and Tai
 ### Prerequisites
 - PHP 8.1+ with CLI support
 - Bash shell
-- curl (for HTTP requests)
+- curl (for inter-server communication)
 
 ### Installation
 
-1. **Clone or navigate to the project:**
+1. **Clone or navigate to the hosting control panel:**
    ```bash
    cd /home/hastings/zend.app
    ```
@@ -133,7 +143,7 @@ A minimalist, high-performance e-commerce web application built with PHP and Tai
    php --version
    ```
 
-3. **Start the development server:**
+3. **Start the hosting control panel:**
    ```bash
    bash server.sh
    ```
@@ -143,7 +153,7 @@ A minimalist, high-performance e-commerce web application built with PHP and Tai
    php -S localhost:8089
    ```
 
-4. **Access the application:**
+4. **Access the control panel:**
    Open your browser and navigate to:
    ```
    http://localhost:8089
@@ -151,137 +161,152 @@ A minimalist, high-performance e-commerce web application built with PHP and Tai
 
 ### Configuration
 
-Edit `config.php` to customize:
-- **API Endpoint:** `__SYSTEM_API__` - Backend API URL
-- **API Key:** `__SYSTEM_API_KEYS__` - Authentication token
-- **Store Index:** `__STORE_INDEX__` - Store identifier
-- **Site Title:** `__SITE_TITLE__` - Site name (currently "REDUES")
-- **Currency:** `__SYSTEM_CURRENCY__` - Currency symbol (currently "R")
-- **External Resources:** JavaScript and theme CDN URLs
+Edit `config.php` to customize hosting settings:
+- **Hosting API Endpoint:** `__SYSTEM_API__` - Backend hosting API
+- **Server Key:** `__SYSTEM_API_KEYS__` - Server authentication token
+- **Store Index:** `__STORE_INDEX__` - Hosting account identifier
+- **Panel Title:** `__SITE_TITLE__` - Control panel name
+- **Currency:** `__SYSTEM_CURRENCY__` - For hosting billing
+- **External Resources:** CDN URLs for admin interface components
 
 ---
 
 ## 🔄 How It Works
 
 ### Routing System
-The application uses a **segment-based router** that parses the URL path:
+The hosting control panel uses a **segment-based router** to organize admin interfaces:
 
 ```php
-// URL: /shop/product-name/2/
-routes(1) // Returns "shop"
-routes(2) // Returns "product-name"
-routes(3) // Returns "2"
+// URL: /projects/website-name/settings/
+routes(1) // Returns "projects"
+routes(2) // Returns "website-name"
+routes(3) // Returns "settings"
 ```
 
 **Route Mapping:**
-- Empty URL (`/`) → Home page
-- `/product/{id}/` → Product detail page
-- `/shop/` → Product catalog
-- `/account/` → User dashboard with sub-routes
-  - `/account/orders/` → Order history
-  - `/account/settings/` → Account settings
-- Query string override: `/?page=shop` → Forces shop page
+- Empty URL (`/`) → Hosting dashboard
+- `/projects/` → Manage hosted websites
+- `/projects/{name}/` → Configure specific project
+- `/themes/` → Browse and apply themes
+- `/templates/` → Create and manage templates
+- `/account/` → User account with sub-routes
+  - `/account/deployments/` → Deployment history
+  - `/account/settings/` → Account configuration
+- Query string override: `/?page=projects` → Forces projects page
 
-### Page Loading Flow
+### Admin Panel Flow
 
-1. **Request arrives** at `index.php`
-2. **Router (routes.php)** determines the page based on URL segments
-3. **Page resolver** maps segments to page components in `/data/pages/`
-4. **Compiler** processes `.kit` template files
-5. **API calls** fetch product and user data
-6. **HTML** is rendered with Tailwind CSS styling
-7. **JavaScript** adds interactivity
+1. **User connects** to control panel at `localhost:8089`
+2. **Router (routes.php)** determines the admin page
+3. **Page resolver** loads admin interface from `/data/pages/`
+4. **Compiler** processes template files (`.kit` format)
+5. **Content retrieves** from hosted project files
+6. **Admin interface** renders with Tailwind CSS
+7. **JavaScript interactions** enable live editing and deployment
 
-### Template System
+### Template & Theme System
 
-The app uses `.kit` file format for templating:
+Templates use `.kit` file format for flexible content management:
 
 ```php
-// Template definition
-$product_template = "
+// Template definition for reusable components
+$template = "
 { 
     id: (#item_id), 
     title: '(#item_name)', 
-    price: (#item_price),
-    category: '(#item_category)',
-    gallery: ['(#item_image)']
+    content: '(#item_content)',
+    theme: '(#theme_name)',
+    files: ['(#item_files)']
 }
 ";
 
-// Template variables that get replaced
-$product_input = ['(#item_id)', '(#item_name)', '(#item_description)'];
+// Template variables for replacement
+$variables = ['(#item_id)', '(#item_name)', '(#item_content)'];
 ```
 
-### API Integration
+### Deployment Process
 
-The app integrates with a Varsity Market API:
-- **Endpoint:** `http://beta-embedded.varsitymarket.co.za/store-access/`
-- **Authentication:** API key in `config.php`
-- **Features:** Product fetching, category management, order processing
+1. **User configures** website in admin panel
+2. **System compiles** all templates and themes
+3. **Assets collected** and prepared for deployment
+4. **One-click publish** deploys to hosting server
+5. **Error handling** logs issues and rolls back if needed
+6. **Live website** immediately available
 
-Fallback data is provided when API is unavailable:
-- Default products (Classic Denim Jacket, Leather Tote, Sweater, etc.)
-- Sample categories (Women, Men, Accessories, Shoes, Watches)
+### Multi-Site Hosting
+
+ZEND.APK supports managing multiple websites:
+- Each site has its own configuration
+- Shared theme library across all sites
+- Independent error logs per site
+- Unified admin interface for all projects
 
 ---
 
 ## 📋 Key Functions
 
 ### `routes($section)`
-Extracts URL segments for routing.
+Extracts URL segments for admin panel routing.
 
 **Example:**
 ```php
-// URL: /shop/women/category/
-$page = routes(1);      // "shop"
-$filter = routes(2);    // "women"
-$sort = routes(3);      // "category"
+// URL: /projects/mysite/settings/
+$section = routes(1);     // "projects"
+$project = routes(2);     // "mysite"
+$action = routes(3);      // "settings"
 ```
 
 ### `page($page, $data = false)`
-Generates navigation URLs dynamically.
+Generates navigation URLs within the admin panel.
 
 ```php
-page('shop');           // Returns: /?page=shop
-page('product', 123);   // Returns: /?page=product&data=123
+page('projects');         // Returns: /?page=projects
+page('project', 'mysite'); // Returns: /?page=project&data=mysite
 ```
 
 ### `sendFormData($endpoint, $formData)`
-Sends form submissions to external API via cURL.
+Sends hosting configurations and deployment commands to backend server via cURL.
 
 **Features:**
-- POST request with URL-encoded data
-- JSON response parsing
-- Error handling for cURL and JSON errors
-- 30-second timeout
+- POST request with URL-encoded configuration data
+- JSON response parsing for deployment status
+- Error handling for connection and parsing issues
+- 30-second timeout for deployment operations
 
 ### `analytics()`
-Loads the Varsity Market analytics tracking script.
+Tracks hosting control panel usage and deployments.
+
+**Example:**
+```php
+analytics(); // Logs admin panel session
+```
 
 ---
 
-## 🎨 Design System
+## 🎨 Control Panel Design
 
-### Colors (Archive Palette)
-- **Paper:** `#F5F5F5` (Light background)
-- **Ink:** `#1A1A1A` (Dark text)
-- **Line:** `#E0E0E0` (Borders)
+### Color Scheme
+- **Paper (Background):** `#F5F5F5` - Clean admin interface background
+- **Ink (Text):** `#1A1A1A` - High contrast for readability
+- **Line (Borders):** `#E0E0E0` - Subtle visual separation
 
 ### Typography
-- **Display Font:** Inter (weights: 200, 900)
-- **Code Font:** JetBrains Mono (weights: 300, 700)
+- **Display Font:** Inter (weights: 200, 900) - For headings and UI
+- **Code Font:** JetBrains Mono (weights: 300, 700) - For code editors and snippets
 
-### Components
-- **Product Cards** - Hover animations with image scale and info reveal
-- **Navigation** - Minimalist top menu with cart icon
-- **Mobile Menu** - Responsive menu with smooth transitions
-- **Product Grid** - Responsive grid layout (1 col mobile, 2+ desktop)
+### Admin Interface Components
+- **Project Cards** - Hover effects with project details and quick actions
+- **Admin Navigation** - Clean menu with current section highlighting
+- **Mobile Menu** - Responsive navigation for tablet and mobile admin access
+- **Project Grid** - Responsive layout for managing multiple websites
+- **Template Editor** - Code editor with syntax highlighting
+- **Theme Previewer** - Live preview of theme changes
 
 ---
 
 ## 📝 Development Notes
 
-### Adding New Pages
+### Adding New Admin Pages
 
 1. Create a new file in `/data/pages/{pagename}.page`
 2. Add route in `routes.php`:
@@ -290,30 +315,55 @@ Loads the Varsity Market analytics tracking script.
        $page = 'pagename';
    }
    ```
-3. Include the page template in the rendering flow
+3. Include the page in the rendering flow
 
-### Customizing Products
+### Creating Custom Themes
 
-Edit product templates in `/data/theme.template.kit`:
-```php
-public function return_shop($state = "products") {
-    // Modify $product_template to change product display
-}
-```
+1. Create theme structure in `/data/theme.structure.kit`
+2. Define templates in `/data/theme.template.kit`
+3. Use `.kit` format for reusable components:
+   ```php
+   public function return_site_theme($state = "themes") {
+       $theme_template = '
+           <div class="theme-preview">
+               <h3>(#theme_name)</h3>
+               <p>(#theme_description)</p>
+           </div>
+       ';
+       return $state === 'themes' ? $theme_template : ['(#theme_id)', '(#theme_name)'];
+   }
+   ```
 
-### Error Logging
+### Managing Projects
 
-Errors are logged to `/data/log/error-file.log`. Check this file for debugging.
+Edit project configurations in `config.php` and extend with dynamic project management in `/data/pages/projects.page`.
 
-### API Fallback
+### Error Logging & Debugging
 
-If the external API is unavailable, the application automatically uses fallback product data defined in `api.kit`. This ensures the application remains functional even without API connectivity.
+All errors are logged to `/data/log/error-file.log`. Monitor this file for:
+- Deployment failures
+- Template compilation errors
+- Authentication issues
+- File system access problems
+
+### Fallback & Recovery
+
+The system uses fallback templates when primary templates fail, ensuring continuous hosting availability even during errors.
 
 ---
 
 ## 🔧 Deployment
 
-### Using the Deployment Script
+### Using One-Click Deployment
+
+From the admin control panel:
+1. Select project to deploy
+2. Review configuration and theme
+3. Click "Deploy" button
+4. Monitor deployment progress
+5. Access live website upon completion
+
+### Using Deployment Script
 
 ```bash
 bash publish.sh
@@ -321,65 +371,78 @@ bash publish.sh
 
 This script:
 1. Verifies PHP installation
-2. Checks the application directory
-3. Confirms the port is available
-4. Starts the PHP server
-5. Logs output to `php_server.log`
+2. Checks hosting directory integrity
+3. Confirms required ports are available
+4. Starts the hosting control panel
+5. Logs operations to `php_server.log`
 
-### Manual Deployment
+### Manual Hosting Panel Start
 
 ```bash
 php -S 0.0.0.0:8089
 ```
 
+Access the hosting control panel from any machine on your network.
+
 ---
 
 ## 🐛 Troubleshooting
 
-### Server won't start
+### Control Panel won't start
 - Check if PHP is installed: `php --version`
 - Verify port 8089 is not in use: `lsof -i :8089`
-- Check error log: `cat data/log/error-file.log`
+- Check system error log: `cat data/log/error-file.log`
 
-### API connection fails
-- Verify `config.php` API settings
-- Check network connectivity to `beta-embedded.varsitymarket.co.za`
-- App falls back to local product data automatically
+### Deployment fails
+- Verify all required template files exist
+- Check project configuration in `config.php`
+- Review deployment log in `/data/log/error-file.log`
+- Ensure file permissions allow write access
 
-### Pages not loading
+### Themes not applying
+- Verify theme files exist in `/data/`
+- Check theme syntax in `.kit` files
+- Use fallback theme if primary theme fails
+- Review theme compiler errors in log
+
+### Admin pages not loading
 - Check URL routing in `routes.php`
 - Verify page files exist in `/data/pages/`
+- Clear browser cache and reload
 - Check PHP error log for parsing errors
 
-### Styling issues
-- Ensure Tailwind CSS CDN is accessible
-- Check browser console for JavaScript errors
-- Verify styles.css is linked correctly
+### File editor not saving
+- Ensure `/data/pages/` directory is writable
+- Check disk space availability
+- Verify file permissions (755 or 777)
+- Review file system error logs
 
 ---
 
-## 📞 Support & Contribution
+## 📞 Support & Information
 
 **Current Version:** 2.1.1.1  
 **Last Updated:** 2026/07/18  
-**Developed by:** LEVIDOC AGENCY  
-**Proprietary:** VARSITYMARKET_TECHNOLOGIES
+**Owner:** Hastings-Ego  
+**Developed by:** HASTINGS-EGO
 
 ---
 
 ## 📄 License
 
-This project is proprietary software developed for VARSITYMARKET_TECHNOLOGIES. All rights reserved.
+This project is proprietary web hosting software owned by **Hastings-Ego**. All rights reserved. Unauthorized copying or distribution is prohibited.
 
 ---
 
-## 🔗 External Resources
+## 🔗 Resources
 
-- **API Documentation:** Varsity Market Store API
-- **Styling:** [Tailwind CSS](https://tailwindcss.com/)
+- **Hosting Documentation:** Control panel guides and API reference
+- **Admin Panel:** [http://localhost:8089](http://localhost:8089)
+- **Styling Framework:** [Tailwind CSS](https://tailwindcss.com/)
 - **Fonts:** [Google Fonts](https://fonts.google.com/)
-- **PHP Docs:** [php.net](https://www.php.net/docs.php)
+- **Server Documentation:** [PHP Official Docs](https://www.php.net/docs.php)
 
 ---
 
-**Ready to launch your VOIDE store!** 🚀
+**ZEND.APK - Web Hosting Made Simple** 🚀  
+*Manage, Deploy, and Host with Ease*
