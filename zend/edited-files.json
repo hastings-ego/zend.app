@@ -1,0 +1,10 @@
+[
+    "body.php",
+    "pages/checkout.page",
+    "head.php",
+    "pages/privacy-policy.page",
+    "pages/error.page",
+    "pages/404.page",
+    "pages/terms-of-use.page",
+    "pages/submit.page"
+]

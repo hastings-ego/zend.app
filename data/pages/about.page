@@ -1,125 +1,170 @@
-
+<main class="policy-section">
+    <div class="container">
         
-        <!-- 1. HERO SECTION -->
-        <section class="max-w-7xl mx-auto px-6 md:px-10 py-10 md:py-20 reveal">
-            <div class="flex flex-col md:flex-row justify-between items-start md:items-end mb-16 gap-10">
-                <h1 style="text-align:center; margin:auto;" class="font-display font-black text-6xl md:text-8xl lg:text-[10vw] leading-none uppercase tracking-tighter">
-                    About Us
-                </h1>
-            </div>
-            <div class="w-full aspect-[21/9] bg-archive-line specimen-border overflow-hidden">
-                <img src="https://voide.online/cdn/shop/files/f8504b70-4027-11f1-b002-c581252a7275.png?height=1408&v=1783674106" alt="Factory Archive" class="w-full h-full object-cover grayscale opacity-90">
-            </div>
-        </section>
+        <!-- Page Header -->
+        <div class="policy-header" style="max-width: 760px;">
+            <h1 class="policy-title">About the Studio</h1>
+            <p class="policy-meta">DROPSTUDIO — Independent streetwear brand & industrial design laboratory.</p>
+        </div>
 
-        <!-- 2. MANIFESTO TEXT -->
-        <section class="max-w-4xl mx-auto px-6 md:px-10 py-20 reveal">
-            <div class="grid grid-cols-1 md:grid-cols-12 gap-10">
-                <div class="md:col-span-8 space-y-12 text-sm leading-loose">
-                    <p class="font-display font-black text-3xl md:text-4xl leading-tight">The new Standard of silent identity</p>
-                    <p class="opacity-70">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum a elit gravida, consequat magna commodo, dapibus urna. Cras leo dui, dictum vitae sem in, lobortis pulvinar nunc. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Integer nec lectus nisl. Vestibulum rhoncus nulla non neque varius sollicitudin. Aliquam tempus odio lacus, nec bibendum mi iaculis ut. Proin odio sem, commodo et ultrices ut, tincidunt ac arcu. Vestibulum tincidunt leo imperdiet volutpat varius. Pellentesque tristique ex vel ante ornare scelerisque. Quisque pharetra lorem eu venenatis convallis.</p>
-                </div>
-            </div>
-        </section>
-
-        <!-- 3. SAMPLE CATEGORIES -->
-        <section class="max-w-7xl mx-auto px-6 md:px-10 py-20 reveal">
+        <div class="policy-grid">
             
-            <!-- Brutalist Grid Layout for Categories -->
-            <div class="grid grid-cols-1 md:grid-cols-3 gap-px bg-archive-line specimen-border">
-                <a href="<!-- #!/engine/node/ page('shop') -->" class="bg-archive-paper p-10 md:p-16 hover:bg-archive-ink hover:text-archive-paper transition-colors group flex flex-col justify-between aspect-square md:aspect-auto">
-                    <span class="text-[10px] font-bold tracking-[0.3em] opacity-40 group-hover:opacity-60 mb-10">01</span>
-                    <div>
-                        <h3 class="font-display font-black text-3xl md:text-4xl uppercase mb-2">Apparel</h3>
-                        <p class="text-xs opacity-60">Structural base layers & anatomy.</p>
-                    </div>
-                </a>
-                <a href="<!-- #!/engine/node/ page('shop') -->" class="bg-archive-paper p-10 md:p-16 hover:bg-archive-ink hover:text-archive-paper transition-colors group flex flex-col justify-between aspect-square md:aspect-auto">
-                    <span class="text-[10px] font-bold tracking-[0.3em] opacity-40 group-hover:opacity-60 mb-10">02</span>
-                    <div>
-                        <h3 class="font-display font-black text-3xl md:text-4xl uppercase mb-2">Outerwear</h3>
-                        <p class="text-xs opacity-60">Technical membranes & shells.</p>
-                    </div>
-                </a>
-                <a href="<!-- #!/engine/node/ page('shop') -->" class="bg-archive-paper p-10 md:p-16 hover:bg-archive-ink hover:text-archive-paper transition-colors group flex flex-col justify-between aspect-square md:aspect-auto">
-                    <span class="text-[10px] font-bold tracking-[0.3em] opacity-40 group-hover:opacity-60 mb-10">03</span>
-                    <div>
-                        <h3 class="font-display font-black text-3xl md:text-4xl uppercase mb-2">Clothing</h3>
-                        <p class="text-xs opacity-60">Utility caps & structural add-ons.</p>
-                    </div>
-                </a>
-            </div>
-        </section>
+            <!-- Sidebar Navigation -->
+            <aside class="card-machined policy-sidebar">
+                <div class="sidebar-title">Studio Index</div>
+                <ul class="sidebar-nav">
+                    <li><a href="#ethos" class="sidebar-link">1. Brand Ethos</a></li>
+                    <li><a href="#construction" class="sidebar-link">2. Construction Specs</a></li>
+                    <li><a href="#drop-model" class="sidebar-link">3. The Drop Model</a></li>
+                    <li><a href="#lab" class="sidebar-link">4. Design Lab</a></li>
+                    <li><a href="#sustainability" class="sidebar-link">5. Ethical Sourcing</a></li>
+                    <li><a href="#collective" class="sidebar-link">6. Core Collective</a></li>
+                </ul>
+            </aside>
 
-        <!-- 4. SAMPLE PRODUCTS -->
-        <section class="max-w-7xl mx-auto px-6 md:px-10 py-20 reveal">
-            <div class="flex justify-between items-end mb-10 border-b specimen-border pb-6">
-                <h2 class="font-display font-black text-4xl uppercase">Sample Products</h2>
-                <a href="<!-- #!/engine/node/ page('home') -->" class="text-[10px] font-bold uppercase tracking-[0.3em] hover:line-through">View All -></a>
-            </div>
-            
-            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
-                <!-- Product 1 -->
-                <a href="<!-- #!/engine/node/ page('shop') -->" class="product-card flex flex-col group cursor-pointer">
-                    <div class="aspect-[4/5] bg-archive-line mb-4 overflow-hidden relative specimen-border">
-                        <img src="https://voide.online/cdn/shop/files/rn-image_picker_lib_temp_5add5d57-49be-4c5b-89f7-b31a47aff9e6.png?v=1783664415&width=832" class="w-full h-full object-cover grayscale">
-                        <div class="absolute inset-0 bg-archive-paper/80 opacity-0 group-hover:opacity-100 transition-opacity flex items-center justify-center">
-                            <span class="text-[10px] font-bold tracking-[0.4em]">VOIDE CLOTHING</span>
-                        </div>
-                    </div>
-                    <div class="info flex justify-between items-start">
-                        
-                    </div>
-                </a>
-
-                <a href="<!-- #!/engine/node/ page('shop') -->" class="product-card flex flex-col group cursor-pointer">
-                    <div class="aspect-[4/5] bg-archive-line mb-4 overflow-hidden relative specimen-border">
-                        <img src="https://voide.online/cdn/shop/files/rn-image_picker_lib_temp_872d65db-cf21-4b57-8a41-6202e4c92f4b.png?v=1783664415&width=3840" class="w-full h-full object-cover grayscale">
-                        <div class="absolute inset-0 bg-archive-paper/80 opacity-0 group-hover:opacity-100 transition-opacity flex items-center justify-center">
-                            <span class="text-[10px] font-bold tracking-[0.4em]">VOIDE CLOTHING</span>
-                        </div>
-                    </div>
-                    <div class="info flex justify-between items-start">
-                        
-                    </div>
-                </a>
-
-                <a href="<!-- #!/engine/node/ page('shop') -->" class="product-card flex flex-col group cursor-pointer">
-                    <div class="aspect-[4/5] bg-archive-line mb-4 overflow-hidden relative specimen-border">
-                        <img src="https://voide.online/cdn/shop/files/rn-image_picker_lib_temp_67b6bf3d-616a-4d4d-a031-26cd6a9c4611.png?v=1783675645&width=832" class="w-full h-full object-cover grayscale">
-                        <div class="absolute inset-0 bg-archive-paper/80 opacity-0 group-hover:opacity-100 transition-opacity flex items-center justify-center">
-                            <span class="text-[10px] font-bold tracking-[0.4em]">VOIDE CLOTHING</span>
-                        </div>
-                    </div>
-                    <div class="info flex justify-between items-start">
-                        
-                    </div>
-                </a>
-
-                <a href="<!-- #!/engine/node/ page('shop') -->" class="product-card flex flex-col group cursor-pointer">
-                    <div class="aspect-[4/5] bg-archive-line mb-4 overflow-hidden relative specimen-border">
-                        <img src="https://voide.online/cdn/shop/files/rn-image_picker_lib_temp_9d3c137c-3f27-4538-a8dc-1edeb335d876.png?v=1783675646&width=832" class="w-full h-full object-cover grayscale">
-                        <div class="absolute inset-0 bg-archive-paper/80 opacity-0 group-hover:opacity-100 transition-opacity flex items-center justify-center">
-                            <span class="text-[10px] font-bold tracking-[0.4em]">VOIDE CLOTHING</span>
-                        </div>
-                    </div>
-                    <div class="info flex justify-between items-start">
-                        
-                    </div>
-                </a>
+            <!-- Main Content Area -->
+            <div class="policy-content">
                 
-            </div>
-        </section>
+                <!-- Section 1: Brand Ethos -->
+                <section id="ethos" class="card-machined policy-card">
+                    <div style="border-radius: var(--radius-sm); overflow: hidden; margin-bottom: 1.5rem; border: 1px solid var(--border-light);">
+                        <img src="https://images.unsplash.com/photo-1509631179647-0177331693ae?auto=format&fit=crop&w=1200&q=80" alt="Studio Workshop Atmosphere" style="width: 100%; height: 280px; object-fit: cover; display: block;">
+                    </div>
+                    <h2 class="section-heading">
+                        <i data-lucide="layers" size="20"></i>
+                        1. Minimalist Utility & Streetwear
+                    </h2>
+                    <p class="policy-text">
+                        Founded on the principle of structural clarity, DROPSTUDIO bridges heavy industrial design with functional streetwear. We discard seasonal bloated inventories in favor of small, highly targeted releases built to withstand daily wear.
+                    </p>
+                    <p class="policy-text">
+                        Every silhouette is developed in-house from the ground up—prioritizing boxy cuts, custom garment dyeing, structural seam work, and zero unnecessary visual clutter.
+                    </p>
+                </section>
 
-        <!-- 5. CALL TO ACTION -->
-        <section class="bg-archive-ink text-archive-paper py-32 px-6 md:px-10 mt-20">
-            <div class="max-w-4xl mx-auto text-center reveal">
-                <p class="text-[10px] font-bold uppercase tracking-[0.5em] opacity-50 mb-8">Contact Us</p>
-                <h2 class="font-display font-black text-5xl md:text-7xl uppercase mb-12 italic">Reach Out TO uS</h2>
-                <p class="text-sm opacity-70 mb-12 max-w-lg mx-auto leading-loose">
-Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum a elit gravida, consequat magna commodo, dapibus urna. Cras leo dui, dictum vitae sem in, lobortis pulvinar nunc. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Integer nec lectus nisl. Vestibulum rhoncus nulla non neque varius sollicitudin. Aliquam tempus odio lacus, nec bibendum mi iaculis ut. Proin odio sem, commodo et ultrices ut, tincidunt ac arcu. Vestibulum tincidunt leo imperdiet volutpat varius. Pellentesque tristique ex vel ante ornare scelerisque. Quisque pharetra lorem eu venenatis convallis.</p>
-                <a href="<!-- #!/engine/node/ page('contact') -->" class="inline-block bg-archive-paper text-archive-ink px-12 py-5 font-display font-black uppercase text-sm hover:scale-105 transition-transform">
-                    Contact Store
-                </a>
+                <!-- Section 2: Construction Specifications -->
+                <section id="construction" class="card-machined policy-card">
+                    <div style="border-radius: var(--radius-sm); overflow: hidden; margin-bottom: 1.5rem; border: 1px solid var(--border-light);">
+                        <img src="https://images.unsplash.com/photo-1558769132-cb1aea458c5e?auto=format&fit=crop&w=1200&q=80" alt="Heavyweight Fabric and Stitching" style="width: 100%; height: 280px; object-fit: cover; display: block;">
+                    </div>
+                    <h2 class="section-heading">
+                        <i data-lucide="cpu" size="20"></i>
+                        2. Precision Garment Engineering
+                    </h2>
+                    <p class="policy-text">
+                        We treat apparel like hardware. Every drop undergoes rigorous testing for GSM weight, stitch density, and wash durability before entering limited production.
+                    </p>
+                    <ul class="policy-list">
+                        <li class="policy-list-item">
+                            <i data-lucide="check-circle-2" size="18"></i>
+                            <span><strong>Heavyweight Textiles:</strong> Custom-knitted 300+ GSM combed cotton for tees and 500+ GSM french terry for fleece.</span>
+                        </li>
+                        <li class="policy-list-item">
+                            <i data-lucide="check-circle-2" size="18"></i>
+                            <span><strong>Reinforced Hardware:</strong> Custom-molded matte metal zippers, reinforced collar ribbing, and double-needle coverstitching.</span>
+                        </li>
+                        <li class="policy-list-item">
+                            <i data-lucide="check-circle-2" size="18"></i>
+                            <span><strong>Pre-Shrunk Processing:</strong> Enzyme-washed finishes to guarantee zero size distortion post-wash.</span>
+                        </li>
+                    </ul>
+                </section>
+
+                <!-- Section 3: The Drop Model -->
+                <section id="drop-model" class="card-machined policy-card">
+                    <h2 class="section-heading">
+                        <i data-lucide="package" size="20"></i>
+                        3. Controlled Release Cadence
+                    </h2>
+                    <p class="policy-text">
+                        Mass production creates unwanted deadstock. We operate strictly on a capped drop model—once a run sells out, it is permanently archived. Restocks only occur for baseline core items, keeping each batch distinct.
+                    </p>
+                    
+                    <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 1rem; margin-top: 1.5rem;">
+                        <div style="background: var(--bg-card-subtle); border: 1px solid var(--border-light); padding: 1rem; border-radius: var(--radius-sm);">
+                            <div style="font-size: 1.5rem; font-weight: 800; color: var(--text-main);">01. Announce</div>
+                            <div style="font-size: 0.75rem; color: var(--text-subtle); margin-top: 0.25rem;">Specs and password release to VIP access list.</div>
+                        </div>
+                        <div style="background: var(--bg-card-subtle); border: 1px solid var(--border-light); padding: 1rem; border-radius: var(--radius-sm);">
+                            <div style="font-size: 1.5rem; font-weight: 800; color: var(--text-main);">02. Launch</div>
+                            <div style="font-size: 0.75rem; color: var(--text-subtle); margin-top: 0.25rem;">Live inventory checkout backed by anti-bot verification.</div>
+                        </div>
+                        <div style="background: var(--bg-card-subtle); border: 1px solid var(--border-light); padding: 1rem; border-radius: var(--radius-sm);">
+                            <div style="font-size: 1.5rem; font-weight: 800; color: var(--text-main);">03. Archive</div>
+                            <div style="font-size: 0.75rem; color: var(--text-subtle); margin-top: 0.25rem;">Immediate dispatch within 24–48 hours; batch unlisted.</div>
+                        </div>
+                    </div>
+                </section>
+
+                <!-- Section 4: Design Lab & Prototyping -->
+                <section id="lab" class="card-machined policy-card">
+                    <div style="border-radius: var(--radius-sm); overflow: hidden; margin-bottom: 1.5rem; border: 1px solid var(--border-light);">
+                        <img src="https://images.unsplash.com/photo-1581092160607-ee22621dd758?auto=format&fit=crop&w=1200&q=80" alt="Prototyping Facility" style="width: 100%; height: 280px; object-fit: cover; display: block;">
+                    </div>
+                    <h2 class="section-heading">
+                        <i data-lucide="pen-tool" size="20"></i>
+                        4. Prototyping & Design Methodology
+                    </h2>
+                    <p class="policy-text">
+                        Our internal studio operates as a full-scale prototyping facility. Every piece begins with 3D CAD pattern drafting, physical sample iteration, and real-world stress testing.
+                    </p>
+                    <p class="policy-text">
+                        We run sample wear tests in urban environments for up to 6 months before committing a design to production, ensuring seams, pocket placements, and closures perform reliably under daily stress.
+                    </p>
+                </section>
+
+                <!-- Section 5: Sourcing & Footprint -->
+                <section id="sustainability" class="card-machined policy-card">
+                    <h2 class="section-heading">
+                        <i data-lucide="shield" size="20"></i>
+                        5. Ethical Sourcing & Footprint
+                    </h2>
+                    <p class="policy-text">
+                        Our supply chain partners strictly adhere to verified labor standards, fair living wages, and non-toxic dye processes. By producing exclusively in capped batches, we eliminate surplus fabric waste and lower overall energy expenditure compared to traditional fast-fashion operations.
+                    </p>
+                </section>
+
+                <!-- Section 6: Collective & Studio HQ -->
+                <section id="collective" class="card-machined policy-card">
+                    <h2 class="section-heading">
+                        <i data-lucide="users" size="20"></i>
+                        6. Core Collective & Studio HQ
+                    </h2>
+                    <p class="policy-text" style="margin-bottom: 1.5rem;">
+                        DROPSTUDIO is driven by an independent collective of pattern makers, industrial designers, and textile engineers based out of our centralized studio.
+                    </p>
+
+                    <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 1rem; margin-bottom: 2rem;">
+                        <!-- Member 1 -->
+                        <div style="background: var(--bg-card-subtle); border: 1px solid var(--border-light); border-radius: var(--radius-sm); padding: 1.25rem; text-align: center;">
+                            <img src="https://images.unsplash.com/photo-1534528741775-53994a69daeb?auto=format&fit=crop&w=300&q=80" alt="Lead Designer" style="width: 80px; height: 80px; border-radius: var(--radius-sm); object-fit: cover; margin: 0 auto 0.75rem auto; border: 1px solid var(--border-medium); display: block;">
+                            <div style="font-size: 0.9375rem; font-weight: 700; color: var(--text-main);">Kaelen Vance</div>
+                            <div style="font-size: 0.75rem; font-weight: 600; color: var(--text-muted); text-transform: uppercase; margin-top: 0.25rem;">Head of Design</div>
+                        </div>
+
+                        <!-- Member 2 -->
+                        <div style="background: var(--bg-card-subtle); border: 1px solid var(--border-light); border-radius: var(--radius-sm); padding: 1.25rem; text-align: center;">
+                            <img src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?auto=format&fit=crop&w=300&q=80" alt="Garment Engineer" style="width: 80px; height: 80px; border-radius: var(--radius-sm); object-fit: cover; margin: 0 auto 0.75rem auto; border: 1px solid var(--border-medium); display: block;">
+                            <div style="font-size: 0.9375rem; font-weight: 700; color: var(--text-main);">Marcus Thorne</div>
+                            <div style="font-size: 0.75rem; font-weight: 600; color: var(--text-muted); text-transform: uppercase; margin-top: 0.25rem;">Textile Engineer</div>
+                        </div>
+                    </div>
+
+                    <!-- Studio Contact / Direct Inquiries -->
+                    <div style="background: var(--bg-card-subtle); border: 1px solid var(--border-light); border-radius: var(--radius-sm); padding: 1.25rem; display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: 1rem;">
+                        <div>
+                            <div style="font-size: 0.875rem; font-weight: 700; color: var(--text-main);">Studio Inquiries & Press</div>
+                            <div style="font-size: 0.75rem; color: var(--text-subtle);">Direct lines open for press kits, wholesale, and brand collaborations.</div>
+                        </div>
+                        <a href="mailto:studio@dropstudio.co.za" class="btn btn-acid" style="padding: 0.5rem 1rem; font-size: 0.75rem;">
+                            <i data-lucide="mail" size="14"></i> Contact Studio
+                        </a>
+                    </div>
+                </section>
+
             </div>
-        </section>
+
+        </div>
+
+    </div>
+</main>

@@ -11,7 +11,7 @@
         <!-- Headline & Status -->
         <div class="space-y-2">
             <h2 class="font-display font-black text-3xl md:text-4xl leading-tight">
-                Submission Failed
+                Submission Faileder
             </h2>
             <p class="text-sm font-mono text-rose-400">
                 Form Could Not Be Sent
@@ -24,4 +24,4 @@
         </p>
 
     </div>
-</section>
+</section> 

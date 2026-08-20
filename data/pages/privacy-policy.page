@@ -1,75 +1,121 @@
-    <!-- MAIN CONTENT - DATA POLICY -->
-    <main class="flex-grow pt-32 pb-20 max-w-5xl mx-auto px-6 md:px-10 w-full reveal">
-
-        <!-- HEADER -->
-        <header class="mb-16 border-b specimen-border pb-10">
-            <p class="text-[20px] font-bold uppercase opacity-40 mb-4">Policies</p>
-            <h1 class="font-display font-black text-5xl md:text-7xl uppercase leading-none tracking-tighter">
-                Privacy Policy
-            </h1>
-            <p class="mt-6 text-xs leading-loose opacity-70 max-w-md">
-                Directives governing the extraction, storage, and utilization of subject data within the terminal environment. Last revised: July 2026.
-            </p>
-        </header>
-
-        <!-- POLICY SECTIONS -->
-        <div class="space-y-16">
-
-            <section class="grid grid-cols-1 md:grid-cols-12 gap-6 md:gap-12 border-b specimen-border pb-16">
-                <div class="md:col-span-4">
-                    <h2 class="text-[10px] font-bold uppercase opacity-50 sticky top-32">01. Subheading </h2>
-                </div>
-                <div class="md:col-span-8 text-sm leading-relaxed space-y-6 opacity-80">
-                    <p>                    
-                        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum a elit gravida, consequat magna commodo, dapibus urna. Cras leo dui, dictum vitae sem in, lobortis pulvinar nunc. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Integer nec lectus nisl. Vestibulum rhoncus nulla non neque varius sollicitudin. Aliquam tempus odio lacus, nec bibendum mi iaculis ut. Proin odio sem, commodo et ultrices ut, tincidunt ac arcu. Vestibulum tincidunt leo imperdiet volutpat varius. Pellentesque tristique ex vel ante ornare scelerisque. Quisque pharetra lorem eu venenatis convallis.
-                    </p>
-                </div>
-            </section>
-
-            <section class="grid grid-cols-1 md:grid-cols-12 gap-6 md:gap-12 border-b specimen-border pb-16">
-                <div class="md:col-span-4">
-                    <h2 class="text-[10px] font-bold uppercase opacity-50 sticky top-32">01. Subheading </h2>
-                </div>
-                <div class="md:col-span-8 text-sm leading-relaxed space-y-6 opacity-80">
-                    <p>                    
-                        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum a elit gravida, consequat magna commodo, dapibus urna. Cras leo dui, dictum vitae sem in, lobortis pulvinar nunc. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Integer nec lectus nisl. Vestibulum rhoncus nulla non neque varius sollicitudin. Aliquam tempus odio lacus, nec bibendum mi iaculis ut. Proin odio sem, commodo et ultrices ut, tincidunt ac arcu. Vestibulum tincidunt leo imperdiet volutpat varius. Pellentesque tristique ex vel ante ornare scelerisque. Quisque pharetra lorem eu venenatis convallis.
-                    </p>
-                </div>
-            </section>
+    <!-- Main Content Area -->   
+    <main class="policy-section">
+        <div class="container">
             
-            <section class="grid grid-cols-1 md:grid-cols-12 gap-6 md:gap-12 border-b specimen-border pb-16">
-                <div class="md:col-span-4">
-                    <h2 class="text-[10px] font-bold uppercase opacity-50 sticky top-32">01. Subheading </h2>
-                </div>
-                <div class="md:col-span-8 text-sm leading-relaxed space-y-6 opacity-80">
-                    <p>                    
-                        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum a elit gravida, consequat magna commodo, dapibus urna. Cras leo dui, dictum vitae sem in, lobortis pulvinar nunc. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Integer nec lectus nisl. Vestibulum rhoncus nulla non neque varius sollicitudin. Aliquam tempus odio lacus, nec bibendum mi iaculis ut. Proin odio sem, commodo et ultrices ut, tincidunt ac arcu. Vestibulum tincidunt leo imperdiet volutpat varius. Pellentesque tristique ex vel ante ornare scelerisque. Quisque pharetra lorem eu venenatis convallis.
-                    </p>
-                </div>
-            </section>
-            
-            <section class="grid grid-cols-1 md:grid-cols-12 gap-6 md:gap-12 border-b specimen-border pb-16">
-                <div class="md:col-span-4">
-                    <h2 class="text-[10px] font-bold uppercase opacity-50 sticky top-32">01. Subheading </h2>
-                </div>
-                <div class="md:col-span-8 text-sm leading-relaxed space-y-6 opacity-80">
-                    <p>                    
-                        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum a elit gravida, consequat magna commodo, dapibus urna. Cras leo dui, dictum vitae sem in, lobortis pulvinar nunc. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Integer nec lectus nisl. Vestibulum rhoncus nulla non neque varius sollicitudin. Aliquam tempus odio lacus, nec bibendum mi iaculis ut. Proin odio sem, commodo et ultrices ut, tincidunt ac arcu. Vestibulum tincidunt leo imperdiet volutpat varius. Pellentesque tristique ex vel ante ornare scelerisque. Quisque pharetra lorem eu venenatis convallis.
-                    </p>
-                </div>
-            </section>
-            
-            <section class="grid grid-cols-1 md:grid-cols-12 gap-6 md:gap-12 border-b specimen-border pb-16">
-                <div class="md:col-span-4">
-                    <h2 class="text-[10px] font-bold uppercase opacity-50 sticky top-32">01. Subheading </h2>
-                </div>
-                <div class="md:col-span-8 text-sm leading-relaxed space-y-6 opacity-80">
-                    <p>                    
-                        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum a elit gravida, consequat magna commodo, dapibus urna. Cras leo dui, dictum vitae sem in, lobortis pulvinar nunc. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Integer nec lectus nisl. Vestibulum rhoncus nulla non neque varius sollicitudin. Aliquam tempus odio lacus, nec bibendum mi iaculis ut. Proin odio sem, commodo et ultrices ut, tincidunt ac arcu. Vestibulum tincidunt leo imperdiet volutpat varius. Pellentesque tristique ex vel ante ornare scelerisque. Quisque pharetra lorem eu venenatis convallis.
-                    </p>
-                </div>
-            </section>
+            <div class="policy-header">
+                <h1 class="policy-title">Privacy Policy</h1>
+                <p class="policy-meta">Last Updated: August 2026 — Applicable to all orders, drops, and digital platforms.</p>
+            </div>
 
+            <div class="policy-grid">
+                
+                <!-- Quick Navigation Sidebar -->
+                <aside class="card-machined policy-sidebar">
+                    <div class="sidebar-title">Contents</div>
+                    <ul class="sidebar-nav">
+                        <li><a href="#collection" class="sidebar-link">1. Data Collection</a></li>
+                        <li><a href="#usage" class="sidebar-link">2. How We Use Data</a></li>
+                        <li><a href="#payments" class="sidebar-link">3. Payments & Orders</a></li>
+                        <li><a href="#cookies" class="sidebar-link">4. Tracking Tech</a></li>
+                        <li><a href="#rights" class="sidebar-link">5. Your Rights</a></li>
+                    </ul>
+                </aside>
+
+                <!-- Document Body -->
+                <div class="policy-content">
+                    
+                    <!-- Section 1 -->
+                    <section id="collection" class="card-machined policy-card">
+                        <h2 class="section-heading">
+                            <i data-lucide="database" size="20"></i>
+                            1. Information We Collect
+                        </h2>
+                        <p class="policy-text">
+                            When you participate in limited-edition drops, place an order, or subscribe to early access release lists, we collect information necessary to process your transactions and verify account authenticity.
+                        </p>
+                        <ul class="policy-list">
+                            <li class="policy-list-item">
+                                <i data-lucide="check-circle-2" size="18"></i>
+                                <span><strong>Personal Identifiers:</strong> Name, shipping address, billing details, email address, and contact numbers.</span>
+                            </li>
+                            <li class="policy-list-item">
+                                <i data-lucide="check-circle-2" size="18"></i>
+                                <span><strong>Order Metrics:</strong> Transaction histories, size selections, and drop event reservation tokens.</span>
+                            </li>
+                            <li class="policy-list-item">
+                                <i data-lucide="check-circle-2" size="18"></i>
+                                <span><strong>Device Telemetry:</strong> IP addresses, browser hardware configurations, and device identifiers used during drop traffic surges to prevent automated bot activity.</span>
+                            </li>
+                        </ul>
+                    </section>
+
+                    <!-- Section 2 -->
+                    <section id="usage" class="card-machined policy-card">
+                        <h2 class="section-heading">
+                            <i data-lucide="sliders" size="20"></i>
+                            2. How Your Data Is Utilized
+                        </h2>
+                        <p class="policy-text">
+                            We use collected data solely to execute store orders, manage stock allocations fairly, and safeguard drops from automated purchasing tools.
+                        </p>
+                        <ul class="policy-list">
+                            <li class="policy-list-item">
+                                <i data-lucide="check-circle-2" size="18"></i>
+                                <span>Order execution, tracking fulfillment, and dispatch notifications.</span>
+                            </li>
+                            <li class="policy-list-item">
+                                <i data-lucide="check-circle-2" size="18"></i>
+                                <span>Verification of fair-purchase policies on capped drop releases.</span>
+                            </li>
+                            <li class="policy-list-item">
+                                <i data-lucide="check-circle-2" size="18"></i>
+                                <span>Direct notification for restocks, drop passwords, and collection previews (only if opted-in).</span>
+                            </li>
+                        </ul>
+                    </section>
+
+                    <!-- Section 3 -->
+                    <section id="payments" class="card-machined policy-card">
+                        <h2 class="section-heading">
+                            <i data-lucide="shield-check" size="20"></i>
+                            3. Payment Security & Processing
+                        </h2>
+                        <p class="policy-text">
+                            All transaction processing is handled via encrypted PCI-DSS compliant payment gateways. We do not store raw credit card credentials, CVVs, or full payment numbers on our local servers.
+                        </p>
+                        <p class="policy-text">
+                            Your payment details pass directly to payment service providers for instant authorization and fraud assessment.
+                        </p>
+                    </section>
+
+                    <!-- Section 4 -->
+                    <section id="cookies" class="card-machined policy-card">
+                        <h2 class="section-heading">
+                            <i data-lucide="cpu" size="20"></i>
+                            4. Cookies & Session Storage
+                        </h2>
+                        <p class="policy-text">
+                            We utilize essential local cookies and storage parameters to sustain active shopping cart states, remember reserved stock countdowns, and keep user sessions authenticated during drops. You can manage cookie preferences via your browser settings at any time.
+                        </p>
+                    </section>
+
+                    <!-- Section 5 -->
+                    <section id="rights" class="card-machined policy-card">
+                        <h2 class="section-heading">
+                            <i data-lucide="user-check" size="20"></i>
+                            5. Data Rights & Inquiries
+                        </h2>
+                        <p class="policy-text">
+                            You maintain complete oversight of your stored personal information. You have the right to request a full dump of your recorded data or ask for account deletion at any point.
+                        </p>
+                        <p class="policy-text">
+                            For privacy inquiries or data requests, contact our compliance team at <strong>privacy@PVTT.internal</strong>.
+                        </p>
+                    </section>
+
+                </div>
+
+            </div>
 
         </div>
     </main>

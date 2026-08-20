@@ -1,143 +1,189 @@
-
-    <!-- MAIN CONTENT - COMMS PROTOCOL (CONTACT US) -->
-    <main class="flex-grow pt-32 pb-20 max-w-7xl mx-auto px-6 md:px-10 w-full reveal">
+<main class="policy-section">
+    <div class="container">
         
-        <!-- HEADER & TELEMETRY -->
-        <div class="flex flex-col md:flex-row justify-between items-start md:items-end mb-16 pb-8 border-b specimen-border gap-6">
-            <div>
-                <p class="font-bold uppercase opacity-40 mb-4">Feel Free To Contact Us</p>
-                <h1 class="font-display font-black text-4xl md:text-6xl uppercase tracking-tighter">
-                    Contact Us
-                </h1>
+        <!-- Page Header -->
+        <div class="policy-header" style="max-width: 760px;">
+            <div style="font-size: 0.75rem; font-weight: 700; text-transform: uppercase; letter-spacing: 0.08em; color: var(--text-subtle); margin-bottom: 0.5rem; display: flex; align-items: center; gap: 0.5rem;">
+                <a href="#" style="color: var(--text-subtle); text-decoration: none;">Index</a> 
+                <i data-lucide="chevron-right" size="12"></i> 
+                <span style="color: var(--text-main);">Contact</span>
             </div>
+            <h1 class="policy-title" style="font-size: clamp(2rem, 4vw, 3.25rem); margin-bottom: 0.75rem;">
+                Contact the Studio
+            </h1>
+            <p class="policy-meta">
+                DROPSTUDIO Direct Communications Queue — Order Status, Wholesale, Press & Technical Support.
+            </p>
         </div>
 
-        <!-- CONTACT GRID LAYOUT -->
-        <div class="grid grid-cols-1 lg:grid-cols-12 gap-12 lg:gap-16 items-start">
+        <div class="policy-grid">
             
-            <!-- TRANSMISSION FORM (Left 7 Columns) -->
-            <div class="lg:col-span-7 border specimen-border p-8 md:p-12 bg-white/40">
-                <div class="mb-10 pb-6 border-b specimen-border">
-                    <h2 class="font-display font-black text-2xl uppercase tracking-tight">Here To Support </h2>
-                    <p class="text-[10px] uppercase opacity-40 mt-2">Please fill in the information and we will get back to you.</p>
+            <!-- Sidebar / Direct Department Channels -->
+            <aside class="card-machined policy-sidebar" style="display: flex; flex-direction: column; gap: 1.5rem;">
+                
+                <!-- SLA Guarantee Badge -->
+                <div style="background: var(--bg-card-subtle); border: 1px solid var(--border-medium); padding: 1rem; border-radius: var(--radius-sm);">
+                    <div style="display: flex; align-items: center; gap: 0.5rem; margin-bottom: 0.5rem;">
+                        <span style="width: 8px; height: 8px; border-radius: 50%; background: #22c55e; display: inline-block; box-shadow: 0 0 8px #22c55e;"></span>
+                        <span style="font-size: 0.75rem; font-weight: 800; text-transform: uppercase; letter-spacing: 0.05em; color: var(--text-main);">
+                            Queue Active
+                        </span>
+                    </div>
+                    <div style="font-size: 0.8125rem; font-weight: 700; color: var(--text-main);">
+                        Response SLA: &lt; 24 Hours
+                    </div>
+                    <div style="font-size: 0.75rem; color: var(--text-subtle); margin-top: 0.25rem;">
+                        Communications monitored Mon–Fri, 08:00–17:00 SAST.
+                    </div>
                 </div>
 
-                <form name="contact-form" action="/forms.php" method="POST" id="contact-form" class="space-y-8">
-                    <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
-                        <div class="space-y-3">
-                            <label class="block text-[10px] font-bold uppercase tracking-[0.3em] opacity-60">Name</label>
-                            <input type="text" name="name" id="contact-name" placeholder="FULL NAME" required class="w-full bg-transparent border specimen-border p-4 text-xs font-mono uppercase focus:border-archive-ink outline-none placeholder:opacity-30">
-                        </div>
-                        <div class="space-y-3">
-                            <label class="block text-[10px] font-bold uppercase tracking-[0.3em] opacity-60">Email</label>
-                            <input type="email" name="email" id="contact-email" placeholder="EMAIL ADDRESS" required class="w-full bg-transparent border specimen-border p-4 text-xs font-mono uppercase focus:border-archive-ink outline-none placeholder:opacity-30">
-                        </div>
-                    </div>
-
-                    <div class="space-y-3">
-                            <label class="block text-[10px] font-bold uppercase tracking-[0.3em] opacity-60">Phone</label>
-                            <input type="phone" name="phone" id="contact-phone" placeholder="PHONE NUMBER" required class="w-full bg-transparent border specimen-border p-4 text-xs font-mono uppercase focus:border-archive-ink outline-none placeholder:opacity-30">
-                        </div>
-
-                    <div class="space-y-3">
-                        <label class="block text-[10px] font-bold uppercase tracking-[0.3em] opacity-60">Message</label>
-                        <textarea name="message" id="contact-message" rows="5" placeholder="ENTER MESSAGE DETAILS..." required class="w-full bg-transparent border specimen-border p-4 text-xs font-mono uppercase focus:border-archive-ink outline-none placeholder:opacity-30 resize-none"></textarea>
-                    </div>
-
-                    <button type="submit" id="submit-btn" class="w-full bg-archive-ink text-archive-paper py-5 text-xs font-bold uppercase tracking-[0.4em] hover:opacity-90 transition-opacity">
-                        Submit Form
-                    </button>
-                </form>
-            </div>
-
-            <!-- STATION TELEMETRY & DIRECT COORDS (Right 5 Columns) -->
-            <div class="lg:col-span-5 space-y-8 lg:sticky lg:top-32">
-                
-                <div class="border specimen-border p-8 bg-archive-ink text-archive-paper space-y-4">
-                    <h3 class="font-display font-black text-xl uppercase tracking-tight pb-4">Reach Us Directly</h3>
+                <!-- Department Channels -->
+                <div>
+                    <div class="sidebar-title" style="margin-bottom: 0.75rem;">Direct Channels</div>
                     
-                    <div class="space-y-4 text-xs uppercase">
-                        <div>
-                            <p class="text-[9px] opacity-40 uppercase mb-1">Support Email</p>
-                            <p class="font-bold">support@voide.com</p>
+                    <div style="display: flex; flex-direction: column; gap: 0.875rem;">
+                        <!-- Channel 1 -->
+                        <div style="padding: 0.875rem; border: 1px solid var(--border-light); border-radius: var(--radius-sm); background: var(--bg-card);">
+                            <div style="font-size: 0.75rem; font-weight: 700; text-transform: uppercase; color: var(--text-subtle);">Order Fulfillment & Dispatch</div>
+                            <a href="mailto:orders@dropstudio.co.za" style="font-size: 0.875rem; font-weight: 700; color: var(--text-main); text-decoration: none; display: flex; align-items: center; gap: 0.375rem; margin-top: 0.25rem;">
+                                <i data-lucide="mail" size="14"></i> orders@dropstudio.co.za
+                            </a>
                         </div>
-                        <div>
-                            <p class="text-[9px] opacity-40 uppercase mb-1">Phone NUmbers</p>
-                            <p class="font-bold">+27 (0) 11 000 4040</p>
+
+                        <!-- Channel 2 -->
+                        <div style="padding: 0.875rem; border: 1px solid var(--border-light); border-radius: var(--radius-sm); background: var(--bg-card);">
+                            <div style="font-size: 0.75rem; font-weight: 700; text-transform: uppercase; color: var(--text-subtle);">Wholesale & Retail Stockists</div>
+                            <a href="mailto:wholesale@dropstudio.co.za" style="font-size: 0.875rem; font-weight: 700; color: var(--text-main); text-decoration: none; display: flex; align-items: center; gap: 0.375rem; margin-top: 0.25rem;">
+                                <i data-lucide="briefcase" size="14"></i> wholesale@dropstudio.co.za
+                            </a>
                         </div>
-                        <div>
-                            <p class="text-[9px] opacity-40 uppercase mb-1">Location</p>
-                            <p class="font-bold">45 Bougainvillea, Montana Tuine, Gauteng, ZA</p>
+
+                        <!-- Channel 3 -->
+                        <div style="padding: 0.875rem; border: 1px solid var(--border-light); border-radius: var(--radius-sm); background: var(--bg-card);">
+                            <div style="font-size: 0.75rem; font-weight: 700; text-transform: uppercase; color: var(--text-subtle);">Press & Editorial Kits</div>
+                            <a href="mailto:press@dropstudio.co.za" style="font-size: 0.875rem; font-weight: 700; color: var(--text-main); text-decoration: none; display: flex; align-items: center; gap: 0.375rem; margin-top: 0.25rem;">
+                                <i data-lucide="camera" size="14"></i> press@dropstudio.co.za
+                            </a>
                         </div>
                     </div>
+                </div>
+
+                <!-- Studio HQ Physical Location -->
+                <div>
+                    <div class="sidebar-title" style="margin-bottom: 0.75rem;">Design Lab HQ</div>
+                    <div style="font-size: 0.8125rem; line-height: 1.5; color: var(--text-subtle);">
+                        <strong style="color: var(--text-main);">DROPSTUDIO Laboratory</strong><br>
+                        Building 04, Tech Park Precinct<br>
+                        Midrand, Johannesburg, 1685<br>
+                        South Africa
+                    </div>
+                </div>
+
+            </aside>
+
+            <!-- Main Contact Form -->
+            <div class="policy-content">
+                <div class="card-machined policy-card" style="padding: 2rem;">
+                    
+                    <h2 class="section-heading" style="margin-bottom: 0.5rem;">
+                        <i data-lucide="send" size="20"></i> Submit Transmission
+                    </h2>
+                    <p class="policy-text" style="margin-bottom: 2rem; font-size: 0.875rem;">
+                        Fill out the specification fields below. Inquiries regarding active drops will require a valid order reference number.
+                    </p>
+
+                    <form action="#" method="POST" style="display: flex; flex-direction: column; gap: 1.25rem;">
+                        
+                        <!-- Name & Email Row -->
+                        <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(240px, 1fr)); gap: 1.25rem;">
+                            <div style="display: flex; flex-direction: column; gap: 0.5rem;">
+                                <label style="font-size: 0.75rem; font-weight: 700; text-transform: uppercase; color: var(--text-main);">
+                                    Full Name <span style="color: var(--acid);">*</span>
+                                </label>
+                                <input type="text" placeholder="e.g. Alex Mercer" required style="padding: 0.75rem 1rem; border: 1px solid var(--border-medium); border-radius: var(--radius-sm); background: var(--bg-card); color: var(--text-main); font-size: 0.875rem; outline: none;">
+                            </div>
+
+                            <div style="display: flex; flex-direction: column; gap: 0.5rem;">
+                                <label style="font-size: 0.75rem; font-weight: 700; text-transform: uppercase; color: var(--text-main);">
+                                    Email Address <span style="color: var(--acid);">*</span>
+                                </label>
+                                <input type="email" placeholder="alex@domain.com" required style="padding: 0.75rem 1rem; border: 1px solid var(--border-medium); border-radius: var(--radius-sm); background: var(--bg-card); color: var(--text-main); font-size: 0.875rem; outline: none;">
+                            </div>
+                        </div>
+
+                        <!-- Department Selection & Order Ref Row -->
+                        <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(240px, 1fr)); gap: 1.25rem;">
+                            <div style="display: flex; flex-direction: column; gap: 0.5rem;">
+                                <label style="font-size: 0.75rem; font-weight: 700; text-transform: uppercase; color: var(--text-main);">
+                                    Department Target <span style="color: var(--acid);">*</span>
+                                </label>
+                                <select required style="padding: 0.75rem 1rem; border: 1px solid var(--border-medium); border-radius: var(--radius-sm); background: var(--bg-card); color: var(--text-main); font-size: 0.875rem; outline: none;">
+                                    <option value="" disabled selected>Select Department...</option>
+                                    <option value="orders">Orders & Delivery Tracking</option>
+                                    <option value="returns">Returns, Exchanges & Sizing</option>
+                                    <option value="wholesale">B2B Wholesale / Retail</option>
+                                    <option value="press">Press & Brand Collaborations</option>
+                                    <option value="general">General Studio Inquiry</option>
+                                </select>
+                            </div>
+
+                            <div style="display: flex; flex-direction: column; gap: 0.5rem;">
+                                <label style="font-size: 0.75rem; font-weight: 700; text-transform: uppercase; color: var(--text-main);">
+                                    Order Ref # <span style="font-size: 0.6875rem; color: var(--text-subtle); text-transform: none;">(Optional)</span>
+                                </label>
+                                <input type="text" placeholder="#DS-XXXX" style="padding: 0.75rem 1rem; border: 1px solid var(--border-medium); border-radius: var(--radius-sm); background: var(--bg-card); color: var(--text-main); font-size: 0.875rem; outline: none; font-family: monospace;">
+                            </div>
+                        </div>
+
+                        <!-- Subject -->
+                        <div style="display: flex; flex-direction: column; gap: 0.5rem;">
+                            <label style="font-size: 0.75rem; font-weight: 700; text-transform: uppercase; color: var(--text-main);">
+                                Subject <span style="color: var(--acid);">*</span>
+                            </label>
+                            <input type="text" placeholder="Brief summary of your inquiry..." required style="padding: 0.75rem 1rem; border: 1px solid var(--border-medium); border-radius: var(--radius-sm); background: var(--bg-card); color: var(--text-main); font-size: 0.875rem; outline: none;">
+                        </div>
+
+                        <!-- Message Field -->
+                        <div style="display: flex; flex-direction: column; gap: 0.5rem;">
+                            <label style="font-size: 0.75rem; font-weight: 700; text-transform: uppercase; color: var(--text-main);">
+                                Message Details <span style="color: var(--acid);">*</span>
+                            </label>
+                            <textarea rows="6" placeholder="Provide full specifics regarding your inquiry..." required style="padding: 0.75rem 1rem; border: 1px solid var(--border-medium); border-radius: var(--radius-sm); background: var(--bg-card); color: var(--text-main); font-size: 0.875rem; outline: none; resize: vertical; font-family: inherit;"></textarea>
+                        </div>
+
+                        <!-- Privacy Consent Checkbox -->
+                        <div style="display: flex; align-items: flex-start; gap: 0.75rem; margin-top: 0.5rem;">
+                            <input type="checkbox" id="privacy-consent" required style="margin-top: 0.25rem; accent-color: var(--text-main);">
+                            <label for="privacy-consent" style="font-size: 0.75rem; color: var(--text-subtle); line-height: 1.4;">
+                                I consent to DROPSTUDIO processing my contact details for the explicit purpose of responding to this inquiry in accordance with POPIA / Privacy Guidelines.
+                            </label>
+                        </div>
+
+                        <!-- Submit Button -->
+                        <div style="margin-top: 1rem;">
+                            <button type="submit" class="btn btn-acid" style="padding: 0.875rem 2rem; font-size: 0.875rem; width: 100%; justify-content: center;">
+                                <i data-lucide="send" size="16"></i> Dispatch Message to Queue
+                            </button>
+                        </div>
+
+                    </form>
+
+                </div>
+
+                <!-- Studio FAQ Quick Access Banner -->
+                <div class="card-machined policy-card" style="padding: 1.5rem; margin-top: 1.5rem; display: flex; align-items: center; justify-content: space-between; flex-wrap: wrap; gap: 1rem; background: var(--bg-card-subtle);">
+                    <div>
+                        <div style="font-size: 0.875rem; font-weight: 700; color: var(--text-main);">Looking for immediate sizing or shipping details?</div>
+                        <div style="font-size: 0.75rem; color: var(--text-subtle);">Check our pre-formatted documentation for instant answers.</div>
+                    </div>
+                    <a href="#" class="btn btn-outline" style="padding: 0.5rem 1rem; font-size: 0.75rem;">
+                        <i data-lucide="file-text" size="14"></i> Read Policy Specs
+                    </a>
                 </div>
 
             </div>
 
         </div>
 
-    </main>
-
-
-    <!-- CONTACT LOGIC -->
-    <script>
-        class ContactController {
-            constructor() {
-                this.initForm();
-                this.initMobileMenu();
-                this.updateCartCount();
-            }
-
-            initForm() {
-                const form = document.getElementById('contact-form');
-                const btn = document.getElementById('submit-btn');
-
-                form.addEventListener('submit', (e) => {
-                    e.preventDefault();
-                    
-                    btn.textContent = 'TRANSMITTING PACKET...';
-                    btn.classList.add('bg-emerald-900');
-
-                    setTimeout(() => {
-                        btn.textContent = 'TRANSMISSION RECEIVED [+]';
-                        alert('Transmission logged successfully. Archival command will respond via secure return coordinates shortly.');
-                        form.submit();
-                        
-                        setTimeout(() => {
-                            btn.textContent = 'TRANSMIT_MESSAGE';
-                            btn.classList.remove('bg-emerald-900');
-                        }, 2000);
-                    }, 1200);
-                });
-            }
-
-            initMobileMenu() {
-                const btn = document.getElementById('menu-toggle');
-                const menu = document.getElementById('mobile-menu');
-                let isOpen = false;
-
-                btn.addEventListener('click', () => {
-                    isOpen = !isOpen;
-                    if (isOpen) {
-                        menu.classList.remove('menu-closed');
-                        menu.classList.add('menu-open');
-                        btn.textContent = '[ CLOSE ]';
-                    } else {
-                        menu.classList.remove('menu-open');
-                        menu.classList.add('menu-closed');
-                        btn.textContent = '[ MENU ]';
-                    }
-                });
-            }
-
-            updateCartCount() {
-                const cart = JSON.parse(localStorage.getItem('specimen_cart')) || [];
-                const count = cart.reduce((acc, item) => acc + item.qty, 0);
-                document.querySelectorAll('.js-cart-count').forEach(el => el.textContent = count);
-            }
-        }
-
-        document.addEventListener('DOMContentLoaded', () => {
-            window.ContactApp = new ContactController();
-        });
-    </script>
+    </div>
+</main>

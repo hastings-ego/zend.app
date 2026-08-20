@@ -93,6 +93,32 @@ button {
     font-weight: 700;
 }
 
+.nav-link {
+    display: block;
+    padding: 10px 12px;
+    border: 1px solid var(--border);
+    background: #0a0a0a;
+    margin-top: 8px;
+}
+
+.nav-link.active {
+    background: var(--panel-2);
+}
+
+.side-title {
+    margin-top: 20px;
+}
+
+.compact {
+    min-height: auto;
+    padding: 14px;
+    place-items: start;
+}
+
+.menu-nav {
+    display: grid;
+}
+
 .notice {
     margin-top: 14px;
     padding: 12px 14px;
@@ -131,9 +157,7 @@ button {
 }
 
 .workspace {
-    display: grid;
-    grid-template-columns: 280px 1fr;
-    gap: 16px;
+    display: block;
     padding: 16px;
 }
 
@@ -171,6 +195,107 @@ button {
 .content {
     display: grid;
     gap: 16px;
+}
+
+.editor-shell-vscode {
+    display: grid;
+    grid-template-columns: 300px minmax(0, 1fr);
+    gap: 16px;
+    min-height: calc(100vh - 136px);
+}
+
+.vscode-sidebar {
+    border: 1px solid var(--border);
+    background: var(--panel);
+    padding: 14px;
+    display: grid;
+    gap: 18px;
+    align-content: start;
+}
+
+.sidebar-group {
+    display: grid;
+    gap: 10px;
+}
+
+.sidebar-title {
+    color: var(--muted);
+    text-transform: uppercase;
+    letter-spacing: 0.14em;
+    font-size: 11px;
+}
+
+.vscode-tree {
+    margin-top: 0;
+}
+
+.vscode-main {
+    border: 1px solid var(--border);
+    background: var(--panel);
+    display: grid;
+    grid-template-rows: auto auto 1fr auto;
+    gap: 14px;
+    padding: 14px;
+    min-width: 0;
+}
+
+.editor-topbar {
+    display: flex;
+    justify-content: space-between;
+    gap: 16px;
+    align-items: center;
+    border-bottom: 1px solid var(--border);
+    padding-bottom: 12px;
+}
+
+.editor-topbar-left {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    min-width: 0;
+}
+
+.editor-filechip {
+    padding: 6px 10px;
+    border: 1px solid var(--border);
+    background: #0a0a0a;
+    font-size: 11px;
+    color: var(--muted);
+    text-transform: uppercase;
+    letter-spacing: 0.12em;
+    flex: none;
+}
+
+.editor-title {
+    font-size: 16px;
+    font-weight: 700;
+    word-break: break-word;
+}
+
+.editor-subtitle {
+    color: var(--muted);
+    font-size: 12px;
+    margin-top: 2px;
+}
+
+.editor-topbar-right {
+    display: flex;
+    gap: 8px;
+    flex-wrap: wrap;
+}
+
+.status-pill {
+    padding: 6px 10px;
+    border: 1px solid var(--border);
+    background: #0a0a0a;
+    color: var(--muted);
+    font-size: 11px;
+    text-transform: uppercase;
+    letter-spacing: 0.12em;
+}
+
+.editor-pane {
+    min-height: 0;
 }
 
 .panel {
@@ -218,9 +343,50 @@ button {
     resize: vertical;
 }
 
+.editor-frame {
+    display: grid;
+    grid-template-columns: auto minmax(0, 1fr);
+    border: 1px solid var(--border);
+    background: #020202;
+    min-height: 560px;
+    overflow: hidden;
+}
+
+.line-gutter {
+    padding: 16px 10px 16px 14px;
+    border-right: 1px solid var(--border);
+    background: #060606;
+    color: #666;
+    font-family: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", monospace;
+    font-size: 13px;
+    line-height: 1.55;
+    text-align: right;
+    user-select: none;
+}
+
+.line-gutter span {
+    display: block;
+}
+
+.vscode-editor {
+    min-height: 560px;
+    border: 0;
+    outline: 0;
+    background: transparent;
+    white-space: pre;
+    word-break: normal;
+    tab-size: 4;
+    padding-left: 16px;
+    padding-right: 16px;
+}
+
 .editor-shell {
     display: grid;
     gap: 12px;
+}
+
+.readonly {
+    opacity: 0.92;
 }
 
 .editor-meta, .editor-actions {
@@ -232,6 +398,104 @@ button {
     font-size: 12px;
 }
 
+.vscode-actions {
+    padding-top: 0;
+}
+
+.home-grid {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 16px;
+}
+
+.home-card {
+    display: grid;
+    gap: 8px;
+    padding: 18px;
+    border: 1px solid var(--border);
+    background: #0a0a0a;
+}
+
+.home-card:hover {
+    border-color: var(--border);
+    background: var(--panel-2);
+}
+
+.home-card-title {
+    font-size: 16px;
+    font-weight: 700;
+}
+
+.home-card-copy {
+    color: var(--muted);
+    line-height: 1.5;
+}
+
+.debug-form {
+    margin-bottom: 16px;
+}
+
+.debug-row {
+    display: flex;
+    gap: 12px;
+    align-items: end;
+}
+
+.debug-field {
+    flex: 1;
+    display: grid;
+    gap: 8px;
+}
+
+.debug-field label {
+    color: var(--muted);
+    font-size: 12px;
+    text-transform: uppercase;
+    letter-spacing: 0.12em;
+}
+
+.debug-split {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 16px;
+}
+
+.debug-pane {
+    display: grid;
+    gap: 10px;
+}
+
+.debug-input {
+    min-height: 320px;
+}
+
+.terminal {
+    margin: 0;
+    min-height: 420px;
+    padding: 16px;
+    overflow: auto;
+    border: 1px solid var(--border);
+    background: #010101;
+    color: #d9d9d9;
+    white-space: pre-wrap;
+    font-family: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", monospace;
+    font-size: 13px;
+    line-height: 1.55;
+}
+
+.vscode-terminal {
+    border-top: 1px solid var(--border);
+    padding-top: 14px;
+}
+
+.complete-form {
+    margin-top: 12px;
+}
+
+.ghost-block {
+    width: 100%;
+}
+
 .empty-state {
     min-height: 220px;
     display: grid;
@@ -240,12 +504,50 @@ button {
     color: var(--muted);
 }
 
+.vscode-empty {
+    background: #020202;
+    min-height: 560px;
+}
+
 @media (max-width: 900px) {
     .workspace {
-        grid-template-columns: 1fr;
+        padding: 12px;
     }
 
     .sidebar {
         min-height: auto;
+    }
+
+    .home-grid,
+    .debug-split {
+        grid-template-columns: 1fr;
+    }
+
+    .debug-row {
+        flex-direction: column;
+        align-items: stretch;
+    }
+
+    .editor-shell-vscode {
+        grid-template-columns: 1fr;
+        min-height: auto;
+    }
+
+    .vscode-main,
+    .vscode-sidebar {
+        min-height: auto;
+    }
+
+    .editor-frame {
+        grid-template-columns: 1fr;
+    }
+
+    .line-gutter {
+        display: none;
+    }
+
+    .vscode-editor,
+    .vscode-empty {
+        min-height: 420px;
     }
 }

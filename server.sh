@@ -4,7 +4,8 @@
 set -e
 
 # --- Configuration ---
-APP_DIR="${1:-.}"               # Default to current directory, or pass path as 1st argument
+APP_DIR="/home/hastings/zend.app/"
+# APP_DIR="${1:-.}"               # Default to current directory, or pass path as 1st argument
 HOST="localhost"
 PORT="8099"
 LOG_FILE="website-trail.log"

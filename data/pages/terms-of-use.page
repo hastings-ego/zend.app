@@ -1,82 +1,118 @@
-
-
-    <!-- MAIN CONTENT - TERMS OF USE / VOID -->
-    <main class="flex-grow pt-32 pb-20 max-w-4xl mx-auto px-6 md:px-10 w-full reveal">
+<main class="policy-section">
+    <div class="container">
         
-        <!-- HEADER -->
-        <div class="mb-16 pb-8 border-b specimen-border flex flex-col md:flex-row justify-between items-start md:items-end gap-6">
-            <div>
-                <p class="text-[10px] font-bold uppercase opacity-40 mb-4">Legal Policies</p>
-                <h1 class="font-display font-black text-4xl md:text-6xl uppercase tracking-tighter">
-                    Terms of Use
-                </h1>
-            </div>
-        </div>
+        <div class="policy-header">
+            <h1 class="policy-title">Terms of Use</h1>
+            <p class="policy-meta">Last Updated: August 2026 — Applicable to all orders, drops, and store access.</p>
+        </div> 
 
-        <!-- TERMS CONTENT SECTIONS -->
-        <div class="space-y-16 text-xs uppercase tracking-widest leading-relaxed">
+        <div class="policy-grid">
             
-            <!-- SECTION 01 -->
-            <div class="border specimen-border p-8 md:p-12 bg-white/40 space-y-4">
-                <h3 class="font-display font-black text-xl uppercase text-archive-ink">Acceptance of Protocol</h3>
-                <p class="text-archive-ink/80 leading-loose">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum a elit gravida, consequat magna commodo, dapibus urna. Cras leo dui, dictum vitae sem in, lobortis pulvinar nunc. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Integer nec lectus nisl. Vestibulum rhoncus nulla non neque varius sollicitudin. Aliquam tempus odio lacus, nec bibendum mi iaculis ut. Proin odio sem, commodo et ultrices ut, tincidunt ac arcu. Vestibulum tincidunt leo imperdiet volutpat varius. Pellentesque tristique ex vel ante ornare scelerisque. Quisque pharetra lorem eu venenatis convallis.</p>
-            </div>
+            <!-- Sidebar Navigation -->
+            <aside class="card-machined policy-sidebar">
+                <div class="sidebar-title">Contents</div>
+                <ul class="sidebar-nav">
+                    <li><a href="#acceptance" class="sidebar-link">1. Acceptance of Terms</a></li>
+                    <li><a href="#drops" class="sidebar-link">2. Limited Drops & Stock</a></li>
+                    <li><a href="#orders" class="sidebar-link">3. Order Verification</a></li>
+                    <li><a href="#bots" class="sidebar-link">4. Anti-Bot Policy</a></li>
+                    <li><a href="#returns" class="sidebar-link">5. Returns & Exchanges</a></li>
+                    <li><a href="#intellectual" class="sidebar-link">6. Intellectual Property</a></li>
+                </ul>
+            </aside>
 
-            <div class="border specimen-border p-8 md:p-12 bg-white/40 space-y-4">
-                <h3 class="font-display font-black text-xl uppercase text-archive-ink">Artifact Decay & Material Variance</h3>
-                <p class="text-archive-ink/80 leading-loose">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum a elit gravida, consequat magna commodo, dapibus urna. Cras leo dui, dictum vitae sem in, lobortis pulvinar nunc. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Integer nec lectus nisl. Vestibulum rhoncus nulla non neque varius sollicitudin. Aliquam tempus odio lacus, nec bibendum mi iaculis ut. Proin odio sem, commodo et ultrices ut, tincidunt ac arcu. Vestibulum tincidunt leo imperdiet volutpat varius. Pellentesque tristique ex vel ante ornare scelerisque. Quisque pharetra lorem eu venenatis convallis.</p>
-            </div>
+            <!-- Document Body -->
+            <div class="policy-content">
+                
+                <!-- Section 1 -->
+                <section id="acceptance" class="card-machined policy-card">
+                    <h2 class="section-heading">
+                        <i data-lucide="file-check" size="20"></i>
+                        1. Acceptance of Terms
+                    </h2>
+                    <p class="policy-text">
+                        By accessing, browsing, or purchasing through PVTT, you agree to be bound by these Terms of Use and all applicable laws and regulations. If you do not agree with any part of these terms, you are prohibited from accessing this platform.
+                    </p>
+                </section>
 
-            <div class="border specimen-border p-8 md:p-12 bg-white/40 space-y-4">
-                <h3 class="font-display font-black text-xl uppercase text-archive-ink">Intellectual Property & Data Rights</h3>
-                <p class="text-archive-ink/80 leading-loose">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum a elit gravida, consequat magna commodo, dapibus urna. Cras leo dui, dictum vitae sem in, lobortis pulvinar nunc. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Integer nec lectus nisl. Vestibulum rhoncus nulla non neque varius sollicitudin. Aliquam tempus odio lacus, nec bibendum mi iaculis ut. Proin odio sem, commodo et ultrices ut, tincidunt ac arcu. Vestibulum tincidunt leo imperdiet volutpat varius. Pellentesque tristique ex vel ante ornare scelerisque. Quisque pharetra lorem eu venenatis convallis.</p>
-            </div>
+                <!-- Section 2 -->
+                <section id="drops" class="card-machined policy-card">
+                    <h2 class="section-heading">
+                        <i data-lucide="package-check" size="20"></i>
+                        2. Limited Drops & Stock Allocation
+                    </h2>
+                    <p class="policy-text">
+                        All garments, footwear, and accessories are produced in finite quantities for scheduled drop events. Adding an item to your cart does not reserve the inventory. Stock is allocated strictly upon successful payment authorization at checkout.
+                    </p>
+                    <ul class="policy-list">
+                        <li class="policy-list-item">
+                            <i data-lucide="check-circle-2" size="18"></i>
+                            <span>All sales during scheduled drop releases are final unless otherwise stated.</span>
+                        </li>
+                        <li class="policy-list-item">
+                            <i data-lucide="check-circle-2" size="18"></i>
+                            <span>Purchase limits per customer or per household may apply to specific high-demand releases.</span>
+                        </li>
+                    </ul>
+                </section>
 
-            <!-- SECTION 05 -->
-            <div class="border specimen-border p-8 md:p-12 bg-archive-ink text-archive-paper space-y-4">
-                <h3 class="font-display font-black text-xl uppercase text-white">Limitation of Liability</h3>
-                <p class="text-archive-paper/80 leading-loose">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum a elit gravida, consequat magna commodo, dapibus urna. Cras leo dui, dictum vitae sem in, lobortis pulvinar nunc. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Integer nec lectus nisl. Vestibulum rhoncus nulla non neque varius sollicitudin. Aliquam tempus odio lacus, nec bibendum mi iaculis ut. Proin odio sem, commodo et ultrices ut, tincidunt ac arcu. Vestibulum tincidunt leo imperdiet volutpat varius. Pellentesque tristique ex vel ante ornare scelerisque. Quisque pharetra lorem eu venenatis convallis.</p>
+                <!-- Section 3 -->
+                <section id="orders" class="card-machined policy-card">
+                    <h2 class="section-heading">
+                        <i data-lucide="credit-card" size="20"></i>
+                        3. Order Verification & Pricing
+                    </h2>
+                    <p class="policy-text">
+                        We reserve the right to refuse, limit, or cancel any order placed with us. Prices for our products are subject to change without notice. In the event an item is listed at an incorrect price due to a system glitch, we reserve the right to cancel any orders placed for that item.
+                    </p>
+                </section>
+
+                <!-- Section 4 -->
+                <section id="bots" class="card-machined policy-card">
+                    <h2 class="section-heading">
+                        <i data-lucide="shield-alert" size="20"></i>
+                        4. Anti-Bot & Fair Access Policy
+                    </h2>
+                    <p class="policy-text">
+                        To maintain fair access for our community, the use of automated purchasing tools, scripts, or bots is strictly prohibited. Orders identified as being placed using unauthorized software will be immediately canceled without prior notice, and offending IP addresses or accounts will be permanently blocked.
+                    </p>
+                </section>
+
+                <!-- Section 5 -->
+                <section id="returns" class="card-machined policy-card">
+                    <h2 class="section-heading">
+                        <i data-lucide="refresh-cw" size="20"></i>
+                        5. Returns, Refunds & Exchanges
+                    </h2>
+                    <p class="policy-text">
+                        Due to the limited nature of our drops, exchanges for different sizes are subject to remaining stock availability. If a replacement size is unavailable, store credit or a full refund will be issued once returned items pass physical inspection.
+                    </p>
+                    <ul class="policy-list">
+                        <li class="policy-list-item">
+                            <i data-lucide="check-circle-2" size="18"></i>
+                            <span>Items must be returned unworn, unwashed, and in original packaging with tags intact within 14 days of delivery.</span>
+                        </li>
+                        <li class="policy-list-item">
+                            <i data-lucide="check-circle-2" size="18"></i>
+                            <span>Return shipping fees are the responsibility of the customer unless the product arrived damaged or defective.</span>
+                        </li>
+                    </ul>
+                </section>
+
+                <!-- Section 6 -->
+                <section id="intellectual" class="card-machined policy-card">
+                    <h2 class="section-heading">
+                        <i data-lucide="copyright" size="20"></i>
+                        6. Intellectual Property
+                    </h2>
+                    <p class="policy-text">
+                        All designs, graphics, branding elements, typography layouts, and media presented on this site are the exclusive property of PVTT. Unauthorized reproduction, modification, or commercial exploitation of any material is strictly prohibited.
+                    </p>
+                </section>
+
             </div>
 
         </div>
-    </main>
 
-
-    <!-- LOGIC -->
-    <script>
-        class TermsController {
-            constructor() {
-                this.initMobileMenu();
-                this.updateCartCount();
-            }
-
-            initMobileMenu() {
-                const btn = document.getElementById('menu-toggle');
-                const menu = document.getElementById('mobile-menu');
-                let isOpen = false;
-
-                btn.addEventListener('click', () => {
-                    isOpen = !isOpen;
-                    if (isOpen) {
-                        menu.classList.remove('menu-closed');
-                        menu.classList.add('menu-open');
-                        btn.textContent = '[ CLOSE ]';
-                    } else {
-                        menu.classList.remove('menu-open');
-                        menu.classList.add('menu-closed');
-                        btn.textContent = '[ MENU ]';
-                    }
-                });
-            }
-
-            updateCartCount() {
-                const cart = JSON.parse(localStorage.getItem('specimen_cart')) || [];
-                const count = cart.reduce((acc, item) => acc + item.qty, 0);
-                document.querySelectorAll('.js-cart-count').forEach(el => el.textContent = count);
-            }
-        }
-
-        document.addEventListener('DOMContentLoaded', () => {
-            window.TermsApp = new TermsController();
-        });
-    </script>
+    </div>
+</main>

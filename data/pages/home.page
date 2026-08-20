@@ -1,205 +1,271 @@
-<div class="bg-white pb-6 sm:pb-8 lg:pb-12">
-    <div class="mx-auto max-w-screen-2xl px-4 md:px-8">
-        <section
-            class="relative flex min-h-96 flex-1 shrink-0 items-center justify-center overflow-hidden rounded-lg bg-gray-100 py-16 shadow-lg md:py-20 xl:py-48">
-            <!-- image - start -->
-            <img src="https://themes.varsitymarket.co.za/collection/voide/assets/cover.webp" loading="lazy" alt=""
-                class="absolute inset-0 h-full w-full object-cover object-center" />
-            <!-- image - end -->
+<main class="policy-section">
+    <div class="container">
+        
+        <!-- Live Drop Ticker / Announcement Banner -->
+        <div class="card-machined policy-card" style="padding: 0.875rem 1.25rem; margin-bottom: 2rem; display: flex; align-items: center; justify-content: space-between; flex-wrap: wrap; gap: 1rem; border-color: var(--text-main);">
+            <div style="display: flex; align-items: center; gap: 0.75rem;">
+                <span style="width: 10px; height: 10px; border-radius: 50%; background: #22c55e; display: inline-block; box-shadow: 0 0 8px #22c55e;"></span>
+                <span style="font-size: 0.8125rem; font-weight: 700; text-transform: uppercase; letter-spacing: 0.05em; color: var(--text-main);">
+                    DROP #04 IS LIVE — 78% INVENTORY ALLOCATED
+                </span>
+            </div>
+            <a href="#featured-drops" class="btn btn-acid" style="padding: 0.375rem 0.75rem; font-size: 0.75rem;">
+                <i data-lucide="zap" size="14"></i> Access Release
+            </a>
+        </div>
 
-            <!-- overlay - start -->
-            <div class="absolute inset-0 mix-blend-multiply"></div>
-            <!-- overlay - end -->
-
-            <!-- text start -->
-            <div class="relative flex flex-col items-center p-4 sm:max-w-xl">
-                <p class="mb-4 text-center text-lg text-indigo-200 sm:text-xl md:mb-8">Very proud to introduce</p>
-
-                <h1 style="text-align:center; margin:auto;"
-                    class="font-display font-black text-white text-6xl md:text-8xl lg:text-[10vw] leading-none uppercase tracking-tighter">
-                    VOIDE
+        <!-- Hero Section -->
+        <section style="display: grid; grid-template-columns: repeat(auto-fit, minmax(320px, 1fr)); gap: 2rem; align-items: center; margin-bottom: 4rem;">
+            <div>
+                <div style="font-size: 0.75rem; font-weight: 700; text-transform: uppercase; letter-spacing: 0.08em; color: var(--text-subtle); margin-bottom: 0.75rem;">
+                    Industrial Design Laboratory
+                </div>
+                <h1 class="policy-title" style="font-size: clamp(2.5rem, 5vw, 4rem); line-height: 1.05; margin-bottom: 1.25rem;">
+                    HEAVYWEIGHT SILHOUETTES. ZERO DEADSTOCK.
                 </h1>
-
-                <h1 class="mb-8 text-center text-4xl font-bold text-white sm:text-5xl md:mb-12 md:text-6xl">
-                    CLOTHING</h1>
-
-
-                <div class="flex w-full flex-col gap-2.5 sm:flex-row sm:justify-center">
+                <p class="policy-text" style="font-size: 1.0625rem; margin-bottom: 2rem; max-width: 520px;">
+                    DROPSTUDIO produces limited-run streetwear constructed from custom 300–500 GSM textiles. Uncompromising structural cuts, zero fill-ins.
+                </p>
+                <div style="display: flex; gap: 1rem; flex-wrap: wrap;">
+                    <a href="#featured-drops" class="btn btn-acid" style="padding: 0.875rem 1.5rem; font-size: 0.875rem;">
+                        <i data-lucide="shopping-bag" size="16"></i> Shop Active Drop
+                    </a>
+                    <a href="#ethos" class="btn btn-outline" style="padding: 0.875rem 1.5rem; font-size: 0.875rem;">
+                        Explore Ethos
+                    </a>
                 </div>
             </div>
-            <!-- text end -->
+
+            <!-- Hero Feature Image / Visual Card -->
+            <div class="card-machined policy-card" style="padding: 1rem; position: relative;">
+                <div style="border-radius: var(--radius-sm); overflow: hidden; border: 1px solid var(--border-light); position: relative;">
+                    <img src="https://images.unsplash.com/photo-1509631179647-0177331693ae?auto=format&fit=crop&w=1000&q=80" alt="Drop Studio Hero Visual" style="width: 100%; aspect-ratio: 4/3; object-fit: cover; display: block;">
+                    <div style="position: absolute; bottom: 1rem; left: 1rem; right: 1rem; background: rgba(0, 0, 0, 0.75); backdrop-filter: blur(8px); padding: 1rem; border-radius: var(--radius-sm); border: 1px solid var(--border-medium); color: #fff; display: flex; justify-content: space-between; align-items: center;">
+                        <div>
+                            <div style="font-size: 0.75rem; text-transform: uppercase; opacity: 0.8; font-weight: 700;">Featured Piece</div>
+                            <div style="font-size: 0.9375rem; font-weight: 800;">DS-01 Boxy French Terry Hoodie</div>
+                        </div>
+                        <span style="font-size: 1.125rem; font-weight: 800;">$140</span>
+                    </div>
+                </div>
+            </div>
         </section>
-    </div>
-</div>
 
-
-<!-- 3. SAMPLE CATEGORIES -->
-<section class="max-w-7xl mx-auto px-6 md:px-10 py-20 reveal">
-
-    <!-- Brutalist Grid Layout for Categories -->
-    <div class="grid grid-cols-1 md:grid-cols-3 gap-px bg-archive-line specimen-border">
-        <a href="<!-- #!/engine/node/ page('shop') -->"
-            class="bg-archive-paper p-10 md:p-16 hover:bg-archive-ink hover:text-archive-paper transition-colors group flex flex-col justify-between aspect-square md:aspect-auto">
-            <span class="text-[10px] font-bold tracking-[0.3em] opacity-40 group-hover:opacity-60 mb-10">01</span>
-            <div>
-                <h3 class="font-display font-black text-3xl md:text-4xl uppercase mb-2">Apparel</h3>
-                <p class="text-xs opacity-60">Structural base layers & anatomy.</p>
+        <!-- Brand Core Stats Strip -->
+        <section style="display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 1rem; margin-bottom: 4rem;">
+            <div class="card-machined policy-card" style="padding: 1.25rem; text-align: center;">
+                <div style="font-size: 2rem; font-weight: 800; color: var(--text-main);">500 GSM</div>
+                <div style="font-size: 0.75rem; font-weight: 700; color: var(--text-subtle); text-transform: uppercase; margin-top: 0.25rem;">Custom Fleece Density</div>
             </div>
-        </a>
-        <a href="<!-- #!/engine/node/ page('shop') -->"
-            class="bg-archive-paper p-10 md:p-16 hover:bg-archive-ink hover:text-archive-paper transition-colors group flex flex-col justify-between aspect-square md:aspect-auto">
-            <span class="text-[10px] font-bold tracking-[0.3em] opacity-40 group-hover:opacity-60 mb-10">02</span>
-            <div>
-                <h3 class="font-display font-black text-3xl md:text-4xl uppercase mb-2">Outerwear</h3>
-                <p class="text-xs opacity-60">Technical membranes & shells.</p>
+            <div class="card-machined policy-card" style="padding: 1.25rem; text-align: center;">
+                <div style="font-size: 2rem; font-weight: 800; color: var(--text-main);">100%</div>
+                <div style="font-size: 0.75rem; font-weight: 700; color: var(--text-subtle); text-transform: uppercase; margin-top: 0.25rem;">Combed Heavy Cotton</div>
             </div>
-        </a>
-        <a href="<!-- #!/engine/node/ page('shop') -->"
-            class="bg-archive-paper p-10 md:p-16 hover:bg-archive-ink hover:text-archive-paper transition-colors group flex flex-col justify-between aspect-square md:aspect-auto">
-            <span class="text-[10px] font-bold tracking-[0.3em] opacity-40 group-hover:opacity-60 mb-10">03</span>
-            <div>
-                <h3 class="font-display font-black text-3xl md:text-4xl uppercase mb-2">Clothing</h3>
-                <p class="text-xs opacity-60">Utility caps & structural add-ons.</p>
+            <div class="card-machined policy-card" style="padding: 1.25rem; text-align: center;">
+                <div style="font-size: 2rem; font-weight: 800; color: var(--text-main);">CAPPED</div>
+                <div style="font-size: 0.75rem; font-weight: 700; color: var(--text-subtle); text-transform: uppercase; margin-top: 0.25rem;">Production Batches</div>
             </div>
-        </a>
-    </div>
-</section>
-
-<div class="bg-white py-6 sm:py-8 lg:py-12">
-    <div class="mx-auto max-w-screen-2xl px-4 md:px-8">
-        <!-- text - start -->
-        <div class="mb-10 md:mb-16">
-        </div>
-        <!-- text - end -->
-
-        <div class="grid gap-6 sm:grid-cols-2">
-            <!-- product - start -->
-            <a href="<!-- #!/engine/node/ page('shop') -->" style="height:75vh" class="group relative flex items-end overflow-hidden rounded-lg bg-gray-100 p-4 shadow-lg">
-                <img src="https://voide.online/cdn/shop/files/f8504b70-4027-11f1-b002-c581252a7275.png?height=1408&v=1783674106"
-                    loading="lazy" alt="Photo by Fakurian Design"
-                    class="absolute inset-0 h-full w-full object-cover object-center transition duration-200 group-hover:scale-110" />
-
-                <div
-                    class="pointer-events-none absolute inset-0 bg-gradient-to-t from-gray-800 via-transparent to-transparent opacity-50">
-                </div>
-
-                <div class="relative flex flex-col">
-                    <span class="text-gray-300">ART</span>
-                    <span class="text-lg font-semibold text-white lg:text-xl">WE CRAFT IT</span>
-                </div>
-            </a>
-            <!-- product - end -->
-
-            <!-- product - start -->
-            <a href="<!-- #!/engine/node/ page('shop') -->" style="height:75vh" class="group relative flex h-100 items-end overflow-hidden rounded-lg bg-gray-100 p-4 shadow-lg">
-                <img src="https://voide.online/cdn/shop/files/e60b53c1-401c-11f1-9555-b9180039253c.png?height=1536&v=1783674161"
-                    loading="lazy" alt=""
-                    class="absolute inset-0 h-full w-full object-cover object-center transition duration-200 group-hover:scale-110" />
-
-                <div
-                    class="pointer-events-none absolute inset-0 bg-gradient-to-t from-gray-800 via-transparent to-transparent opacity-50">
-                </div>
-
-                <div class="relative flex flex-col">
-                    <span class="text-gray-300">DESIGNS</span>
-                    <span class="text-lg font-semibold text-white lg:text-xl">WE MAKE IT</span>
-                </div>
-            </a>
-            <!-- product - end -->
-        </div>
-    </div>
-</div>
-
-<main class="flex-grow pt-32">
-    <!-- MAIN CONTENT - CATALOG MATRIX -->
-    <div class="flex-grow pt-32 pb-20 max-w-7xl mx-auto px-6 md:px-10 w-full reveal">
-
-        <!-- HEADER & CATALOG TELEMETRY -->
-        <div
-            class="flex flex-col md:flex-row justify-between items-start md:items-end mb-16 pb-8 border-b specimen-border gap-6">
-            <div>
-                <p class="text-[10px] font-bold uppercase opacity-40 mb-4">View Whats In Store</p>
-                <h1 class="font-display font-black text-4xl md:text-6xl uppercase tracking-tighter">
-                    Latest Arrivals
-                </h1>
+            <div class="card-machined policy-card" style="padding: 1.25rem; text-align: center;">
+                <div style="font-size: 2rem; font-weight: 800; color: var(--text-main);">24hr</div>
+                <div style="font-size: 0.75rem; font-weight: 700; color: var(--text-subtle); text-transform: uppercase; margin-top: 0.25rem;">Dispatch Window</div>
             </div>
-        </div>
+        </section>
 
-        <!-- PRODUCT GRID -->
-        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-12" id="catalog-grid">
+        <!-- Active Drops Showcase Section -->
+        <section id="featured-drops" style="margin-bottom: 4rem;">
+            <div style="display: flex; justify-content: space-between; align-items: flex-end; margin-bottom: 2rem; flex-wrap: wrap; gap: 1rem;">
+                <div>
+                    <h2 class="section-heading" style="margin-bottom: 0.25rem;">
+                        <i data-lucide="package" size="20"></i> Active Drop Release
+                    </h2>
+                    <p class="policy-text" style="margin-bottom: 0;">Finite quantity allocations available until stock depletes.</p>
+                </div>
+                <a href="#" class="btn btn-outline" style="padding: 0.5rem 1rem; font-size: 0.8125rem;">View Full Catalog</a>
+            </div>
 
-            <a href="<!-- #!/engine/node/ page('product/3') -->" class="specimen-card flex flex-col group cursor-pointer block">
-                <div class="aspect-[4/5] bg-archive-line mb-6 overflow-hidden relative specimen-border">
-                    <img src="https://mercha.co.za/wp-content/uploads/2025/09/Mocks-_Hoodie-Back-1000x1259.png"
-                        alt="HEATSKRS HOODIE" class="w-full h-full object-cover grayscale js-card-img">
-                    <div
-                        class="absolute inset-0 bg-archive-paper/80 opacity-0 group-hover:opacity-100 transition-opacity flex items-center justify-center">
-                        <span class="text-[15px] font-bold">VIEW PRODUCT</span>
+            <!-- Product Grid -->
+            <div style="display: grid; grid-template-columns: repeat(auto-fill, minmax(260px, 1fr)); gap: 1.5rem;">
+                
+                <!-- Product 1 -->
+                <div class="card-machined policy-card" style="padding: 1.25rem;">
+                    <div style="border-radius: var(--radius-sm); overflow: hidden; margin-bottom: 1rem; border: 1px solid var(--border-light); position: relative;">
+                        <img src="https://images.unsplash.com/photo-1556905055-8f358a7a47b2?auto=format&fit=crop&w=600&q=80" alt="DS-01 Boxy French Terry Hoodie" style="width: 100%; aspect-ratio: 4/5; object-fit: cover; display: block;">
+                        <div style="position: absolute; top: 0.75rem; right: 0.75rem; background: var(--bg-card); border: 1px solid var(--border-medium); border-radius: var(--radius-sm); padding: 0.25rem 0.5rem; font-size: 0.75rem; font-weight: 700;">
+                            500 GSM
+                        </div>
+                    </div>
+                    <div style="font-size: 0.75rem; font-weight: 700; text-transform: uppercase; color: var(--text-subtle); margin-bottom: 0.25rem;">Outerwear</div>
+                    <h3 style="font-size: 1.0625rem; font-weight: 700; color: var(--text-main); margin-bottom: 0.5rem;">DS-01 Boxy French Terry Hoodie</h3>
+                    <div style="display: flex; align-items: center; justify-content: space-between; margin-top: 1rem; padding-top: 0.75rem; border-top: 1px solid var(--border-light);">
+                        <span style="font-size: 1.125rem; font-weight: 800; color: var(--text-main);">$140</span>
+                        <a href="#" class="btn btn-acid" style="padding: 0.5rem 0.875rem; font-size: 0.75rem;">
+                            <i data-lucide="shopping-bag" size="14"></i> Add to Cart
+                        </a>
                     </div>
                 </div>
-                <div class="flex justify-between items-start">
-                    <div>
-                        <h3 class="font-display font-black text-xl uppercase js-card-title">HEATSKRS HOODIE</h3>
-                        <p class="text-[9px] opacity-40 uppercase js-card-category mt-1"></p>
-                    </div>
-                    <span class="font-bold text-sm js-card-price">R 799.00</span>
-                </div>
-            </a>
 
-            <a href="<!-- #!/engine/node/ page('product/2') -->" class="specimen-card flex flex-col group cursor-pointer block">
-                <div class="aspect-[4/5] bg-archive-line mb-6 overflow-hidden relative specimen-border">
-                    <img src="https://mercha.co.za/wp-content/uploads/2025/07/Mocks-94-1000x1259.webp"
-                        alt="Deadlines SLVLSS Tee" class="w-full h-full object-cover grayscale js-card-img">
-                    <div
-                        class="absolute inset-0 bg-archive-paper/80 opacity-0 group-hover:opacity-100 transition-opacity flex items-center justify-center">
-                        <span class="text-[15px] font-bold">VIEW PRODUCT</span>
+                <!-- Product 2 -->
+                <div class="card-machined policy-card" style="padding: 1.25rem;">
+                    <div style="border-radius: var(--radius-sm); overflow: hidden; margin-bottom: 1rem; border: 1px solid var(--border-light); position: relative;">
+                        <img src="https://images.unsplash.com/photo-1521572267360-ee0c2909d518?auto=format&fit=crop&w=600&q=80" alt="DS-04 Heavyweight Raw Edge Tee" style="width: 100%; aspect-ratio: 4/5; object-fit: cover; display: block;">
+                        <div style="position: absolute; top: 0.75rem; right: 0.75rem; background: var(--bg-card); border: 1px solid var(--border-medium); border-radius: var(--radius-sm); padding: 0.25rem 0.5rem; font-size: 0.75rem; font-weight: 700;">
+                            320 GSM
+                        </div>
+                    </div>
+                    <div style="font-size: 0.75rem; font-weight: 700; text-transform: uppercase; color: var(--text-subtle); margin-bottom: 0.25rem;">Tees & Tops</div>
+                    <h3 style="font-size: 1.0625rem; font-weight: 700; color: var(--text-main); margin-bottom: 0.5rem;">DS-04 Heavyweight Raw Edge Tee</h3>
+                    <div style="display: flex; align-items: center; justify-content: space-between; margin-top: 1rem; padding-top: 0.75rem; border-top: 1px solid var(--border-light);">
+                        <span style="font-size: 1.125rem; font-weight: 800; color: var(--text-main);">$65</span>
+                        <a href="#" class="btn btn-acid" style="padding: 0.5rem 0.875rem; font-size: 0.75rem;">
+                            <i data-lucide="shopping-bag" size="14"></i> Add to Cart
+                        </a>
                     </div>
                 </div>
-                <div class="flex justify-between items-start">
-                    <div>
-                        <h3 class="font-display font-black text-xl uppercase js-card-title">Deadlines SLVLSS Tee</h3>
-                        <p class="text-[9px] opacity-40 uppercase js-card-category mt-1"></p>
-                    </div>
-                    <span class="font-bold text-sm js-card-price">R 399.99</span>
-                </div>
-            </a>
 
-            <a href="<!-- #!/engine/node/ page('product/1') -->" class="specimen-card flex flex-col group cursor-pointer block">
-                <div class="aspect-[4/5] bg-archive-line mb-6 overflow-hidden relative specimen-border">
-                    <img src="https://mercha.co.za/wp-content/uploads/2025/08/Mocks-134-1000x1259.png"
-                        alt="TBHBG 220GSM OVRSZD TEE" class="w-full h-full object-cover grayscale js-card-img">
-                    <div
-                        class="absolute inset-0 bg-archive-paper/80 opacity-0 group-hover:opacity-100 transition-opacity flex items-center justify-center">
-                        <span class="text-[15px] font-bold">VIEW PRODUCT</span>
+                <!-- Product 3 -->
+                <div class="card-machined policy-card" style="padding: 1.25rem;">
+                    <div style="border-radius: var(--radius-sm); overflow: hidden; margin-bottom: 1rem; border: 1px solid var(--border-light);">
+                        <img src="https://images.unsplash.com/photo-1541099649105-f69ad21f3246?auto=format&fit=crop&w=600&q=80" alt="DS-08 Modular Double-Knee Cargo" style="width: 100%; aspect-ratio: 4/5; object-fit: cover; display: block;">
+                    </div>
+                    <div style="font-size: 0.75rem; font-weight: 700; text-transform: uppercase; color: var(--text-subtle); margin-bottom: 0.25rem;">Bottoms</div>
+                    <h3 style="font-size: 1.0625rem; font-weight: 700; color: var(--text-main); margin-bottom: 0.5rem;">DS-08 Modular Double-Knee Cargo</h3>
+                    <div style="display: flex; align-items: center; justify-content: space-between; margin-top: 1rem; padding-top: 0.75rem; border-top: 1px solid var(--border-light);">
+                        <span style="font-size: 1.125rem; font-weight: 800; color: var(--text-main);">$160</span>
+                        <a href="#" class="btn btn-acid" style="padding: 0.5rem 0.875rem; font-size: 0.75rem;">
+                            <i data-lucide="shopping-bag" size="14"></i> Add to Cart
+                        </a>
                     </div>
                 </div>
-                <div class="flex justify-between items-start">
-                    <div>
-                        <h3 class="font-display font-black text-xl uppercase js-card-title">TBHBG 220GSM OVRSZD TEE</h3>
-                        <p class="text-[9px] opacity-40 uppercase js-card-category mt-1"></p>
+
+                <!-- Product 4 -->
+                <div class="card-machined policy-card" style="padding: 1.25rem;">
+                    <div style="border-radius: var(--radius-sm); overflow: hidden; margin-bottom: 1rem; border: 1px solid var(--border-light);">
+                        <img src="https://images.unsplash.com/photo-1578587018452-892bacefd3f2?auto=format&fit=crop&w=600&q=80" alt="DS-02 Workwear Zip Jacket" style="width: 100%; aspect-ratio: 4/5; object-fit: cover; display: block;">
                     </div>
-                    <span class="font-bold text-sm js-card-price">R 499.99</span>
+                    <div style="font-size: 0.75rem; font-weight: 700; text-transform: uppercase; color: var(--text-subtle); margin-bottom: 0.25rem;">Outerwear</div>
+                    <h3 style="font-size: 1.0625rem; font-weight: 700; color: var(--text-main); margin-bottom: 0.5rem;">DS-02 Workwear Zip Jacket</h3>
+                    <div style="display: flex; align-items: center; justify-content: space-between; margin-top: 1rem; padding-top: 0.75rem; border-top: 1px solid var(--border-light);">
+                        <span style="font-size: 1.125rem; font-weight: 800; color: var(--text-main);">$195</span>
+                        <a href="#" class="btn btn-acid" style="padding: 0.5rem 0.875rem; font-size: 0.75rem;">
+                            <i data-lucide="shopping-bag" size="14"></i> Add to Cart
+                        </a>
+                    </div>
                 </div>
-            </a>
-        </div>
+
+            </div>
+        </section>
+
+        <!-- Category Grid Navigation -->
+        <section style="margin-bottom: 4rem;">
+            <div style="margin-bottom: 2rem;">
+                <h2 class="section-heading" style="margin-bottom: 0.25rem;">
+                    <i data-lucide="grid" size="20"></i> Category Index
+                </h2>
+                <p class="policy-text" style="margin-bottom: 0;">Browse silhouettes by functional division.</p>
+            </div>
+
+            <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 1.5rem;">
+                <!-- Category 1 -->
+                <a href="#" class="card-machined policy-card" style="text-decoration: none; padding: 1.5rem; display: flex; flex-direction: column; justify-content: space-between; height: 180px; position: relative; overflow: hidden;">
+                    <div style="position: relative; z-index: 2;">
+                        <div style="font-size: 0.75rem; font-weight: 700; text-transform: uppercase; color: var(--text-subtle);">Division 01</div>
+                        <h3 style="font-size: 1.5rem; font-weight: 800; color: var(--text-main); margin-top: 0.25rem;">Outerwear & Fleece</h3>
+                    </div>
+                    <div style="display: flex; align-items: center; gap: 0.5rem; font-size: 0.8125rem; font-weight: 700; color: var(--text-main); position: relative; z-index: 2;">
+                        Explore Category <i data-lucide="arrow-right" size="16"></i>
+                    </div>
+                </a>
+
+                <!-- Category 2 -->
+                <a href="#" class="card-machined policy-card" style="text-decoration: none; padding: 1.5rem; display: flex; flex-direction: column; justify-content: space-between; height: 180px; position: relative; overflow: hidden;">
+                    <div style="position: relative; z-index: 2;">
+                        <div style="font-size: 0.75rem; font-weight: 700; text-transform: uppercase; color: var(--text-subtle);">Division 02</div>
+                        <h3 style="font-size: 1.5rem; font-weight: 800; color: var(--text-main); margin-top: 0.25rem;">Tees & Tops</h3>
+                    </div>
+                    <div style="display: flex; align-items: center; gap: 0.5rem; font-size: 0.8125rem; font-weight: 700; color: var(--text-main); position: relative; z-index: 2;">
+                        Explore Category <i data-lucide="arrow-right" size="16"></i>
+                    </div>
+                </a>
+
+                <!-- Category 3 -->
+                <a href="#" class="card-machined policy-card" style="text-decoration: none; padding: 1.5rem; display: flex; flex-direction: column; justify-content: space-between; height: 180px; position: relative; overflow: hidden;">
+                    <div style="position: relative; z-index: 2;">
+                        <div style="font-size: 0.75rem; font-weight: 700; text-transform: uppercase; color: var(--text-subtle);">Division 03</div>
+                        <h3 style="font-size: 1.5rem; font-weight: 800; color: var(--text-main); margin-top: 0.25rem;">Pants & Bottoms</h3>
+                    </div>
+                    <div style="display: flex; align-items: center; gap: 0.5rem; font-size: 0.8125rem; font-weight: 700; color: var(--text-main); position: relative; z-index: 2;">
+                        Explore Category <i data-lucide="arrow-right" size="16"></i>
+                    </div>
+                </a>
+            </div>
+        </section>
+
+        <!-- Brand Ethos & Process Section -->
+        <section id="ethos" class="card-machined policy-card" style="padding: 3rem 2rem; margin-bottom: 4rem;">
+            <div style="max-width: 720px; margin: 0 auto; text-align: center;">
+                <div style="width: 3.5rem; height: 3.5rem; background: var(--text-main); color: var(--acid); border-radius: var(--radius-sm); display: inline-flex; align-items: center; justify-content: center; margin-bottom: 1.25rem;">
+                    <i data-lucide="cpu" size="28"></i>
+                </div>
+                <h2 class="policy-title" style="font-size: clamp(1.75rem, 3.5vw, 2.5rem); margin-bottom: 1rem;">
+                    Apparel Built Like Hardware
+                </h2>
+                <p class="policy-text" style="font-size: 1rem; margin-bottom: 2rem;">
+                    We reject fast-fashion lifecycles. Every garment is prototyped through 3D pattern drafting, physical sample iteration, and stress testing before entering capped production runs.
+                </p>
+                <div style="display: flex; gap: 1.5rem; justify-content: center; flex-wrap: wrap; text-align: left;">
+                    <div style="display: flex; align-items: center; gap: 0.5rem; font-size: 0.875rem; font-weight: 700;">
+                        <i data-lucide="check-circle-2" size="18" style="color: var(--text-main);"></i> Custom Fabric Knits
+                    </div>
+                    <div style="display: flex; align-items: center; gap: 0.5rem; font-size: 0.875rem; font-weight: 700;">
+                        <i data-lucide="check-circle-2" size="18" style="color: var(--text-main);"></i> Pre-Shrunk Enzyme Wash
+                    </div>
+                    <div style="display: flex; align-items: center; gap: 0.5rem; font-size: 0.875rem; font-weight: 700;">
+                        <i data-lucide="check-circle-2" size="18" style="color: var(--text-main);"></i> Anti-Bot Checkout
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Lookbook / Editorial Gallery Preview -->
+        <section style="margin-bottom: 4rem;">
+            <div style="margin-bottom: 2rem;">
+                <h2 class="section-heading" style="margin-bottom: 0.25rem;">
+                    <i data-lucide="camera" size="20"></i> Studio Lookbook Preview
+                </h2>
+                <p class="policy-text" style="margin-bottom: 0;">Visual study from the Drop #04 editorial set.</p>
+            </div>
+
+            <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 1.25rem;">
+                <div style="border-radius: var(--radius-sm); overflow: hidden; border: 1px solid var(--border-light); height: 320px;">
+                    <img src="https://images.unsplash.com/photo-1558769132-cb1aea458c5e?auto=format&fit=crop&w=800&q=80" alt="Lookbook Shot 1" style="width: 100%; height: 100%; object-fit: cover; display: block;">
+                </div>
+                <div style="border-radius: var(--radius-sm); overflow: hidden; border: 1px solid var(--border-light); height: 320px;">
+                    <img src="https://images.unsplash.com/photo-1581092160607-ee22621dd758?auto=format&fit=crop&w=800&q=80" alt="Lookbook Shot 2" style="width: 100%; height: 100%; object-fit: cover; display: block;">
+                </div>
+                <div style="border-radius: var(--radius-sm); overflow: hidden; border: 1px solid var(--border-light); height: 320px;">
+                    <img src="https://images.unsplash.com/photo-1503342217505-b0a15ec3261c?auto=format&fit=crop&w=800&q=80" alt="Lookbook Shot 3" style="width: 100%; height: 100%; object-fit: cover; display: block;">
+                </div>
+            </div>
+        </section>
+
+        <!-- VIP Drop Access Newsletter Banner -->
+        <section class="card-machined policy-card" style="padding: 3rem 2rem; background: var(--bg-card-subtle);">
+            <div style="max-width: 600px; margin: 0 auto; text-align: center;">
+                <h2 style="font-size: 1.75rem; font-weight: 800; color: var(--text-main); margin-bottom: 0.5rem;">
+                    EARLY ACCESS / DROP ALERTS
+                </h2>
+                <p class="policy-text" style="margin-bottom: 1.5rem;">
+                    Receive direct password access 15 minutes prior to public release launches. Zero promotional spam.
+                </p>
+                
+                <form style="display: flex; gap: 0.75rem; flex-wrap: wrap; justify-content: center;" onsubmit="event.preventDefault();">
+                    <input type="email" placeholder="Enter your email..." style="flex: 1; min-width: 240px; padding: 0.875rem 1rem; border: 1px solid var(--border-medium); border-radius: var(--radius-sm); background: var(--bg-card); color: var(--text-main); font-size: 0.875rem;">
+                    <button type="submit" class="btn btn-acid" style="padding: 0.875rem 1.5rem; font-size: 0.875rem;">
+                        <i data-lucide="bell" size="16"></i> Request Access
+                    </button>
+                </form>
+            </div>
+        </section>
 
     </div>
 </main>
-
-<section class="bg-archive-ink text-archive-paper py-32 px-6 md:px-10 mt-20">
-    <div class="max-w-4xl mx-auto text-center reveal">
-        <p class="text-[10px] font-bold uppercase tracking-[0.5em] opacity-50 mb-8">Contact Us</p>
-        <h2 class="font-display font-black text-5xl md:text-7xl uppercase mb-12">Reach Out TO uS</h2>
-        <p class="text-sm opacity-70 mb-12 max-w-lg mx-auto leading-loose">
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum a elit gravida, consequat magna commodo,
-            dapibus urna. Cras leo dui, dictum vitae sem in, lobortis pulvinar nunc. Pellentesque habitant morbi
-            tristique senectus et netus et malesuada fames ac turpis egestas. Integer nec lectus nisl. Vestibulum
-            rhoncus nulla non neque varius sollicitudin. Aliquam tempus odio lacus, nec bibendum mi iaculis ut. Proin
-            odio sem, commodo et ultrices ut, tincidunt ac arcu. Vestibulum tincidunt leo imperdiet volutpat varius.
-            Pellentesque tristique ex vel ante ornare scelerisque. Quisque pharetra lorem eu venenatis convallis.</p>
-        <a href="<!-- #!/engine/node/ page('contact') -->"
-            class="inline-block bg-archive-paper text-archive-ink px-12 py-5 font-display font-black uppercase text-sm hover:scale-105 transition-transform">
-            Contact Store
-        </a>
-    </div>
-</section>

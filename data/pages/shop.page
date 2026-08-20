@@ -1,177 +1,168 @@
-
-    <style>
+<main class="policy-section">
+    <div class="container">
         
-        /* Architecture lines */
-        .specimen-border { border: 0.5px solid #E0E0E0; }
-        .dark-border { border: 0.5px solid rgba(245, 245, 245, 0.2); }
-        
-        /* Subtle reveal animations */
-        .reveal { animation: specReveal 1.2s cubic-bezier(0.16, 1, 0.3, 1) forwards; }
-        @keyframes specReveal { 
-            from { opacity: 0; transform: translateY(20px); filter: blur(5px); } 
-            to { opacity: 1; transform: translateY(0); filter: blur(0); } 
-        }
-
-        /* Card Hover Effects */
-        .specimen-card img { transition: transform 0.8s cubic-bezier(0.16, 1, 0.3, 1); }
-        .specimen-card:hover img { transform: scale(1.03); }
-
-        /* Filter Active States */
-        .filter-active { background-color: #1A1A1A !important; color: #F5F5F5 !important; border-color: #1A1A1A !important; }
-
-        /* Mobile Menu Transitions */
-        #mobile-menu { transition: transform 0.5s cubic-bezier(0.16, 1, 0.3, 1); }
-        .menu-open { transform: translateY(0%); }
-        .menu-closed { transform: translateY(-100%); }
-
-        ::-webkit-scrollbar { width: 4px; }
-        ::-webkit-scrollbar-thumb { background: #1A1A1A; }
-    </style>
-
-
-
-    <!-- MAIN CONTENT - CATALOG MATRIX -->
-    <main class="flex-grow pt-32 pb-20 max-w-7xl mx-auto px-6 md:px-10 w-full reveal">
-        
-        <!-- HEADER & CATALOG TELEMETRY -->
-        <div class="flex flex-col md:flex-row justify-between items-start md:items-end mb-16 pb-8 border-b specimen-border gap-6">
-            <div>
-                <p class="text-[10px] font-bold uppercase opacity-40 mb-4">View Whats In Store</p>
-                <h1 class="font-display font-black text-4xl md:text-6xl uppercase tracking-tighter">
-                    Our Shop
-                </h1>
-            </div>
-            <div class="text-right">
-                <p id="artifact-count" class="text-xs uppercase tracking-widest font-bold">Total Products: [ 9 ]</p>
-            </div>
+        <!-- Page Header -->
+        <div class="policy-header" style="max-width: 760px; margin-bottom: 2.5rem;">
+            <h1 class="policy-title">Active Drops</h1>
+            <p class="policy-meta">Drop Archive & Limited Inventory — Heavyweight garments engineered for daily wear.</p>
         </div>
 
-        <!-- FILTER CONTROLS -->
-        <div class="flex flex-wrap gap-3 mb-16" id="category-filters">
-            <button class="filter-btn border specimen-border px-6 py-3 text-[10px] font-bold uppercase tracking-[0.3em] filter-active transition-all" data-category="ALL">All Classifications</button>
-            <button class="filter-btn border specimen-border px-6 py-3 text-[10px] font-bold uppercase tracking-[0.3em] hover:border-archive-ink transition-all" data-category="Apparel">Apparel</button>
-            <button class="filter-btn border specimen-border px-6 py-3 text-[10px] font-bold uppercase tracking-[0.3em] hover:border-archive-ink transition-all" data-category="Outerwear">Outerwear</button>
-            <button class="filter-btn border specimen-border px-6 py-3 text-[10px] font-bold uppercase tracking-[0.3em] hover:border-archive-ink transition-all" data-category="Hardware">Hardware</button>
-        </div>
+        <div class="policy-grid">
+            
+            <!-- Filters & Category Navigation Sidebar -->
+            <aside class="card-machined policy-sidebar">
+                <div class="sidebar-title">Categories</div>
+                <ul class="sidebar-nav" style="margin-bottom: 1.5rem;">
+                    <li><a href="#" class="sidebar-link" style="background-color: var(--bg-card-subtle); color: var(--text-main);">All Drops (8)</a></li>
+                    <li><a href="#" class="sidebar-link">Outerwear & Fleece (3)</a></li>
+                    <li><a href="#" class="sidebar-link">Tees & Tops (3)</a></li>
+                    <li><a href="#" class="sidebar-link">Pants & Bottoms (2)</a></li>
+                </ul>
 
-        <!-- PRODUCT GRID -->
-        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-12" id="catalog-grid">
-            <!-- Populated via JS -->
-        </div>
-
-    </main>
-
-    <!-- PRODUCT CARD TEMPLATE -->
-    <template id="tpl-catalog-card">
-        <a href="<!-- #!/engine/node/ page(''); -->" class="specimen-card flex flex-col group cursor-pointer block">
-            <div class="aspect-[4/5] bg-archive-line mb-6 overflow-hidden relative specimen-border">
-                <img src="" alt="" class="w-full h-full object-cover grayscale js-card-img">
-                <div class="absolute inset-0 bg-archive-paper/80 opacity-0 group-hover:opacity-100 transition-opacity flex items-center justify-center">
-                    <span class="text-[15px] font-bold">VIEW PRODUCT</span>
+                <div class="sidebar-title">Filter By Size</div>
+                <div style="display: flex; gap: 0.5rem; flex-wrap: wrap; margin-bottom: 1.5rem;">
+                    <button class="btn btn-outline" style="padding: 0.375rem 0.75rem; font-size: 0.75rem;">S</button>
+                    <button class="btn btn-acid" style="padding: 0.375rem 0.75rem; font-size: 0.75rem;">M</button>
+                    <button class="btn btn-outline" style="padding: 0.375rem 0.75rem; font-size: 0.75rem;">L</button>
+                    <button class="btn btn-outline" style="padding: 0.375rem 0.75rem; font-size: 0.75rem;">XL</button>
                 </div>
-            </div>
-            <div class="flex justify-between items-start">
-                <div>
-                    <h3 class="font-display font-black text-xl uppercase js-card-title"></h3>
-                    <p class="text-[9px] opacity-40 uppercase js-card-category mt-1"></p>
+
+                <div class="sidebar-title">Availability</div>
+                <ul class="sidebar-nav">
+                    <li><a href="#" class="sidebar-link">In Stock Only</a></li>
+                    <li><a href="#" class="sidebar-link">Archived Releases</a></li>
+                </ul>
+            </aside>
+
+            <!-- Main Product Catalog Grid -->
+            <div style="display: grid; grid-template-columns: repeat(auto-fill, minmax(260px, 1fr)); gap: 1.5rem; align-items: start;">
+                
+                <!-- Product Card 1 -->
+                <div class="card-machined policy-card" style="padding: 1.25rem;">
+                    <div style="border-radius: var(--radius-sm); overflow: hidden; margin-bottom: 1rem; border: 1px solid var(--border-light); position: relative;">
+                        <img src="https://images.unsplash.com/photo-1556905055-8f358a7a47b2?auto=format&fit=crop&w=600&q=80" alt="Heavyweight Boxy Hoodie" style="width: 100%; aspect-ratio: 4/5; object-fit: cover; display: block;">
+                        <div style="position: absolute; top: 0.75rem; right: 0.75rem; background: var(--bg-card); border: 1px solid var(--border-medium); border-radius: var(--radius-sm); padding: 0.25rem 0.5rem; font-size: 0.75rem; font-weight: 700;">
+                            500 GSM
+                        </div>
+                    </div>
+                    <div style="font-size: 0.75rem; font-weight: 700; text-transform: uppercase; letter-spacing: 0.04em; color: var(--text-subtle); margin-bottom: 0.25rem;">
+                        Outerwear
+                    </div>
+                    <h3 style="font-size: 1.0625rem; font-weight: 700; color: var(--text-main); margin-bottom: 0.5rem;">
+                        DS-01 Boxy French Terry Hoodie
+                    </h3>
+                    <div style="display: flex; align-items: center; justify-content: space-between; margin-top: 1rem; padding-top: 0.75rem; border-top: 1px solid var(--border-light);">
+                        <span style="font-size: 1.125rem; font-weight: 800; color: var(--text-main);">$140</span>
+                        <a href="#" class="btn btn-acid" style="padding: 0.5rem 0.875rem; font-size: 0.75rem;">
+                            <i data-lucide="shopping-bag" size="14"></i> Add to Cart
+                        </a>
+                    </div>
                 </div>
-                <span class="font-bold text-sm js-card-price"></span>
+
+                <!-- Product Card 2 -->
+                <div class="card-machined policy-card" style="padding: 1.25rem;">
+                    <div style="border-radius: var(--radius-sm); overflow: hidden; margin-bottom: 1rem; border: 1px solid var(--border-light); position: relative;">
+                        <img src="https://images.unsplash.com/photo-1521572267360-ee0c2909d518?auto=format&fit=crop&w=600&q=80" alt="Oversized Heavyweight Tee" style="width: 100%; aspect-ratio: 4/5; object-fit: cover; display: block;">
+                        <div style="position: absolute; top: 0.75rem; right: 0.75rem; background: var(--bg-card); border: 1px solid var(--border-medium); border-radius: var(--radius-sm); padding: 0.25rem 0.5rem; font-size: 0.75rem; font-weight: 700;">
+                            320 GSM
+                        </div>
+                    </div>
+                    <div style="font-size: 0.75rem; font-weight: 700; text-transform: uppercase; letter-spacing: 0.04em; color: var(--text-subtle); margin-bottom: 0.25rem;">
+                        Tees & Tops
+                    </div>
+                    <h3 style="font-size: 1.0625rem; font-weight: 700; color: var(--text-main); margin-bottom: 0.5rem;">
+                        DS-04 Heavyweight Raw Edge Tee
+                    </h3>
+                    <div style="display: flex; align-items: center; justify-content: space-between; margin-top: 1rem; padding-top: 0.75rem; border-top: 1px solid var(--border-light);">
+                        <span style="font-size: 1.125rem; font-weight: 800; color: var(--text-main);">$65</span>
+                        <a href="#" class="btn btn-acid" style="padding: 0.5rem 0.875rem; font-size: 0.75rem;">
+                            <i data-lucide="shopping-bag" size="14"></i> Add to Cart
+                        </a>
+                    </div>
+                </div>
+
+                <!-- Product Card 3 -->
+                <div class="card-machined policy-card" style="padding: 1.25rem;">
+                    <div style="border-radius: var(--radius-sm); overflow: hidden; margin-bottom: 1rem; border: 1px solid var(--border-light); position: relative;">
+                        <img src="https://images.unsplash.com/photo-1541099649105-f69ad21f3246?auto=format&fit=crop&w=600&q=80" alt="Tactile Cargo Trouser" style="width: 100%; aspect-ratio: 4/5; object-fit: cover; display: block;">
+                    </div>
+                    <div style="font-size: 0.75rem; font-weight: 700; text-transform: uppercase; letter-spacing: 0.04em; color: var(--text-subtle); margin-bottom: 0.25rem;">
+                        Bottoms
+                    </div>
+                    <h3 style="font-size: 1.0625rem; font-weight: 700; color: var(--text-main); margin-bottom: 0.5rem;">
+                        DS-08 Modular Double-Knee Cargo
+                    </h3>
+                    <div style="display: flex; align-items: center; justify-content: space-between; margin-top: 1rem; padding-top: 0.75rem; border-top: 1px solid var(--border-light);">
+                        <span style="font-size: 1.125rem; font-weight: 800; color: var(--text-main);">$160</span>
+                        <a href="#" class="btn btn-acid" style="padding: 0.5rem 0.875rem; font-size: 0.75rem;">
+                            <i data-lucide="shopping-bag" size="14"></i> Add to Cart
+                        </a>
+                    </div>
+                </div>
+
+                <!-- Product Card 4 -->
+                <div class="card-machined policy-card" style="padding: 1.25rem;">
+                    <div style="border-radius: var(--radius-sm); overflow: hidden; margin-bottom: 1rem; border: 1px solid var(--border-light); position: relative;">
+                        <img src="https://images.unsplash.com/photo-1578587018452-892bacefd3f2?auto=format&fit=crop&w=600&q=80" alt="Industrial Zip Jacket" style="width: 100%; aspect-ratio: 4/5; object-fit: cover; display: block;">
+                    </div>
+                    <div style="font-size: 0.75rem; font-weight: 700; text-transform: uppercase; letter-spacing: 0.04em; color: var(--text-subtle); margin-bottom: 0.25rem;">
+                        Outerwear
+                    </div>
+                    <h3 style="font-size: 1.0625rem; font-weight: 700; color: var(--text-main); margin-bottom: 0.5rem;">
+                        DS-02 Workwear Zip Jacket
+                    </h3>
+                    <div style="display: flex; align-items: center; justify-content: space-between; margin-top: 1rem; padding-top: 0.75rem; border-top: 1px solid var(--border-light);">
+                        <span style="font-size: 1.125rem; font-weight: 800; color: var(--text-main);">$195</span>
+                        <a href="#" class="btn btn-acid" style="padding: 0.5rem 0.875rem; font-size: 0.75rem;">
+                            <i data-lucide="shopping-bag" size="14"></i> Add to Cart
+                        </a>
+                    </div>
+                </div>
+
+                <!-- Product Card 5 (Sold Out State) -->
+                <div class="card-machined policy-card" style="padding: 1.25rem; opacity: 0.75;">
+                    <div style="border-radius: var(--radius-sm); overflow: hidden; margin-bottom: 1rem; border: 1px solid var(--border-light); position: relative;">
+                        <img src="https://images.unsplash.com/photo-1503342217505-b0a15ec3261c?auto=format&fit=crop&w=600&q=80" alt="Graphic Crewneck" style="width: 100%; aspect-ratio: 4/5; object-fit: cover; display: block; filter: grayscale(100%);">
+                        <div style="position: absolute; top: 0.75rem; left: 0.75rem; background: var(--text-main); color: var(--bg-card); border-radius: var(--radius-sm); padding: 0.25rem 0.5rem; font-size: 0.75rem; font-weight: 700;">
+                            SOLD OUT
+                        </div>
+                    </div>
+                    <div style="font-size: 0.75rem; font-weight: 700; text-transform: uppercase; letter-spacing: 0.04em; color: var(--text-subtle); margin-bottom: 0.25rem;">
+                        Tees & Tops
+                    </div>
+                    <h3 style="font-size: 1.0625rem; font-weight: 700; color: var(--text-main); margin-bottom: 0.5rem;">
+                        DS-05 Archival Graphic Crewneck
+                    </h3>
+                    <div style="display: flex; align-items: center; justify-content: space-between; margin-top: 1rem; padding-top: 0.75rem; border-top: 1px solid var(--border-light);">
+                        <span style="font-size: 1.125rem; font-weight: 800; color: var(--text-muted);">$110</span>
+                        <button class="btn btn-outline" disabled style="padding: 0.5rem 0.875rem; font-size: 0.75rem; cursor: not-allowed; opacity: 0.6;">
+                            Archived
+                        </button>
+                    </div>
+                </div>
+
+                <!-- Product Card 6 -->
+                <div class="card-machined policy-card" style="padding: 1.25rem;">
+                    <div style="border-radius: var(--radius-sm); overflow: hidden; margin-bottom: 1rem; border: 1px solid var(--border-light); position: relative;">
+                        <img src="https://images.unsplash.com/photo-1620799140408-edc6dcb6d633?auto=format&fit=crop&w=600&q=80" alt="Structured Thermal Longsleeve" style="width: 100%; aspect-ratio: 4/5; object-fit: cover; display: block;">
+                    </div>
+                    <div style="font-size: 0.75rem; font-weight: 700; text-transform: uppercase; letter-spacing: 0.04em; color: var(--text-subtle); margin-bottom: 0.25rem;">
+                        Tees & Tops
+                    </div>
+                    <h3 style="font-size: 1.0625rem; font-weight: 700; color: var(--text-main); margin-bottom: 0.5rem;">
+                        DS-06 Waffle Knit Thermal
+                    </h3>
+                    <div style="display: flex; align-items: center; justify-content: space-between; margin-top: 1rem; padding-top: 0.75rem; border-top: 1px solid var(--border-light);">
+                        <span style="font-size: 1.125rem; font-weight: 800; color: var(--text-main);">$85</span>
+                        <a href="#" class="btn btn-acid" style="padding: 0.5rem 0.875rem; font-size: 0.75rem;">
+                            <i data-lucide="shopping-bag" size="14"></i> Add to Cart
+                        </a>
+                    </div>
+                </div>
+
             </div>
-        </a>
-    </template>
 
-    <!-- CATALOG LOGIC -->
-    <script>
-        <!-- #!/engine/node/
-        app()->create_shop_ui(api()->async_products());
-        -->
-        
+        </div>
 
-        class CatalogController {
-            constructor() {
-                this.currentCategory = 'ALL';
-                this.renderGrid(DB_PRODUCTS);
-                this.initFilters();
-                this.initMobileMenu();
-                this.updateCartCount();
-            }
-
-            renderGrid(products) {
-                const grid = document.getElementById('catalog-grid');
-                const template = document.getElementById('tpl-catalog-card');
-                grid.innerHTML = '';
-
-                products.forEach(p => {
-                    const clone = template.content.cloneNode(true);
-                    
-                    const link = clone.querySelector('a');
-                    link.href = `<!-- #!/engine/node/ page('product','${p.id}'); -->`;
-
-                    clone.querySelector('.js-card-title').textContent = p.title;
-                    clone.querySelector('.js-card-category').textContent = p.category;
-                    clone.querySelector('.js-card-price').textContent = `R ${p.price.toFixed(2)}`;
-                    
-                    const img = clone.querySelector('.js-card-img');
-                    img.src = p.gallery[0];
-                    img.alt = p.title;
-
-                    grid.appendChild(clone);
-                });
-
-                document.getElementById('artifact-count').textContent = `Total Products: [ ${products.length} ]`;
-            }
-
-            initFilters() {
-                const buttons = document.querySelectorAll('.filter-btn');
-                buttons.forEach(btn => {
-                    btn.addEventListener('click', (e) => {
-                        buttons.forEach(b => {
-                            b.classList.remove('filter-active');
-                            b.classList.add('border', 'specimen-border');
-                        });
-                        e.target.classList.add('filter-active');
-                        e.target.classList.remove('border', 'specimen-border');
-
-                        const category = e.target.getAttribute('data-category');
-                        this.currentCategory = category;
-
-                        if (category === 'ALL') {
-                            this.renderGrid(DB_PRODUCTS);
-                        } else {
-                            const filtered = DB_PRODUCTS.filter(p => p.category === category);
-                            this.renderGrid(filtered);
-                        }
-                    });
-                });
-            }
-
-            initMobileMenu() {
-                const btn = document.getElementById('menu-toggle');
-                const menu = document.getElementById('mobile-menu');
-                let isOpen = false;
-
-                btn.addEventListener('click', () => {
-                    isOpen = !isOpen;
-                    if (isOpen) {
-                        menu.classList.remove('menu-closed');
-                        menu.classList.add('menu-open');
-                        btn.textContent = '[ CLOSE ]';
-                    } else {
-                        menu.classList.remove('menu-open');
-                        menu.classList.add('menu-closed');
-                        btn.textContent = '[ MENU ]';
-                    }
-                });
-            }
-
-            updateCartCount() {
-                const cart = JSON.parse(localStorage.getItem('specimen_cart')) || [];
-                const count = cart.reduce((acc, item) => acc + item.qty, 0);
-                document.querySelectorAll('.js-cart-count').forEach(el => el.textContent = count);
-            }
-        }
-
-        document.addEventListener('DOMContentLoaded', () => {
-            window.CatalogApp = new CatalogController();
-        });
-    </script>
+    </div>
+</main>

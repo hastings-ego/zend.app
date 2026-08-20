@@ -8,94 +8,77 @@
         # $app()->page(e);
     </main>
 
-    <!-- NEW REDESIGNED GRID FOOTER -->
-    <footer class="bg-archive-ink text-archive-paper">
-        <!-- Top Footer Grid -->
-        <div class="">
-            <div class="grid grid-cols-1 md:grid-cols-4">
 
-                <!-- Brand Column -->
-                <div class="p-10 md:p-12 flex flex-col justify-between min-h-[300px]">
-                    <img src="https://themes.varsitymarket.co.za/collection/voide/assets/b-logo.png" style="max-width:6rem; margin:auto; ">
-                    <h2 class="font-display font-black text-4xl leading-none" style="text-align:center;">VOIDE</h2>
+    <!-- Multi-Column Footer -->
+    <footer>
+        <div class="container">
+            <div class="footer-grid">
+                <div class="footer-brand">
+                    <a href="#" class="logo">
+                        <div class="logo-icon"><i data-lucide="package" size="18"></i></div>
+                        <span>PVTT</span>
+                    </a>
+                    <p>Independent streetwear label. Precision apparel engineered for minimal design setups.</p>
                 </div>
 
-                <!-- Link Column 1 -->
-                <div class="p-10 md:p-12">
-                    <h3 class="text-[14px] font-bold uppercase opacity-30 mb-10">The Brand</h3>
-                    <ul class="space-y-6 text-xs uppercase">
-                        <li><a href="<!-- #!/engine/node/ page('shop') -->"  class="hover:text-white opacity-70 hover:opacity-100 transition-opacity">Our Shop</a></li>
-                        <li><a href="<!-- #!/engine/node/ page('about') -->"  class="hover:text-white opacity-70 hover:opacity-100 transition-opacity">About Us</a></li>
-                        <li><a href="<!-- #!/engine/node/ page('cart') -->"  class="hover:text-white opacity-70 hover:opacity-100 transition-opacity">Cart</a></li>
-                        <li><a href="<!-- #!/engine/node/ page('login') -->"  class="hover:text-white opacity-70 hover:opacity-100 transition-opacity">Account</a></li>
+                <div>
+                    <h3 class="footer-column-title">Collection</h3>
+                    <ul class="footer-links">
+                        <li><a href="#">Latest Drop</a></li>
+                        <li><a href="#">Outerwear</a></li>
+                        <li><a href="#">Tops & Tees</a></li>
+                        <li><a href="#">Accessories</a></li>
                     </ul>
                 </div>
 
-                <!-- Link Column 2 -->
-                <div class="p-10 md:p-12">
-                    <h3 class="text-[14px] font-bold uppercase opacity-30 mb-10">Support</h3>
-                    <ul class="space-y-6 text-xs uppercase tracking-widest">
-                        <li><a href="<!-- #!/engine/node/ page('contact') -->"  class="hover:text-white opacity-70 hover:opacity-100 transition-opacity">Contact Us</a></li>
-                        <li><a href="<!-- #!/engine/node/ page('faq') -->"  class="hover:text-white opacity-70 hover:opacity-100 transition-opacity">FAQ</a></li>
-                        <li><a href="<!-- #!/engine/node/ page('terms-of-use') -->"  class="hover:text-white opacity-70 hover:opacity-100 transition-opacity">Terms of Use</a></li>
-                        <li><a href="<!-- #!/engine/node/ page('privacy-policy') -->"  class="hover:text-white opacity-70 hover:opacity-100 transition-opacity">Privacy Policy</a></li>
+                <div>
+                    <h3 class="footer-column-title">Support</h3>
+                    <ul class="footer-links">
+                        <li><a href="#">Order Tracking</a></li>
+                        <li><a href="#">Shipping Policy</a></li>
+                        <li><a href="#">Returns & Exchanges</a></li>
+                        <li><a href="#">Size Guide</a></li>
                     </ul>
                 </div>
 
-                <!-- Subscribe Column -->
-                <div class="p-10 md:p-12">
-                    <h3 class="text-[14px] font-bold uppercase opacity-30 mb-10">Subscribe</h3>
-                    <p class="text-[10px] opacity-60 leading-loose mb-6">Join The Voide Club</p>
-                    <form class="flex pb-2">
-                        <input type="email" placeholder="EMAIL ADDRESS" class="bg-transparent border-none outline-none text-xs w-full uppercase placeholder:text-archive-paper/30 font-mono text-archive-paper" required>
-                        <button type="submit" class="text-[14px] font-bold uppercase hover:italic">Subscribe</button>
-                    </form>
+                <div>
+                    <h3 class="footer-column-title">Support</h3>
+                    <ul class="footer-links">
+                        <li><a href="?page=privacy-policy">Privacy Policy</a></li>
+                        <li><a href="?page=terms-of-use">Terms of Service</a></li>
+                        <li><a href="?page=faq">Frequently Asked Questions </a></li>
+                    </ul>
                 </div>
-
             </div>
-        </div>
 
-        <!-- Bottom Bar -->
-        <div class="p-10 flex flex-col md:flex-row justify-between items-center text-[12px] uppercase opacity-40">
-            <p></p>
-            <p class="mt-4 md:mt-0">Powered By Varsity Market Technologies</p>
+            <div class="footer-bottom">
+                <div>&copy; 2026 PVTT Inc. All rights reserved.</div>
+                <div style="display: flex; gap: 1.5rem;">
+                    <a href="#" class="nav-link">Instagram</a>
+                    <a href="#" class="nav-link">Discord</a>
+                    <a href="#" class="nav-link">X / Twitter</a>
+                </div>
+                <br>
+                <div>Powered by Varsitymarket Technologies.</div>
+            </div>
         </div>
     </footer>
 
-    <!-- MOBILE MENU LOGIC -->
+    <!-- Interactive Script -->
     <script>
-        document.addEventListener('DOMContentLoaded', () => {
-            const btn = document.getElementById('menu-toggle');
-            const menu = document.getElementById('mobile-menu');
-            let isOpen = false;
+        // Initialize Icons
+        lucide.createIcons();
 
-            btn.addEventListener('click', () => {
-                isOpen = !isOpen;
-                if (isOpen) {
-                    menu.classList.remove('menu-closed');
-                    menu.classList.add('menu-open');
-                    btn.innerHTML = '<img style="width: 3rem; display: block; opacity: 1; filter: invert(1);" src="https://themes.varsitymarket.co.za/collection/voide/assets/close.png">';
-                } else {
-                    menu.classList.remove('menu-open');
-                    menu.classList.add('menu-closed');
-                    btn.innerHTML = '<img style="width: 3rem; display: block; opacity: 1; filter: invert(1);" src="https://themes.varsitymarket.co.za/collection/voide/assets/menu.png">';
-                }
-            });
+        // Mobile Nav Drawer Toggle
+        const mobileMenuBtn = document.getElementById('mobileMenuBtn');
+        const mobileMenu = document.getElementById('mobileMenu');
 
-            // Close menu if a link is clicked
-            const links = menu.querySelectorAll('a');
-            links.forEach(link => {
-                link.addEventListener('click', () => {
-                    isOpen = false;
-                    menu.classList.remove('menu-open');
-                    menu.classList.add('menu-closed');
-                    btn.textContent = '[ MENU ]';
-                });
-            });
+        mobileMenuBtn.addEventListener('click', () => {
+            mobileMenu.classList.toggle('active');
         });
     </script>
 
+
 <!-- #!/engine/node/ analytics() --> 
 </body>
-
 </html>

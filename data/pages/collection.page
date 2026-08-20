@@ -1,0 +1,207 @@
+<main class="policy-section">
+    <div class="container">
+        
+        <!-- Collection Header & Breadcrumbs -->
+        <div class="policy-header" style="max-width: 800px; margin-bottom: 2.5rem;">
+            <div style="font-size: 0.75rem; font-weight: 700; text-transform: uppercase; letter-spacing: 0.08em; color: var(--text-subtle); margin-bottom: 0.5rem; display: flex; align-items: center; gap: 0.5rem;">
+                <a href="#" style="color: var(--text-subtle); text-decoration: none;">Index</a> 
+                <i data-lucide="chevron-right" size="12"></i> 
+                <span style="color: var(--text-main);">Division 01</span>
+            </div>
+            <h1 class="policy-title" style="font-size: clamp(2rem, 4vw, 3.25rem); margin-bottom: 0.75rem;">
+                Outerwear & Fleece
+            </h1>
+            <p class="policy-text" style="font-size: 1rem; margin-bottom: 0;">
+                Heavyweight double-stitched jackets, 500+ GSM french terry hoodies, and technical modular layers engineered for extreme durability and zero structural shrinkage.
+            </p>
+        </div>
+
+        <!-- Filter & Control Toolbar -->
+        <div class="card-machined policy-card" style="padding: 1rem 1.25rem; margin-bottom: 2rem; display: flex; align-items: center; justify-content: space-between; flex-wrap: wrap; gap: 1rem;">
+            
+            <!-- Filter Pills / Categories -->
+            <div style="display: flex; align-items: center; gap: 0.5rem; flex-wrap: wrap;">
+                <button class="btn btn-acid" style="padding: 0.4rem 0.875rem; font-size: 0.75rem;">
+                    <i data-lucide="sliders-horizontal" size="14"></i> Filter Controls
+                </button>
+                <div style="height: 18px; width: 1px; background: var(--border-medium); margin: 0 0.25rem;"></div>
+                <a href="#" style="padding: 0.35rem 0.75rem; background: var(--text-main); color: var(--bg-card); border-radius: var(--radius-sm); font-size: 0.75rem; font-weight: 700; text-decoration: none;">All Outerwear (18)</a>
+                <a href="#" style="padding: 0.35rem 0.75rem; background: transparent; border: 1px solid var(--border-light); border-radius: var(--radius-sm); font-size: 0.75rem; font-weight: 600; color: var(--text-subtle); text-decoration: none;">Hoodies (8)</a>
+                <a href="#" style="padding: 0.35rem 0.75rem; background: transparent; border: 1px solid var(--border-light); border-radius: var(--radius-sm); font-size: 0.75rem; font-weight: 600; color: var(--text-subtle); text-decoration: none;">Jackets & Anoraks (6)</a>
+                <a href="#" style="padding: 0.35rem 0.75rem; background: transparent; border: 1px solid var(--border-light); border-radius: var(--radius-sm); font-size: 0.75rem; font-weight: 600; color: var(--text-subtle); text-decoration: none;">Vests & Liners (4)</a>
+            </div>
+
+            <!-- Sort Controls -->
+            <div style="display: flex; align-items: center; gap: 1rem;">
+                <div style="display: flex; align-items: center; gap: 0.5rem;">
+                    <span style="font-size: 0.75rem; font-weight: 700; color: var(--text-subtle); text-transform: uppercase;">Sort By:</span>
+                    <select style="background: var(--bg-card); border: 1px solid var(--border-medium); border-radius: var(--radius-sm); color: var(--text-main); padding: 0.4rem 0.75rem; font-size: 0.75rem; font-weight: 700; outline: none;">
+                        <option>Featured Releases</option>
+                        <option>GSM Weight (High to Low)</option>
+                        <option>Price (Low to High)</option>
+                        <option>Price (High to Low)</option>
+                        <option>Newest Additions</option>
+                    </select>
+                </div>
+            </div>
+        </div>
+
+        <!-- Product Grid -->
+        <div style="display: grid; grid-template-columns: repeat(auto-fill, minmax(280px, 1fr)); gap: 1.5rem; margin-bottom: 3.5rem;">
+            
+            <!-- Item 1 -->
+            <div class="card-machined policy-card" style="padding: 1.25rem;">
+                <div style="border-radius: var(--radius-sm); overflow: hidden; margin-bottom: 1rem; border: 1px solid var(--border-light); position: relative;">
+                    <img src="https://images.unsplash.com/photo-1556905055-8f358a7a47b2?auto=format&fit=crop&w=600&q=80" alt="DS-01 Boxy French Terry Hoodie" style="width: 100%; aspect-ratio: 4/5; object-fit: cover; display: block;">
+                    <div style="position: absolute; top: 0.75rem; right: 0.75rem; background: var(--bg-card); border: 1px solid var(--border-medium); border-radius: var(--radius-sm); padding: 0.25rem 0.5rem; font-size: 0.75rem; font-weight: 700;">
+                        500 GSM
+                    </div>
+                </div>
+                <div style="font-size: 0.75rem; font-weight: 700; text-transform: uppercase; color: var(--text-subtle); margin-bottom: 0.25rem;">French Terry</div>
+                <h3 style="font-size: 1.0625rem; font-weight: 700; color: var(--text-main); margin-bottom: 0.5rem;">DS-01 Boxy French Terry Hoodie</h3>
+                <div style="display: flex; align-items: center; justify-content: space-between; margin-top: 1rem; padding-top: 0.75rem; border-top: 1px solid var(--border-light);">
+                    <span style="font-size: 1.125rem; font-weight: 800; color: var(--text-main);">$140</span>
+                    <a href="#" class="btn btn-acid" style="padding: 0.5rem 0.875rem; font-size: 0.75rem;">
+                        <i data-lucide="shopping-bag" size="14"></i> Add to Cart
+                    </a>
+                </div>
+            </div>
+
+            <!-- Item 2 -->
+            <div class="card-machined policy-card" style="padding: 1.25rem;">
+                <div style="border-radius: var(--radius-sm); overflow: hidden; margin-bottom: 1rem; border: 1px solid var(--border-light); position: relative;">
+                    <img src="https://images.unsplash.com/photo-1578587018452-892bacefd3f2?auto=format&fit=crop&w=600&q=80" alt="DS-02 Workwear Zip Jacket" style="width: 100%; aspect-ratio: 4/5; object-fit: cover; display: block;">
+                    <div style="position: absolute; top: 0.75rem; right: 0.75rem; background: var(--bg-card); border: 1px solid var(--border-medium); border-radius: var(--radius-sm); padding: 0.25rem 0.5rem; font-size: 0.75rem; font-weight: 700;">
+                        Canvas / Fleece
+                    </div>
+                </div>
+                <div style="font-size: 0.75rem; font-weight: 700; text-transform: uppercase; color: var(--text-subtle); margin-bottom: 0.25rem;">Heavy Jackets</div>
+                <h3 style="font-size: 1.0625rem; font-weight: 700; color: var(--text-main); margin-bottom: 0.5rem;">DS-02 Workwear Zip Jacket</h3>
+                <div style="display: flex; align-items: center; justify-content: space-between; margin-top: 1rem; padding-top: 0.75rem; border-top: 1px solid var(--border-light);">
+                    <span style="font-size: 1.125rem; font-weight: 800; color: var(--text-main);">$195</span>
+                    <a href="#" class="btn btn-acid" style="padding: 0.5rem 0.875rem; font-size: 0.75rem;">
+                        <i data-lucide="shopping-bag" size="14"></i> Add to Cart
+                    </a>
+                </div>
+            </div>
+
+            <!-- Item 3 -->
+            <div class="card-machined policy-card" style="padding: 1.25rem;">
+                <div style="border-radius: var(--radius-sm); overflow: hidden; margin-bottom: 1rem; border: 1px solid var(--border-light); position: relative;">
+                    <img src="https://images.unsplash.com/photo-1509631179647-0177331693ae?auto=format&fit=crop&w=600&q=80" alt="DS-05 Oversized Tactical Vest" style="width: 100%; aspect-ratio: 4/5; object-fit: cover; display: block;">
+                    <div style="position: absolute; top: 0.75rem; right: 0.75rem; background: var(--bg-card); border: 1px solid var(--border-medium); border-radius: var(--radius-sm); padding: 0.25rem 0.5rem; font-size: 0.75rem; font-weight: 700;">
+                        400 GSM Ripstop
+                    </div>
+                </div>
+                <div style="font-size: 0.75rem; font-weight: 700; text-transform: uppercase; color: var(--text-subtle); margin-bottom: 0.25rem;">Modular Vests</div>
+                <h3 style="font-size: 1.0625rem; font-weight: 700; color: var(--text-main); margin-bottom: 0.5rem;">DS-05 Utility Tactical Vest</h3>
+                <div style="display: flex; align-items: center; justify-content: space-between; margin-top: 1rem; padding-top: 0.75rem; border-top: 1px solid var(--border-light);">
+                    <span style="font-size: 1.125rem; font-weight: 800; color: var(--text-main);">$120</span>
+                    <a href="#" class="btn btn-acid" style="padding: 0.5rem 0.875rem; font-size: 0.75rem;">
+                        <i data-lucide="shopping-bag" size="14"></i> Add to Cart
+                    </a>
+                </div>
+            </div>
+
+            <!-- Item 4 -->
+            <div class="card-machined policy-card" style="padding: 1.25rem;">
+                <div style="border-radius: var(--radius-sm); overflow: hidden; margin-bottom: 1rem; border: 1px solid var(--border-light); position: relative;">
+                    <img src="https://images.unsplash.com/photo-1558769132-cb1aea458c5e?auto=format&fit=crop&w=600&q=80" alt="DS-09 Washed Quarter-Zip Pullover" style="width: 100%; aspect-ratio: 4/5; object-fit: cover; display: block;">
+                    <div style="position: absolute; top: 0.75rem; left: 0.75rem; background: #eab308; color: #000; border-radius: var(--radius-sm); padding: 0.25rem 0.5rem; font-size: 0.6875rem; font-weight: 800; text-transform: uppercase;">
+                        Low Stock
+                    </div>
+                    <div style="position: absolute; top: 0.75rem; right: 0.75rem; background: var(--bg-card); border: 1px solid var(--border-medium); border-radius: var(--radius-sm); padding: 0.25rem 0.5rem; font-size: 0.75rem; font-weight: 700;">
+                        480 GSM
+                    </div>
+                </div>
+                <div style="font-size: 0.75rem; font-weight: 700; text-transform: uppercase; color: var(--text-subtle); margin-bottom: 0.25rem;">Pullovers</div>
+                <h3 style="font-size: 1.0625rem; font-weight: 700; color: var(--text-main); margin-bottom: 0.5rem;">DS-09 Washed Quarter-Zip Fleece</h3>
+                <div style="display: flex; align-items: center; justify-content: space-between; margin-top: 1rem; padding-top: 0.75rem; border-top: 1px solid var(--border-light);">
+                    <span style="font-size: 1.125rem; font-weight: 800; color: var(--text-main);">$155</span>
+                    <a href="#" class="btn btn-acid" style="padding: 0.5rem 0.875rem; font-size: 0.75rem;">
+                        <i data-lucide="shopping-bag" size="14"></i> Add to Cart
+                    </a>
+                </div>
+            </div>
+
+            <!-- Item 5 -->
+            <div class="card-machined policy-card" style="padding: 1.25rem;">
+                <div style="border-radius: var(--radius-sm); overflow: hidden; margin-bottom: 1rem; border: 1px solid var(--border-light); position: relative;">
+                    <img src="https://images.unsplash.com/photo-1544441893-675973e31985?auto=format&fit=crop&w=600&q=80" alt="DS-12 Technical Weather Shell" style="width: 100%; aspect-ratio: 4/5; object-fit: cover; display: block;">
+                    <div style="position: absolute; top: 0.75rem; right: 0.75rem; background: var(--bg-card); border: 1px solid var(--border-medium); border-radius: var(--radius-sm); padding: 0.25rem 0.5rem; font-size: 0.75rem; font-weight: 700;">
+                        3-Layer Membrane
+                    </div>
+                </div>
+                <div style="font-size: 0.75rem; font-weight: 700; text-transform: uppercase; color: var(--text-subtle); margin-bottom: 0.25rem;">Weatherproof</div>
+                <h3 style="font-size: 1.0625rem; font-weight: 700; color: var(--text-main); margin-bottom: 0.5rem;">DS-12 Technical Anorak Shell</h3>
+                <div style="display: flex; align-items: center; justify-content: space-between; margin-top: 1rem; padding-top: 0.75rem; border-top: 1px solid var(--border-light);">
+                    <span style="font-size: 1.125rem; font-weight: 800; color: var(--text-main);">$210</span>
+                    <a href="#" class="btn btn-acid" style="padding: 0.5rem 0.875rem; font-size: 0.75rem;">
+                        <i data-lucide="shopping-bag" size="14"></i> Add to Cart
+                    </a>
+                </div>
+            </div>
+
+            <!-- Item 6 (Archived / Sold Out) -->
+            <div class="card-machined policy-card" style="padding: 1.25rem; opacity: 0.75;">
+                <div style="border-radius: var(--radius-sm); overflow: hidden; margin-bottom: 1rem; border: 1px solid var(--border-light); position: relative;">
+                    <img src="https://images.unsplash.com/photo-1503342217505-b0a15ec3261c?auto=format&fit=crop&w=600&q=80" alt="DS-03 Heavy Crewneck Sweater" style="width: 100%; aspect-ratio: 4/5; object-fit: cover; display: block; filter: grayscale(80%);">
+                    <div style="position: absolute; top: 0.75rem; left: 0.75rem; background: #ef4444; color: #fff; border-radius: var(--radius-sm); padding: 0.25rem 0.5rem; font-size: 0.6875rem; font-weight: 800; text-transform: uppercase;">
+                        Archived / Sold Out
+                    </div>
+                </div>
+                <div style="font-size: 0.75rem; font-weight: 700; text-transform: uppercase; color: var(--text-subtle); margin-bottom: 0.25rem;">Crewnecks</div>
+                <h3 style="font-size: 1.0625rem; font-weight: 700; color: var(--text-main); margin-bottom: 0.5rem;">DS-03 Minimalist Heavy Crewneck</h3>
+                <div style="display: flex; align-items: center; justify-content: space-between; margin-top: 1rem; padding-top: 0.75rem; border-top: 1px solid var(--border-light);">
+                    <span style="font-size: 1.125rem; font-weight: 800; color: var(--text-subtle);">$115</span>
+                    <button class="btn btn-outline" style="padding: 0.5rem 0.875rem; font-size: 0.75rem;" disabled>
+                        <i data-lucide="lock" size="14"></i> Sold Out
+                    </button>
+                </div>
+            </div>
+
+        </div>
+
+        <!-- Technical Specification Banner for Outerwear -->
+        <section class="card-machined policy-card" style="padding: 2.5rem 2rem; margin-bottom: 3.5rem;">
+            <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 2rem; align-items: center;">
+                <div>
+                    <div style="font-size: 0.75rem; font-weight: 700; text-transform: uppercase; letter-spacing: 0.08em; color: var(--text-subtle); margin-bottom: 0.5rem;">
+                        Division Specs & Craftsmanship
+                    </div>
+                    <h2 style="font-size: 1.75rem; font-weight: 800; color: var(--text-main); margin-bottom: 1rem;">
+                        Built to Outlast Seasonal Lifecycles
+                    </h2>
+                    <p class="policy-text" style="margin-bottom: 1rem;">
+                        Our fleece and outerwear silhouettes use custom 100% loopback french terry and high-density cotton duck canvas. Every seam is double-locked with bonded thread to eliminate fraying under stress.
+                    </p>
+                </div>
+                <div style="display: flex; flex-direction: column; gap: 0.75rem; background: var(--bg-card-subtle); padding: 1.25rem; border-radius: var(--radius-sm); border: 1px solid var(--border-light);">
+                    <div style="display: flex; justify-content: space-between; font-size: 0.8125rem; font-weight: 700; border-bottom: 1px solid var(--border-light); padding-bottom: 0.5rem;">
+                        <span style="color: var(--text-subtle);">AVERAGE WEIGHT</span>
+                        <span style="color: var(--text-main);">450–520 GSM</span>
+                    </div>
+                    <div style="display: flex; justify-content: space-between; font-size: 0.8125rem; font-weight: 700; border-bottom: 1px solid var(--border-light); padding-bottom: 0.5rem;">
+                        <span style="color: var(--text-subtle);">CUT SILHOUETTE</span>
+                        <span style="color: var(--text-main);">Drop-Shoulder / Boxy</span>
+                    </div>
+                    <div style="display: flex; justify-content: space-between; font-size: 0.8125rem; font-weight: 700;">
+                        <span style="color: var(--text-subtle);">FINISHING TREATMENT</span>
+                        <span style="color: var(--text-main);">Enzyme Pre-Shrunk</span>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Catalog Pagination / Count Bar -->
+        <div style="display: flex; flex-direction: column; align-items: center; justify-content: center; gap: 1rem;">
+            <div style="font-size: 0.8125rem; font-weight: 700; color: var(--text-subtle);">
+                Showing 6 of 18 Active Releases
+            </div>
+            <button class="btn btn-outline" style="padding: 0.75rem 2rem; font-size: 0.875rem;">
+                <i data-lucide="refresh-cw" size="16"></i> Load Additional Silhouettes
+            </button>
+        </div>
+
+    </div>
+</main>

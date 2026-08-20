@@ -1,21 +1,37 @@
-<!-- ════════════════════════════════════ 404 PAGE ════════════════════════════════════ -->
-<!-- MAIN CONTENT - 404 VOID -->
-<main class="flex-grow flex flex-col justify-center items-center text-center px-6 reveal min-h-[75vh]">
-    <!-- Massive brutalist typography -->
-    <h1
-        class="font-display font-black text-[35vw] md:text-[20vw] leading-none text-archive-line select-none relative z-0">
-        404
-    </h1>
+<main class="policy-section">
+    <div class="container" style="max-width: 720px;">
+        
+        <!-- 404 Error Card -->
+        <div class="card-machined policy-card" style="text-align: center; padding: 4rem 2rem;">
+            
+            <!-- Icon Indicator -->
+            <div style="width: 4rem; height: 4rem; background: var(--text-main); color: var(--acid); border-radius: var(--radius-sm); display: inline-flex; align-items: center; justify-content: center; margin-bottom: 1.5rem;">
+                <i data-lucide="alert-triangle" size="32"></i>
+            </div>
 
-    <!-- Overlapping context -->
-    <div class="relative z-10 -mt-16 md:-mt-24 flex flex-col items-center">
-        <p class="font-display font-black text-4xl md:text-5xl uppercase mb-8 bg-archive-paper px-4">Page Not Found</p>
-        <p class="text-xs opacity-50 mb-12 uppercase tracking-[0.2em] max-w-md mx-auto leading-loose">
-            We webpage you are looking for does not exists.
-        </p>
-        <a href="<!-- #!/engine/node/ page('home'); -->"
-            class="font-display font-black text-lg md:text-xl border-b-2 border-archive-ink pb-2 hover:bg-archive-ink hover:text-archive-paper transition-all px-6 py-2">
-            Home Page
-        </a>
+            <!-- Main Heading -->
+            <h1 class="policy-title" style="font-size: clamp(3rem, 6vw, 4.5rem); line-height: 1; margin-bottom: 0.5rem;">
+                404
+            </h1>
+            
+            <div style="font-size: 1.125rem; font-weight: 700; color: var(--text-main); margin-bottom: 0.75rem; text-transform: uppercase; letter-spacing: 0.02em;">
+                Page Not Found
+            </div>
+
+            <p class="policy-text" style="max-width: 440px; margin: 0 auto 2rem auto;">
+                The page you are looking for has been moved, unlisted, or sold out entirely.
+            </p>
+
+            
+
+            <!-- Action Buttons -->
+            <div style="display: flex; gap: 1rem; justify-content: center; flex-wrap: wrap;">
+                <a href="?page=home" class="btn btn-outline">
+                    Return to Home
+                </a>
+            </div>
+
+        </div>
+
     </div>
-</main>
+</main>    

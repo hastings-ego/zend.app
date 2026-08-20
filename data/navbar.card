@@ -1,39 +1,41 @@
 <!-- #/engine/navbar/encode/:BEGIN -->
 
-<!-- MOBILE RESPONSIVE NAV -->
-<nav class="fixed top-0 left-0 w-full z-50 mix-blend-difference px-6 md:px-10 py-6 flex justify-between items-center text-archive-paper">
-  <a href="/" class="font-display font-black text-2xl tracking-tighter z-50 relative">
-    <img src="https://themes.varsitymarket.co.za/collection/voide/assets/logo.png" style="width:100%; max-width: 6rem; filter: invert(1);">
-    <h2 class="font-display font-black text-3xl leading-none" style="text-align:center;">VOIDE</h2>
+    <!-- Header Navigation -->
+    <header>
+        <div class="container nav-container">
+            <a href="#" class="logo">
+                <div class="logo-icon"><i data-lucide="package" size="18"></i></div>
+                <span>PVTT</span>
+            </a>
 
-  </a>
+            <ul class="nav-links">
+                <li><a href="/?page=about" class="nav-link">About</a></li>
+                <li><a href="/?page=shop" class="nav-link">Shop</a></li>
+                <li><a href="#" class="nav-link">Lookbook</a></li>
+                <li><a href="#" class="nav-link">About</a></li>
+                <li><a href="#" class="nav-link">Support</a></li>
+            </ul>
 
-  <!-- Desktop Menu -->
-  <div class="hidden md:flex space-x-12 text-[18px] uppercase tracking-[0.6em] font-bold">
-    <a href="/" class="hover:line-through">Home</a>
-    <a href="/shop/" class="hover:line-through">Shop</a>
-    <a href="/contact/" class="hover:line-through">Contact</a>
-    <a href="/login/" class="hover:line-through">Account</a>
-  </div>
+            <div class="nav-actions" style="display: flex; gap: 0.75rem;">
+                <a href="#" class="btn btn-outline"><i data-lucide="shopping-bag" size="16"></i> Cart (0)</a>
+                <a href="#" class="btn btn-acid">Sign In</a>
+            </div>
 
+            <button class="mobile-toggle" id="mobileMenuBtn" aria-label="Toggle Menu">
+                <i data-lucide="menu"></i>
+            </button>
+        </div>
+    </header>
 
-  <div style="display:flex; ">
-    <img onclick="window.location.href=`/cart/`" style="width: 2.5rem; display: block; opacity: 1; filter: invert(1);" src="https://themes.varsitymarket.co.za/collection/voide/assets/cart.png">
-
-    <!-- Mobile Toggle Button -->
-    <button id="menu-toggle" class="md:hidden z-50 relative text-[10px] uppercase tracking-[0.4em] font-bold focus:outline-none">
-      <img style="padding-left:1rem; width: 3rem; display: block; opacity: 1; filter: invert(1);" src="https://themes.varsitymarket.co.za/collection/voide/assets/menu.png">
-    </button>
-  </div>
-</nav>
-
-<!-- FULLSCREEN MOBILE MENU -->
-<div id="mobile-menu" class="fixed inset-0 bg-archive-ink text-archive-paper z-40 menu-closed flex flex-col justify-center items-center space-y-10">
-  <a href="/home/" class="font-display font-black text-4xl uppercase hover:italic transition-all">Home</a>
-  <a href="/shop/" class="font-display font-black text-4xl uppercase hover:italic transition-all">Shop</a>
-  <a href="/contact/" class="font-display font-black text-4xl uppercase hover:italic transition-all">Contact</a>
-  <a href="/login/" class="font-display font-black text-4xl uppercase hover:italic transition-all">Account</a>
-  <div class="absolute bottom-10 text-[9px] uppercase">Powered By VarsityMarket Technologies</div>
-</div>
+    <!-- Mobile Drawer -->
+    <div class="mobile-menu" id="mobileMenu">
+        <a href="#" class="nav-link">Shop Drops</a>
+        <a href="#" class="nav-link">Lookbook</a>
+        <a href="#" class="nav-link">About</a>
+        <a href="#" class="nav-link">Support</a>
+        <hr style="border: none; border-top: 1px solid var(--border-medium);">
+        <a href="#" class="btn btn-outline" style="width: 100%;">Cart (0)</a>
+        <a href="#" class="btn btn-acid" style="width: 100%;">Sign In</a>
+    </div>
 
 <!-- #/engine/navbar/encode/:END; -->
